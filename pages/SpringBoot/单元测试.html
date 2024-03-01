@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>springboot单元测试 | CtrlCVer</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    <link rel="icon" href="/6.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/2.10.0/github-markdown.min.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <meta name="description" content="孙文豪大魔王">
+    
+    <link rel="preload" href="/assets/css/0.styles.84492279.css" as="style"><link rel="preload" href="/assets/js/app.347fa917.js" as="script"><link rel="preload" href="/assets/js/4.4e440976.js" as="script"><link rel="preload" href="/assets/js/48.f303128c.js" as="script"><link rel="prefetch" href="/assets/js/10.1230c4be.js"><link rel="prefetch" href="/assets/js/11.daeaf548.js"><link rel="prefetch" href="/assets/js/12.abede0ae.js"><link rel="prefetch" href="/assets/js/13.cb62a723.js"><link rel="prefetch" href="/assets/js/14.5375bc4a.js"><link rel="prefetch" href="/assets/js/15.ffb73a9c.js"><link rel="prefetch" href="/assets/js/16.6be16dba.js"><link rel="prefetch" href="/assets/js/17.3879182a.js"><link rel="prefetch" href="/assets/js/18.04083c0b.js"><link rel="prefetch" href="/assets/js/19.ee44a025.js"><link rel="prefetch" href="/assets/js/2.3a3bb906.js"><link rel="prefetch" href="/assets/js/20.bdce0031.js"><link rel="prefetch" href="/assets/js/21.b9bf7143.js"><link rel="prefetch" href="/assets/js/22.aadd746b.js"><link rel="prefetch" href="/assets/js/23.d590bbfb.js"><link rel="prefetch" href="/assets/js/24.72023ebd.js"><link rel="prefetch" href="/assets/js/25.dd4e2abc.js"><link rel="prefetch" href="/assets/js/26.d2b37904.js"><link rel="prefetch" href="/assets/js/27.971418ab.js"><link rel="prefetch" href="/assets/js/28.779a0681.js"><link rel="prefetch" href="/assets/js/29.246ef370.js"><link rel="prefetch" href="/assets/js/3.4c8c30ea.js"><link rel="prefetch" href="/assets/js/30.ffc51d63.js"><link rel="prefetch" href="/assets/js/31.6d4fb3a7.js"><link rel="prefetch" href="/assets/js/32.0f4e411c.js"><link rel="prefetch" href="/assets/js/33.11a7d2af.js"><link rel="prefetch" href="/assets/js/34.e7403a40.js"><link rel="prefetch" href="/assets/js/35.92937b0a.js"><link rel="prefetch" href="/assets/js/36.9f52b8c7.js"><link rel="prefetch" href="/assets/js/37.193fb1cc.js"><link rel="prefetch" href="/assets/js/38.33e3fa35.js"><link rel="prefetch" href="/assets/js/39.1b9c5402.js"><link rel="prefetch" href="/assets/js/40.4ae4ec73.js"><link rel="prefetch" href="/assets/js/41.93514908.js"><link rel="prefetch" href="/assets/js/42.79934fb7.js"><link rel="prefetch" href="/assets/js/43.6be9e89a.js"><link rel="prefetch" href="/assets/js/44.cf8d93d5.js"><link rel="prefetch" href="/assets/js/45.89850dfb.js"><link rel="prefetch" href="/assets/js/46.c9bf838d.js"><link rel="prefetch" href="/assets/js/47.d009214c.js"><link rel="prefetch" href="/assets/js/49.a002314e.js"><link rel="prefetch" href="/assets/js/5.baec3451.js"><link rel="prefetch" href="/assets/js/50.bf708037.js"><link rel="prefetch" href="/assets/js/51.a0931ba6.js"><link rel="prefetch" href="/assets/js/52.d828c50a.js"><link rel="prefetch" href="/assets/js/53.319606bc.js"><link rel="prefetch" href="/assets/js/54.45b73705.js"><link rel="prefetch" href="/assets/js/55.19e29602.js"><link rel="prefetch" href="/assets/js/56.70a7339c.js"><link rel="prefetch" href="/assets/js/57.24bae8ee.js"><link rel="prefetch" href="/assets/js/58.b9e501fa.js"><link rel="prefetch" href="/assets/js/59.5741b163.js"><link rel="prefetch" href="/assets/js/6.faab7e15.js"><link rel="prefetch" href="/assets/js/60.55c05a7e.js"><link rel="prefetch" href="/assets/js/61.66739ddc.js"><link rel="prefetch" href="/assets/js/62.984ff248.js"><link rel="prefetch" href="/assets/js/63.198b0614.js"><link rel="prefetch" href="/assets/js/64.44df42dc.js"><link rel="prefetch" href="/assets/js/65.835f260b.js"><link rel="prefetch" href="/assets/js/66.b01fd1a5.js"><link rel="prefetch" href="/assets/js/67.3e990aa1.js"><link rel="prefetch" href="/assets/js/68.3bff67c3.js"><link rel="prefetch" href="/assets/js/69.c77e5194.js"><link rel="prefetch" href="/assets/js/7.1e0b6ef9.js"><link rel="prefetch" href="/assets/js/70.990cc3f7.js"><link rel="prefetch" href="/assets/js/71.faf1e578.js"><link rel="prefetch" href="/assets/js/72.bf80a7aa.js"><link rel="prefetch" href="/assets/js/73.28855af5.js"><link rel="prefetch" href="/assets/js/74.575cab52.js"><link rel="prefetch" href="/assets/js/75.9fbc678e.js"><link rel="prefetch" href="/assets/js/76.aefd2222.js"><link rel="prefetch" href="/assets/js/77.29024e8c.js"><link rel="prefetch" href="/assets/js/78.1a261541.js"><link rel="prefetch" href="/assets/js/79.7f221adf.js"><link rel="prefetch" href="/assets/js/8.52cec024.js"><link rel="prefetch" href="/assets/js/80.a25bdaa1.js"><link rel="prefetch" href="/assets/js/81.78c287ce.js"><link rel="prefetch" href="/assets/js/9.6965887d.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.84492279.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/2.png" alt="CtrlCVer" class="logo"> <span class="site-name can-hide">CtrlCVer</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据库" class="dropdown-title"><span class="title">数据库</span> <span class="arrow down"></span></button> <button type="button" aria-label="数据库" class="mobile-dropdown-title"><span class="title">数据库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/数据库/MySQL.html" class="nav-link">
+  MySQL
+</a></li><li class="dropdown-item"><!----> <a href="/pages/数据库/Redis.html" class="nav-link">
+  Redis
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Vue" class="dropdown-title"><span class="title">Vue</span> <span class="arrow down"></span></button> <button type="button" aria-label="Vue" class="mobile-dropdown-title"><span class="title">Vue</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/Vue/Vue-loading动态加载.html" class="nav-link">
+  Vue-loading动态加载
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Vue/Vue项目用axios做request封装.html" class="nav-link">
+  Vue项目用axios做request封装
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Vue/前端踩坑之路.html" class="nav-link">
+  前端踩坑之路
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="SpringBoot" class="dropdown-title"><span class="title">SpringBoot</span> <span class="arrow down"></span></button> <button type="button" aria-label="SpringBoot" class="mobile-dropdown-title"><span class="title">SpringBoot</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/aop面向切面编程.html" class="nav-link">
+  aop面向切面编程
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/Cron表达式.html" class="nav-link">
+  Cron表达式
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/issue3.html" class="nav-link">
+  issue3
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/Listener监听器.html" class="nav-link">
+  Listener监听器
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/Mybatis 动态SQL.html" class="nav-link">
+  Mybatis 动态SQL
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/Mybatis.html" class="nav-link">
+  Mybatis
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/mybatis和spring整合.html" class="nav-link">
+  mybatis和spring整合
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/Mybatis缓存机制.html" class="nav-link">
+  Mybatis缓存机制
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/session之 HttpSessionActivation.html" class="nav-link">
+  session之 HttpSessionActivation
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/springboot+vue部署后出现springboot后端部分页面404.html" class="nav-link">
+  springboot+vue部署后出现springboot后端部分页面404
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/springboot.html" class="nav-link">
+  springboot
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/SpringMVC介绍.html" class="nav-link">
+  SpringMVC介绍
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/springmvc重定向和请求转发操作.html" class="nav-link">
+  springmvc重定向和请求转发操作
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/Spring介绍.html" class="nav-link">
+  Spring介绍
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/SSM整合开发.html" class="nav-link">
+  SSM整合开发
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/url-pattern设置.html" class="nav-link">
+  url-pattern设置
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/web开发.html" class="nav-link">
+  web开发
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/yaml.html" class="nav-link">
+  yaml
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/单元测试.html" class="nav-link">
+  单元测试
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/启动原理.html" class="nav-link">
+  启动原理
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/嵌入式servlet服务器.html" class="nav-link">
+  嵌入式servlet服务器
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/异常，拦截器....html" class="nav-link">
+  异常，拦截器...
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/执行流程分析.html" class="nav-link">
+  执行流程分析
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/指标监控.html" class="nav-link">
+  指标监控
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/数据访问.html" class="nav-link">
+  数据访问
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/注意.html" class="nav-link">
+  注意
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/注解.html" class="nav-link">
+  注解
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/注解方式注入.html" class="nav-link">
+  注解方式注入
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/源码分析.html" class="nav-link">
+  源码分析
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/高级特性.html" class="nav-link">
+  高级特性
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="SpringCloud" class="dropdown-title"><span class="title">SpringCloud</span> <span class="arrow down"></span></button> <button type="button" aria-label="SpringCloud" class="mobile-dropdown-title"><span class="title">SpringCloud</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/Eureka.html" class="nav-link">
+  Eureka
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/Gateway.html" class="nav-link">
+  Gateway
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/Hystrix断路器.html" class="nav-link">
+  Hystrix断路器
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/nacos-config.html" class="nav-link">
+  nacos-config
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/nacos.html" class="nav-link">
+  nacos
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/nacos集群和持久化配置.html" class="nav-link">
+  nacos集群和持久化配置
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/OpenFeign ISsue.html" class="nav-link">
+  OpenFeign ISsue
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/OpenFeign-issue.html" class="nav-link">
+  OpenFeign-issue
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/OpenFeign服务接口调用.html" class="nav-link">
+  OpenFeign服务接口调用
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/question.html" class="nav-link">
+  question
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/seata.html" class="nav-link">
+  seata
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/security.html" class="nav-link">
+  security
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/sentinel.html" class="nav-link">
+  sentinel
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/Sentinel实现熔断与限流.html" class="nav-link">
+  Sentinel实现熔断与限流
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/Spring Cloud Ribbon.html" class="nav-link">
+  Spring Cloud Ribbon
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/spring-cloud-stream.html" class="nav-link">
+  spring-cloud-stream
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/stream3.2学习.html" class="nav-link">
+  stream3.2学习
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/zookeeper.html" class="nav-link">
+  zookeeper
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/配置中心.html" class="nav-link">
+  配置中心
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="JVM" class="dropdown-title"><span class="title">JVM</span> <span class="arrow down"></span></button> <button type="button" aria-label="JVM" class="mobile-dropdown-title"><span class="title">JVM</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/JVM/JVM.html" class="nav-link">
+  JVM
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="JUC" class="dropdown-title"><span class="title">JUC</span> <span class="arrow down"></span></button> <button type="button" aria-label="JUC" class="mobile-dropdown-title"><span class="title">JUC</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/JUC/Atomic原子操作类.html" class="nav-link">
+  Atomic原子操作类
+</a></li><li class="dropdown-item"><!----> <a href="/pages/JUC/CAS.html" class="nav-link">
+  CAS
+</a></li><li class="dropdown-item"><!----> <a href="/pages/JUC/Java内存模型JMM.html" class="nav-link">
+  Java内存模型JMM
+</a></li><li class="dropdown-item"><!----> <a href="/pages/JUC/Java对象内存布局和对象头.html" class="nav-link">
+  Java对象内存布局和对象头
+</a></li><li class="dropdown-item"><!----> <a href="/pages/JUC/synchronized.html" class="nav-link">
+  synchronized
+</a></li><li class="dropdown-item"><!----> <a href="/pages/JUC/ThreadLocl.html" class="nav-link">
+  ThreadLocl
+</a></li><li class="dropdown-item"><!----> <a href="/pages/JUC/Thread、ThreadLocal、ThreadLocalMap.html" class="nav-link">
+  Thread、ThreadLocal、ThreadLocalMap
+</a></li><li class="dropdown-item"><!----> <a href="/pages/JUC/volatile.html" class="nav-link">
+  volatile
+</a></li><li class="dropdown-item"><!----> <a href="/pages/JUC/多线程锁.html" class="nav-link">
+  多线程锁
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Project" class="dropdown-title"><span class="title">Project</span> <span class="arrow down"></span></button> <button type="button" aria-label="Project" class="mobile-dropdown-title"><span class="title">Project</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/Project/clash部署至服务器，提供“上网”服务.html" class="nav-link">
+  clash部署至服务器，提供“上网”服务
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Project/Oauth2.html" class="nav-link">
+  Oauth2
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Project/SSE+Flux.html" class="nav-link">
+  SSE+Flux
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Project/Unicloud 阿里云服务器作图床.html" class="nav-link">
+  Unicloud 阿里云服务器作图床
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Project/内网穿透技术初探.html" class="nav-link">
+  内网穿透技术初探
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Project/微信订阅号开发.html" class="nav-link">
+  微信订阅号开发
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="课程" class="dropdown-title"><span class="title">课程</span> <span class="arrow down"></span></button> <button type="button" aria-label="课程" class="mobile-dropdown-title"><span class="title">课程</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/课程/操作系统.html" class="nav-link">
+  操作系统
+</a></li><li class="dropdown-item"><!----> <a href="/pages/课程/计算机组成与原理.html" class="nav-link">
+  计算机组成与原理
+</a></li><li class="dropdown-item"><!----> <a href="/pages/课程/计算机网络.html" class="nav-link">
+  计算机网络
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="机器视觉" class="dropdown-title"><span class="title">机器视觉</span> <span class="arrow down"></span></button> <button type="button" aria-label="机器视觉" class="mobile-dropdown-title"><span class="title">机器视觉</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/机器视觉/RTMPose.html" class="nav-link">
+  RTMPose
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/sunwenhaopro" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据库" class="dropdown-title"><span class="title">数据库</span> <span class="arrow down"></span></button> <button type="button" aria-label="数据库" class="mobile-dropdown-title"><span class="title">数据库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/数据库/MySQL.html" class="nav-link">
+  MySQL
+</a></li><li class="dropdown-item"><!----> <a href="/pages/数据库/Redis.html" class="nav-link">
+  Redis
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Vue" class="dropdown-title"><span class="title">Vue</span> <span class="arrow down"></span></button> <button type="button" aria-label="Vue" class="mobile-dropdown-title"><span class="title">Vue</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/Vue/Vue-loading动态加载.html" class="nav-link">
+  Vue-loading动态加载
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Vue/Vue项目用axios做request封装.html" class="nav-link">
+  Vue项目用axios做request封装
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Vue/前端踩坑之路.html" class="nav-link">
+  前端踩坑之路
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="SpringBoot" class="dropdown-title"><span class="title">SpringBoot</span> <span class="arrow down"></span></button> <button type="button" aria-label="SpringBoot" class="mobile-dropdown-title"><span class="title">SpringBoot</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/aop面向切面编程.html" class="nav-link">
+  aop面向切面编程
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/Cron表达式.html" class="nav-link">
+  Cron表达式
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/issue3.html" class="nav-link">
+  issue3
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/Listener监听器.html" class="nav-link">
+  Listener监听器
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/Mybatis 动态SQL.html" class="nav-link">
+  Mybatis 动态SQL
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/Mybatis.html" class="nav-link">
+  Mybatis
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/mybatis和spring整合.html" class="nav-link">
+  mybatis和spring整合
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/Mybatis缓存机制.html" class="nav-link">
+  Mybatis缓存机制
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/session之 HttpSessionActivation.html" class="nav-link">
+  session之 HttpSessionActivation
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/springboot+vue部署后出现springboot后端部分页面404.html" class="nav-link">
+  springboot+vue部署后出现springboot后端部分页面404
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/springboot.html" class="nav-link">
+  springboot
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/SpringMVC介绍.html" class="nav-link">
+  SpringMVC介绍
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/springmvc重定向和请求转发操作.html" class="nav-link">
+  springmvc重定向和请求转发操作
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/Spring介绍.html" class="nav-link">
+  Spring介绍
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/SSM整合开发.html" class="nav-link">
+  SSM整合开发
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/url-pattern设置.html" class="nav-link">
+  url-pattern设置
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/web开发.html" class="nav-link">
+  web开发
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/yaml.html" class="nav-link">
+  yaml
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/单元测试.html" class="nav-link">
+  单元测试
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/启动原理.html" class="nav-link">
+  启动原理
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/嵌入式servlet服务器.html" class="nav-link">
+  嵌入式servlet服务器
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/异常，拦截器....html" class="nav-link">
+  异常，拦截器...
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/执行流程分析.html" class="nav-link">
+  执行流程分析
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/指标监控.html" class="nav-link">
+  指标监控
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/数据访问.html" class="nav-link">
+  数据访问
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/注意.html" class="nav-link">
+  注意
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/注解.html" class="nav-link">
+  注解
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/注解方式注入.html" class="nav-link">
+  注解方式注入
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/源码分析.html" class="nav-link">
+  源码分析
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/高级特性.html" class="nav-link">
+  高级特性
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="SpringCloud" class="dropdown-title"><span class="title">SpringCloud</span> <span class="arrow down"></span></button> <button type="button" aria-label="SpringCloud" class="mobile-dropdown-title"><span class="title">SpringCloud</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/Eureka.html" class="nav-link">
+  Eureka
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/Gateway.html" class="nav-link">
+  Gateway
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/Hystrix断路器.html" class="nav-link">
+  Hystrix断路器
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/nacos-config.html" class="nav-link">
+  nacos-config
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/nacos.html" class="nav-link">
+  nacos
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/nacos集群和持久化配置.html" class="nav-link">
+  nacos集群和持久化配置
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/OpenFeign ISsue.html" class="nav-link">
+  OpenFeign ISsue
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/OpenFeign-issue.html" class="nav-link">
+  OpenFeign-issue
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/OpenFeign服务接口调用.html" class="nav-link">
+  OpenFeign服务接口调用
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/question.html" class="nav-link">
+  question
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/seata.html" class="nav-link">
+  seata
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/security.html" class="nav-link">
+  security
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/sentinel.html" class="nav-link">
+  sentinel
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/Sentinel实现熔断与限流.html" class="nav-link">
+  Sentinel实现熔断与限流
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/Spring Cloud Ribbon.html" class="nav-link">
+  Spring Cloud Ribbon
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/spring-cloud-stream.html" class="nav-link">
+  spring-cloud-stream
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/stream3.2学习.html" class="nav-link">
+  stream3.2学习
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/zookeeper.html" class="nav-link">
+  zookeeper
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/配置中心.html" class="nav-link">
+  配置中心
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="JVM" class="dropdown-title"><span class="title">JVM</span> <span class="arrow down"></span></button> <button type="button" aria-label="JVM" class="mobile-dropdown-title"><span class="title">JVM</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/JVM/JVM.html" class="nav-link">
+  JVM
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="JUC" class="dropdown-title"><span class="title">JUC</span> <span class="arrow down"></span></button> <button type="button" aria-label="JUC" class="mobile-dropdown-title"><span class="title">JUC</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/JUC/Atomic原子操作类.html" class="nav-link">
+  Atomic原子操作类
+</a></li><li class="dropdown-item"><!----> <a href="/pages/JUC/CAS.html" class="nav-link">
+  CAS
+</a></li><li class="dropdown-item"><!----> <a href="/pages/JUC/Java内存模型JMM.html" class="nav-link">
+  Java内存模型JMM
+</a></li><li class="dropdown-item"><!----> <a href="/pages/JUC/Java对象内存布局和对象头.html" class="nav-link">
+  Java对象内存布局和对象头
+</a></li><li class="dropdown-item"><!----> <a href="/pages/JUC/synchronized.html" class="nav-link">
+  synchronized
+</a></li><li class="dropdown-item"><!----> <a href="/pages/JUC/ThreadLocl.html" class="nav-link">
+  ThreadLocl
+</a></li><li class="dropdown-item"><!----> <a href="/pages/JUC/Thread、ThreadLocal、ThreadLocalMap.html" class="nav-link">
+  Thread、ThreadLocal、ThreadLocalMap
+</a></li><li class="dropdown-item"><!----> <a href="/pages/JUC/volatile.html" class="nav-link">
+  volatile
+</a></li><li class="dropdown-item"><!----> <a href="/pages/JUC/多线程锁.html" class="nav-link">
+  多线程锁
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Project" class="dropdown-title"><span class="title">Project</span> <span class="arrow down"></span></button> <button type="button" aria-label="Project" class="mobile-dropdown-title"><span class="title">Project</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/Project/clash部署至服务器，提供“上网”服务.html" class="nav-link">
+  clash部署至服务器，提供“上网”服务
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Project/Oauth2.html" class="nav-link">
+  Oauth2
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Project/SSE+Flux.html" class="nav-link">
+  SSE+Flux
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Project/Unicloud 阿里云服务器作图床.html" class="nav-link">
+  Unicloud 阿里云服务器作图床
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Project/内网穿透技术初探.html" class="nav-link">
+  内网穿透技术初探
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Project/微信订阅号开发.html" class="nav-link">
+  微信订阅号开发
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="课程" class="dropdown-title"><span class="title">课程</span> <span class="arrow down"></span></button> <button type="button" aria-label="课程" class="mobile-dropdown-title"><span class="title">课程</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/课程/操作系统.html" class="nav-link">
+  操作系统
+</a></li><li class="dropdown-item"><!----> <a href="/pages/课程/计算机组成与原理.html" class="nav-link">
+  计算机组成与原理
+</a></li><li class="dropdown-item"><!----> <a href="/pages/课程/计算机网络.html" class="nav-link">
+  计算机网络
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="机器视觉" class="dropdown-title"><span class="title">机器视觉</span> <span class="arrow down"></span></button> <button type="button" aria-label="机器视觉" class="mobile-dropdown-title"><span class="title">机器视觉</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/机器视觉/RTMPose.html" class="nav-link">
+  RTMPose
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/sunwenhaopro" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/pages/SpringBoot/aop面向切面编程.html" class="sidebar-link">aop介绍</a></li><li><a href="/pages/SpringBoot/Cron表达式.html" class="sidebar-link">Cron表达式</a></li><li><a href="/pages/SpringBoot/issue3.html" class="sidebar-link">创建SpringApplicationRunListener监听器失败</a></li><li><a href="/pages/SpringBoot/Listener监听器.html" class="sidebar-link">什么叫监听器</a></li><li><a href="/pages/SpringBoot/Mybatis 动态SQL.html" class="sidebar-link">Mybatis 动态SQL</a></li><li><a href="/pages/SpringBoot/Mybatis.html" class="sidebar-link">Mybatis</a></li><li><a href="/pages/SpringBoot/mybatis和spring整合.html" class="sidebar-link">mybatis和spring整合开发</a></li><li><a href="/pages/SpringBoot/Mybatis缓存机制.html" class="sidebar-link">MyBatis|缓存机制</a></li><li><a href="/pages/SpringBoot/session之 HttpSessionActivation.html" class="sidebar-link">session之 HttpSessionActivation</a></li><li><a href="/pages/SpringBoot/springboot+vue部署后出现springboot后端部分页面404.html" class="sidebar-link">springboot+vue部署后出现springboot后端部分页面404</a></li><li><a href="/pages/SpringBoot/springboot.html" class="sidebar-link">自定义文件上传路径和访问路径映射（等同于设置静态资源路径）</a></li><li><a href="/pages/SpringBoot/SpringMVC介绍.html" class="sidebar-link">spring mvc介绍</a></li><li><a href="/pages/SpringBoot/springmvc重定向和请求转发操作.html" class="sidebar-link">重定向和请求转发操作</a></li><li><a href="/pages/SpringBoot/Spring介绍.html" class="sidebar-link">spring介绍</a></li><li><a href="/pages/SpringBoot/SSM整合开发.html" class="sidebar-link">SSM整合开发</a></li><li><a href="/pages/SpringBoot/url-pattern设置.html" class="sidebar-link">/pages/SpringBoot/url-pattern设置.html</a></li><li><a href="/pages/SpringBoot/web开发.html" class="sidebar-link">springboot web开发</a></li><li><a href="/pages/SpringBoot/yaml.html" class="sidebar-link">yaml使用</a></li><li><a href="/pages/SpringBoot/单元测试.html" class="active sidebar-link">springboot单元测试</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/pages/SpringBoot/单元测试.html#变化" class="sidebar-link">变化</a></li><li class="sidebar-sub-header"><a href="/pages/SpringBoot/单元测试.html#_1、简单断言" class="sidebar-link">1、简单断言</a></li><li class="sidebar-sub-header"><a href="/pages/SpringBoot/单元测试.html#_2、数组断言" class="sidebar-link">2、数组断言</a></li><li class="sidebar-sub-header"><a href="/pages/SpringBoot/单元测试.html#_3、组合断言" class="sidebar-link">3、组合断言</a></li><li class="sidebar-sub-header"><a href="/pages/SpringBoot/单元测试.html#_4、异常断言" class="sidebar-link">4、异常断言</a></li><li class="sidebar-sub-header"><a href="/pages/SpringBoot/单元测试.html#_5、超时断言" class="sidebar-link">5、超时断言</a></li><li class="sidebar-sub-header"><a href="/pages/SpringBoot/单元测试.html#_6、快速失败" class="sidebar-link">6、快速失败</a></li></ul></li><li><a href="/pages/SpringBoot/启动原理.html" class="sidebar-link">springboot启动原理分析</a></li><li><a href="/pages/SpringBoot/嵌入式servlet服务器.html" class="sidebar-link">嵌入式servlet服务器</a></li><li><a href="/pages/SpringBoot/异常，拦截器....html" class="sidebar-link">异常处理</a></li><li><a href="/pages/SpringBoot/执行流程分析.html" class="sidebar-link">执行流程图</a></li><li><a href="/pages/SpringBoot/指标监控.html" class="sidebar-link">指标监控</a></li><li><a href="/pages/SpringBoot/数据访问.html" class="sidebar-link">spring boot数据访问</a></li><li><a href="/pages/SpringBoot/注意.html" class="sidebar-link">spring boot 注意点</a></li><li><a href="/pages/SpringBoot/注解.html" class="sidebar-link">spring boot注解</a></li><li><a href="/pages/SpringBoot/注解方式注入.html" class="sidebar-link">使用注解前提</a></li><li><a href="/pages/SpringBoot/源码分析.html" class="sidebar-link">SpringApplication.run()阶段</a></li><li><a href="/pages/SpringBoot/高级特性.html" class="sidebar-link">spring boot高级特性</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="springboot单元测试"><a href="#springboot单元测试" class="header-anchor">#</a> springboot单元测试</h1> <h2 id="变化"><a href="#变化" class="header-anchor">#</a> 变化</h2> <p>官方网站<a href="http://ooszy.cco.vin/img/blog-note/https://junit.org/junit5/" target="_blank" rel="noopener noreferrer">JUnit 5<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p><strong>Spring Boot 2.2.0 版本开始引入 JUnit 5 作为单元测试默认库</strong></p> <p>作为最新版本的JUnit框架，JUnit5与之前版本的Junit框架有很大的不同。由三个不同子项目的几个不同模块组成。</p> <p><strong>JUnit 5 = JUnit Platform + JUnit Jupiter + JUnit Vintage</strong></p> <p><strong>JUnit Platform</strong>: Junit Platform是在JVM上启动测试框架的基础，不仅支持Junit自制的测试引擎，其他测试引擎也都可以接入。</p> <p><strong>JUnit Jupiter</strong>: JUnit Jupiter提供了JUnit5的新的编程模型，是JUnit5新特性的核心。内部 包含了一个<strong>测试引擎</strong>，用于在Junit Platform上运行。</p> <p><strong>JUnit Vintage</strong>: 由于JUint已经发展多年，为了照顾老的项目，JUnit Vintage提供了兼容JUnit4.x,Junit3.x的测试引擎。</p> <p><img src="https://picture.xcye.xyz/image-20210710081407600.png?x-oss-process=style/pictureProcess1" alt=""></p> <p>注意：</p> <p><strong>SpringBoot 2.4 以上版本移除了默认对</strong> <strong>Vintage 的依赖。如果需要兼容junit4需要自行引入（不能使用junit4的功能 @Test</strong>**）**</p> <p><strong>JUnit 5’s Vintage Engine Removed from</strong> <code>spring-boot-starter-test,如果需要继续兼容junit4需要自行引入vintage</code></p> <div class="language-xml line-numbers-mode"><pre class="language-xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>org.junit.vintage<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>junit-vintage-engine<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>scope</span><span class="token punctuation">&gt;</span></span>test<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>scope</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>exclusions</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>exclusion</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>org.hamcrest<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>hamcrest-core<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>exclusion</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>exclusions</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">&gt;</span></span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><p>springboot在2.4版本之后，就对此作出了改变，可以看他们更新日志</p> <p>https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-2.4-Release-Notes</p> <p>If you upgrade to Spring Boot 2.4 and see test compilation errors for JUnit classes such as <code>org.junit.Test</code>, this may be because JUnit 5’s vintage engine has been removed from <code>spring-boot-starter-test</code>. The vintage engine allows tests written with JUnit 4 to be run by JUnit 5. If you do not want to migrate your tests to JUnit 5 and wish to continue using JUnit 4, add a dependency on the Vintage Engine, as shown in the following example for Maven:</p> <p>在Junit5中，提供了对spring的支持，所以我们可以使用容器中的对象，并且可以在测试类上，添加支持事务的注解<code>@Transactional</code></p> <p><img src="https://picture.xcye.xyz/image-20210710081252637.png?x-oss-process=style/pictureProcess1" alt=""></p> <h1 id="常用测试注解"><a href="#常用测试注解" class="header-anchor">#</a> 常用测试注解</h1> <p>在使用<code>@Test</code>时，一定要选择<code>org.junit.jupiter.api.Test</code>，这个才是Junit5版本的</p> <p>可以查看官网文档<a href="http://ooszy.cco.vin/img/blog-note/https://junit.org/junit5/docs/current/user-guide/" target="_blank" rel="noopener noreferrer">JUnit 5 User Guide<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <ul><li><p>**@Test 😗*表示方法是测试方法。但是与JUnit4的@Test不同，他的职责非常单一不能声明任何属性，拓展的测试将会由Jupiter提供额外测试</p></li> <li><p>**@ParameterizedTest 😗*表示方法是参数化测试，下方会有详细介绍</p></li> <li><p>**@RepeatedTest 😗*表示方法可重复执行，下方会有详细介绍</p></li> <li><p>**@DisplayName 😗*为测试类或者测试方法设置展示名称</p> <p>可以在类上，或者方法上使用</p></li> <li><p>**@BeforeEach 😗*表示在每个单元测试之前执行</p></li> <li><p>**@AfterEach 😗*表示在每个单元测试之后执行</p></li> <li><p>**@BeforeAll 😗*表示在所有单元测试之前执行</p> <p>此测试中的方法体只会执行一次</p></li> <li><p>**@AfterAll 😗*表示在所有单元测试之后执行</p> <p>只会执行一次</p> <p>报错</p> <div class="language-java line-numbers-mode"><pre class="language-java"><code><span class="token class-name"><span class="token namespace">org<span class="token punctuation">.</span>junit<span class="token punctuation">.</span>platform<span class="token punctuation">.</span>commons<span class="token punctuation">.</span></span>JUnitException</span><span class="token operator">:</span> <span class="token annotation punctuation">@BeforeAll</span> method '<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token class-name"><span class="token namespace">vin<span class="token punctuation">.</span>cco<span class="token punctuation">.</span>qsyyke<span class="token punctuation">.</span></span>MyTest</span><span class="token punctuation">.</span><span class="token function">test5</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name"><span class="token namespace">java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span></span>Exception</span>' must be <span class="token keyword">static</span> unless the test <span class="token keyword">class</span> is annotated <span class="token keyword">with</span> <span class="token annotation punctuation">@TestInstance</span><span class="token punctuation">(</span><span class="token class-name">Lifecycle</span><span class="token punctuation">.</span><span class="token constant">PER_CLASS</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div></li> <li><p>**@Tag 😗*表示单元测试类别，类似于JUnit4中的@Categories</p></li> <li><p>**@Disabled 😗*表示测试类或测试方法不执行，类似于JUnit4中的@Ignore</p></li> <li><p>**@Timeout 😗*表示测试方法运行如果超过了指定时间将会返回错误</p> <div class="language-java line-numbers-mode"><pre class="language-java"><code><span class="token annotation punctuation">@Timeout</span><span class="token punctuation">(</span>value <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">)</span>
+<span class="token annotation punctuation">@Test</span>
+<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">test7</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">Exception</span> <span class="token punctuation">{</span>
+    <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token number">22342</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">Thread</span><span class="token punctuation">.</span><span class="token function">sleep</span><span class="token punctuation">(</span><span class="token number">5000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token class-name"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span>concurrent<span class="token punctuation">.</span></span>TimeoutException</span><span class="token operator">:</span> <span class="token function">test7</span><span class="token punctuation">(</span><span class="token punctuation">)</span> timed out after <span class="token number">3</span> seconds
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div></li> <li><p>**@ExtendWith 😗*为测试类或测试方法提供扩展类引用</p></li></ul> <blockquote><p>如果我们没有在类上使用<code>@SpringBootTest</code>，那么就不能使用容器中的对象，Junit5注解可以用</p> <div class="language-java line-numbers-mode"><pre class="language-java"><code><span class="token annotation punctuation">@BootstrapWith</span><span class="token punctuation">(</span><span class="token class-name">SpringBootTestContextBootstrapper</span><span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">)</span>
+<span class="token annotation punctuation">@ExtendWith</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token class-name">SpringExtension</span><span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token annotation punctuation">@interface</span> <span class="token class-name">SpringBootTest</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div></blockquote> <h1 id="断言机制"><a href="#断言机制" class="header-anchor">#</a> 断言机制</h1> <p>断言（assertions）是测试方法中的核心部分，用来对测试需要满足的条件进行验证。<strong>这些断言方法都是 org.junit.jupiter.api.Assertions 的静态方法</strong>。JUnit 5 内置的断言可以分成如下几个类别：</p> <p><strong>检查业务逻辑返回的数据是否合理。</strong></p> <p><strong>所有的测试运行结束以后，会有一个详细的测试报告；</strong></p> <h2 id="_1、简单断言"><a href="#_1、简单断言" class="header-anchor">#</a> 1、简单断言</h2> <p>用来对单个值进行简单的验证。如：</p> <table><thead><tr><th>方法</th> <th>说明</th></tr></thead> <tbody><tr><td>assertEquals</td> <td>判断两个对象或两个原始类型是否相等</td></tr> <tr><td>assertNotEquals</td> <td>判断两个对象或两个原始类型是否不相等</td></tr> <tr><td>assertSame</td> <td>判断两个对象引用是否指向同一个对象</td></tr> <tr><td>assertNotSame</td> <td>判断两个对象引用是否指向不同的对象</td></tr> <tr><td>assertTrue</td> <td>判断给定的布尔值是否为 true</td></tr> <tr><td>assertFalse</td> <td>判断给定的布尔值是否为 false</td></tr> <tr><td>assertNull</td> <td>判断给定的对象引用是否为 null</td></tr> <tr><td>assertNotNull</td> <td>判断给定的对象引用是否不为 null</td></tr></tbody></table> <div class="language-java line-numbers-mode"><pre class="language-java"><code><span class="token annotation punctuation">@Test</span>
+<span class="token annotation punctuation">@DisplayName</span><span class="token punctuation">(</span><span class="token string">&quot;simple assertion&quot;</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">simple</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+     <span class="token function">assertEquals</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">1</span> <span class="token operator">+</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token string">&quot;simple math&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+     <span class="token function">assertNotEquals</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">1</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+     <span class="token function">assertNotSame</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Object</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">Object</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+     <span class="token class-name">Object</span> obj <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Object</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+     <span class="token function">assertSame</span><span class="token punctuation">(</span>obj<span class="token punctuation">,</span> obj<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+     <span class="token function">assertFalse</span><span class="token punctuation">(</span><span class="token number">1</span> <span class="token operator">&gt;</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+     <span class="token function">assertTrue</span><span class="token punctuation">(</span><span class="token number">1</span> <span class="token operator">&lt;</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+     <span class="token function">assertNull</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+     <span class="token function">assertNotNull</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Object</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br></div></div><h2 id="_2、数组断言"><a href="#_2、数组断言" class="header-anchor">#</a> 2、数组断言</h2> <p>通过 assertArrayEquals 方法来判断两个对象或原始类型的数组是否相等</p> <div class="language-java line-numbers-mode"><pre class="language-java"><code><span class="token annotation punctuation">@Test</span>
+<span class="token annotation punctuation">@DisplayName</span><span class="token punctuation">(</span><span class="token string">&quot;array assertion&quot;</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">array</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+ <span class="token function">assertArrayEquals</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">{</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token punctuation">{</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><h2 id="_3、组合断言"><a href="#_3、组合断言" class="header-anchor">#</a> 3、组合断言</h2> <p>assertAll 方法接受多个 org.junit.jupiter.api.Executable 函数式接口的实例作为要验证的断言，可以通过 lambda 表达式很容易的提供这些断言</p> <div class="language-java line-numbers-mode"><pre class="language-java"><code><span class="token annotation punctuation">@Test</span>
+<span class="token annotation punctuation">@DisplayName</span><span class="token punctuation">(</span><span class="token string">&quot;assert all&quot;</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">all</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+ <span class="token function">assertAll</span><span class="token punctuation">(</span><span class="token string">&quot;Math&quot;</span><span class="token punctuation">,</span>
+    <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-&gt;</span> <span class="token function">assertEquals</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">1</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-&gt;</span> <span class="token function">assertTrue</span><span class="token punctuation">(</span><span class="token number">1</span> <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">)</span>
+ <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><h2 id="_4、异常断言"><a href="#_4、异常断言" class="header-anchor">#</a> 4、异常断言</h2> <p>在JUnit4时期，想要测试方法的异常情况时，需要用**@Rule<strong>注解的ExpectedException变量还是比较麻烦的。而JUnit5提供了一种新的断言方式</strong>Assertions.assertThrows()** ,配合函数式编程就可以进行使用。</p> <div class="language-java line-numbers-mode"><pre class="language-java"><code><span class="token annotation punctuation">@Test</span>
+<span class="token annotation punctuation">@DisplayName</span><span class="token punctuation">(</span><span class="token string">&quot;异常测试&quot;</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">exceptionTest</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token class-name">ArithmeticException</span> exception <span class="token operator">=</span> <span class="token class-name">Assertions</span><span class="token punctuation">.</span><span class="token function">assertThrows</span><span class="token punctuation">(</span>
+           <span class="token comment">//扔出断言异常</span>
+            <span class="token class-name">ArithmeticException</span><span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-&gt;</span> <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token number">1</span> <span class="token operator">%</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><h2 id="_5、超时断言"><a href="#_5、超时断言" class="header-anchor">#</a> 5、超时断言</h2> <p>Junit5还提供了<strong>Assertions.assertTimeout()</strong> 为测试方法设置了超时时间</p> <div class="language-java line-numbers-mode"><pre class="language-java"><code><span class="token annotation punctuation">@Test</span>
+<span class="token annotation punctuation">@DisplayName</span><span class="token punctuation">(</span><span class="token string">&quot;超时测试&quot;</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">timeoutTest</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">//如果测试方法时间超过1s将会异常</span>
+    <span class="token class-name">Assertions</span><span class="token punctuation">.</span><span class="token function">assertTimeout</span><span class="token punctuation">(</span><span class="token class-name">Duration</span><span class="token punctuation">.</span><span class="token function">ofMillis</span><span class="token punctuation">(</span><span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-&gt;</span> <span class="token class-name">Thread</span><span class="token punctuation">.</span><span class="token function">sleep</span><span class="token punctuation">(</span><span class="token number">500</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><h2 id="_6、快速失败"><a href="#_6、快速失败" class="header-anchor">#</a> 6、快速失败</h2> <p>通过 fail 方法直接使得测试失败</p> <div class="language-java line-numbers-mode"><pre class="language-java"><code><span class="token annotation punctuation">@Test</span>
+<span class="token annotation punctuation">@DisplayName</span><span class="token punctuation">(</span><span class="token string">&quot;fail&quot;</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">shouldFail</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+ <span class="token function">fail</span><span class="token punctuation">(</span><span class="token string">&quot;This should fail&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><h1 id="前置条件-assumptions"><a href="#前置条件-assumptions" class="header-anchor">#</a> 前置条件（assumptions）</h1> <p>JUnit 5 中的前置条件（<strong>assumptions【假设】</strong>）类似于断言，不同之处在于<strong>不满足的断言会使得测试方法失败</strong>，而不满足的<strong>前置条件只会使得测试方法的执行终止</strong>。前置条件可以看成是测试方法执行的前提，当该前提不满足时，就没有继续执行的必要。</p> <div class="language-java line-numbers-mode"><pre class="language-java"><code><span class="token annotation punctuation">@DisplayName</span><span class="token punctuation">(</span><span class="token string">&quot;前置条件&quot;</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">AssumptionsTest</span> <span class="token punctuation">{</span>
+ <span class="token keyword">private</span> <span class="token keyword">final</span> <span class="token class-name">String</span> environment <span class="token operator">=</span> <span class="token string">&quot;DEV&quot;</span><span class="token punctuation">;</span>
+ 
+ <span class="token annotation punctuation">@Test</span>
+ <span class="token annotation punctuation">@DisplayName</span><span class="token punctuation">(</span><span class="token string">&quot;simple&quot;</span><span class="token punctuation">)</span>
+ <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">simpleAssume</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">assumeTrue</span><span class="token punctuation">(</span><span class="token class-name">Objects</span><span class="token punctuation">.</span><span class="token function">equals</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>environment<span class="token punctuation">,</span> <span class="token string">&quot;DEV&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">assumeFalse</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-&gt;</span> <span class="token class-name">Objects</span><span class="token punctuation">.</span><span class="token function">equals</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>environment<span class="token punctuation">,</span> <span class="token string">&quot;PROD&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+ <span class="token punctuation">}</span>
+ 
+ <span class="token annotation punctuation">@Test</span>
+ <span class="token annotation punctuation">@DisplayName</span><span class="token punctuation">(</span><span class="token string">&quot;assume then do&quot;</span><span class="token punctuation">)</span>
+ <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">assumeThenDo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">assumingThat</span><span class="token punctuation">(</span>
+       <span class="token class-name">Objects</span><span class="token punctuation">.</span><span class="token function">equals</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>environment<span class="token punctuation">,</span> <span class="token string">&quot;DEV&quot;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+       <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-&gt;</span> <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;In DEV&quot;</span><span class="token punctuation">)</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+ <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br></div></div><p>assumeTrue 和 assumFalse 确保给定的条件为 true 或 false，不满足条件会使得测试执行终止。assumingThat 的参数是表示条件的布尔值和对应的 Executable 接口的实现对象。只有条件满足时，Executable 对象才会被执行；当条件不满足时，测试执行并不会终止。</p> <h1 id="嵌套测试"><a href="#嵌套测试" class="header-anchor">#</a> 嵌套测试</h1> <p>JUnit 5 可以通过 Java 中的内部类和@Nested 注解实现嵌套测试，从而可以更好的把相关的测试方法组织在一起。在内部类中可以使用@BeforeEach 和@AfterEach 注解，而且嵌套的层次没有限制。</p> <div class="language-java line-numbers-mode"><pre class="language-java"><code><span class="token annotation punctuation">@DisplayName</span><span class="token punctuation">(</span><span class="token string">&quot;A stack&quot;</span><span class="token punctuation">)</span>
+<span class="token keyword">class</span> <span class="token class-name">TestingAStackDemo</span> <span class="token punctuation">{</span>
+
+    <span class="token class-name">Stack</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Object</span><span class="token punctuation">&gt;</span></span> stack<span class="token punctuation">;</span>
+
+    <span class="token annotation punctuation">@Test</span>
+    <span class="token annotation punctuation">@DisplayName</span><span class="token punctuation">(</span><span class="token string">&quot;is instantiated with new Stack()&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword">void</span> <span class="token function">isInstantiatedWithNew</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">new</span> <span class="token class-name">Stack</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Nested</span>
+    <span class="token annotation punctuation">@DisplayName</span><span class="token punctuation">(</span><span class="token string">&quot;when new&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword">class</span> <span class="token class-name">WhenNew</span> <span class="token punctuation">{</span>
+
+        <span class="token annotation punctuation">@BeforeEach</span>
+        <span class="token keyword">void</span> <span class="token function">createNewStack</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            stack <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Stack</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token annotation punctuation">@Test</span>
+        <span class="token annotation punctuation">@DisplayName</span><span class="token punctuation">(</span><span class="token string">&quot;is empty&quot;</span><span class="token punctuation">)</span>
+        <span class="token keyword">void</span> <span class="token function">isEmpty</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token function">assertTrue</span><span class="token punctuation">(</span>stack<span class="token punctuation">.</span><span class="token function">isEmpty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token annotation punctuation">@Test</span>
+        <span class="token annotation punctuation">@DisplayName</span><span class="token punctuation">(</span><span class="token string">&quot;throws EmptyStackException when popped&quot;</span><span class="token punctuation">)</span>
+        <span class="token keyword">void</span> <span class="token function">throwsExceptionWhenPopped</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token function">assertThrows</span><span class="token punctuation">(</span><span class="token class-name">EmptyStackException</span><span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">,</span> stack<span class="token operator">::</span><span class="token function">pop</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token annotation punctuation">@Test</span>
+        <span class="token annotation punctuation">@DisplayName</span><span class="token punctuation">(</span><span class="token string">&quot;throws EmptyStackException when peeked&quot;</span><span class="token punctuation">)</span>
+        <span class="token keyword">void</span> <span class="token function">throwsExceptionWhenPeeked</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token function">assertThrows</span><span class="token punctuation">(</span><span class="token class-name">EmptyStackException</span><span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">,</span> stack<span class="token operator">::</span><span class="token function">peek</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token annotation punctuation">@Nested</span>
+        <span class="token annotation punctuation">@DisplayName</span><span class="token punctuation">(</span><span class="token string">&quot;after pushing an element&quot;</span><span class="token punctuation">)</span>
+        <span class="token keyword">class</span> <span class="token class-name">AfterPushing</span> <span class="token punctuation">{</span>
+
+            <span class="token class-name">String</span> anElement <span class="token operator">=</span> <span class="token string">&quot;an element&quot;</span><span class="token punctuation">;</span>
+
+            <span class="token annotation punctuation">@BeforeEach</span>
+            <span class="token keyword">void</span> <span class="token function">pushAnElement</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                stack<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>anElement<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+
+            <span class="token annotation punctuation">@Test</span>
+            <span class="token annotation punctuation">@DisplayName</span><span class="token punctuation">(</span><span class="token string">&quot;it is no longer empty&quot;</span><span class="token punctuation">)</span>
+            <span class="token keyword">void</span> <span class="token function">isNotEmpty</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token function">assertFalse</span><span class="token punctuation">(</span>stack<span class="token punctuation">.</span><span class="token function">isEmpty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+
+            <span class="token annotation punctuation">@Test</span>
+            <span class="token annotation punctuation">@DisplayName</span><span class="token punctuation">(</span><span class="token string">&quot;returns the element when popped and is empty&quot;</span><span class="token punctuation">)</span>
+            <span class="token keyword">void</span> <span class="token function">returnElementWhenPopped</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token function">assertEquals</span><span class="token punctuation">(</span>anElement<span class="token punctuation">,</span> stack<span class="token punctuation">.</span><span class="token function">pop</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token function">assertTrue</span><span class="token punctuation">(</span>stack<span class="token punctuation">.</span><span class="token function">isEmpty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+
+            <span class="token annotation punctuation">@Test</span>
+            <span class="token annotation punctuation">@DisplayName</span><span class="token punctuation">(</span><span class="token string">&quot;returns the element when peeked but remains not empty&quot;</span><span class="token punctuation">)</span>
+            <span class="token keyword">void</span> <span class="token function">returnElementWhenPeeked</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token function">assertEquals</span><span class="token punctuation">(</span>anElement<span class="token punctuation">,</span> stack<span class="token punctuation">.</span><span class="token function">peek</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token function">assertFalse</span><span class="token punctuation">(</span>stack<span class="token punctuation">.</span><span class="token function">isEmpty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br></div></div><h1 id="参数化测试"><a href="#参数化测试" class="header-anchor">#</a> 参数化测试</h1> <p>参数化测试是JUnit5很重要的一个新特性，它使得用不同的参数多次运行测试成为了可能，也为我们的单元测试带来许多便利。</p> <p>利用@ValueSource等注解，指定入参，我们将可以使用不同的参数进行多次单元测试，而不需要每新增一个参数就新增一个单元测试，省去了很多冗余代码。</p> <ul><li><p>@ValueSource: 为参数化测试指定入参来源，支持八大基础类以及String类型,Class类型</p> <p>palindromes(String candidate)中candidate的值，会从strings = { &quot;racecar&quot;, &quot;radar&quot;, &quot;able was I ere I saw elba&quot; }中逐一拿取</p> <div class="language-java line-numbers-mode"><pre class="language-java"><code><span class="token annotation punctuation">@DisplayName</span><span class="token punctuation">(</span><span class="token string">&quot;ValueSource&quot;</span><span class="token punctuation">)</span>
+<span class="token annotation punctuation">@ParameterizedTest</span>
+<span class="token annotation punctuation">@ValueSource</span><span class="token punctuation">(</span>strings <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token string">&quot;racecar&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;radar&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;able was I ere I saw elba&quot;</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">void</span> <span class="token function">palindromes</span><span class="token punctuation">(</span><span class="token class-name">String</span> candidate<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>candidate<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+可以写的值有下面这些
+    <span class="token keyword">short</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token function">shorts</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">default</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token function">bytes</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">default</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token function">ints</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">default</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">long</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token function">longs</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">default</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">float</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token function">floats</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">default</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">double</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token function">doubles</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">default</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">char</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token function">chars</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">default</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">boolean</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token function">booleans</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">default</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token function">strings</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">default</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token class-name">Class</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token operator">?</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token function">classes</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">default</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br></div></div></li> <li><p>@NullSource: 表示为参数化测试提供一个null的入参</p></li> <li><p>@EnumSource: 表示为参数化测试提供一个枚举入参</p></li> <li><p>@CsvFileSource：表示读取指定CSV文件内容作为参数化测试入参</p></li> <li><p>@MethodSource：表示读取指定方法的返回值作为参数化测试入参(注意方法返回需要是一个流)</p></li></ul> <p>当然如果参数化测试仅仅只能做到指定普通的入参还达不到让我觉得惊艳的地步。让我真正感到他的强大之处的地方在于他可以支持外部的各类入参。如:CSV,YML,JSON 文件甚至方法的返回值也可以作为入参。只需要去实现ArgumentsProvider接口，任何外部文件都可以作为它的入参。</p> <div class="language-java line-numbers-mode"><pre class="language-java"><code><span class="token annotation punctuation">@ParameterizedTest</span>
+<span class="token annotation punctuation">@ValueSource</span><span class="token punctuation">(</span>strings <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">&quot;one&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;two&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;three&quot;</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token annotation punctuation">@DisplayName</span><span class="token punctuation">(</span><span class="token string">&quot;参数化测试1&quot;</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">parameterizedTest1</span><span class="token punctuation">(</span><span class="token class-name">String</span> string<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>string<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">Assertions</span><span class="token punctuation">.</span><span class="token function">assertTrue</span><span class="token punctuation">(</span><span class="token class-name">StringUtils</span><span class="token punctuation">.</span><span class="token function">isNotBlank</span><span class="token punctuation">(</span>string<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+
+<span class="token annotation punctuation">@ParameterizedTest</span>
+<span class="token annotation punctuation">@MethodSource</span><span class="token punctuation">(</span><span class="token string">&quot;method&quot;</span><span class="token punctuation">)</span>    <span class="token comment">//指定方法名</span>
+<span class="token annotation punctuation">@DisplayName</span><span class="token punctuation">(</span><span class="token string">&quot;方法来源参数&quot;</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">testWithExplicitLocalMethodSource</span><span class="token punctuation">(</span><span class="token class-name">String</span> name<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">Assertions</span><span class="token punctuation">.</span><span class="token function">assertNotNull</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">static</span> <span class="token class-name">Stream</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span></span> <span class="token function">method</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token class-name">Stream</span><span class="token punctuation">.</span><span class="token function">of</span><span class="token punctuation">(</span><span class="token string">&quot;apple&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;banana&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br></div></div><h1 id="迁移指南"><a href="#迁移指南" class="header-anchor">#</a> 迁移指南</h1> <p>在进行迁移的时候需要注意如下的变化：</p> <p>●注解在 org.junit.jupiter.api 包中，断言在 org.junit.jupiter.api.Assertions 类中，前置条件在 org.junit.jupiter.api.Assumptions 类中。</p> <p>●把@Before 和@After 替换成@BeforeEach 和@AfterEach。</p> <p>●把@BeforeClass 和@AfterClass 替换成@BeforeAll 和@AfterAll。</p> <p>●把@Ignore 替换成@Disabled。</p> <p>●把@Category 替换成@Tag。</p> <p>●把@RunWith、@Rule 和@ClassRule 替换成@ExtendWith。</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/pages/SpringBoot/yaml.html" class="prev">
+        yaml使用
+      </a></span> <span class="next"><a href="/pages/SpringBoot/启动原理.html">
+        springboot启动原理分析
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.347fa917.js" defer></script><script src="/assets/js/4.4e440976.js" defer></script><script src="/assets/js/48.f303128c.js" defer></script>
+  </body>
+</html>

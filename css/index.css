@@ -1,0 +1,5 @@
+#app{
+    ::selection {
+        background-color: #d1ff79;
+    }
+}

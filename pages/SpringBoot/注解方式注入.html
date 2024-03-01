@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>使用注解前提 | CtrlCVer</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    <link rel="icon" href="/6.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/2.10.0/github-markdown.min.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <meta name="description" content="孙文豪大魔王">
+    
+    <link rel="preload" href="/assets/css/0.styles.84492279.css" as="style"><link rel="preload" href="/assets/js/app.347fa917.js" as="script"><link rel="preload" href="/assets/js/4.4e440976.js" as="script"><link rel="preload" href="/assets/js/57.24bae8ee.js" as="script"><link rel="prefetch" href="/assets/js/10.1230c4be.js"><link rel="prefetch" href="/assets/js/11.daeaf548.js"><link rel="prefetch" href="/assets/js/12.abede0ae.js"><link rel="prefetch" href="/assets/js/13.cb62a723.js"><link rel="prefetch" href="/assets/js/14.5375bc4a.js"><link rel="prefetch" href="/assets/js/15.ffb73a9c.js"><link rel="prefetch" href="/assets/js/16.6be16dba.js"><link rel="prefetch" href="/assets/js/17.3879182a.js"><link rel="prefetch" href="/assets/js/18.04083c0b.js"><link rel="prefetch" href="/assets/js/19.ee44a025.js"><link rel="prefetch" href="/assets/js/2.3a3bb906.js"><link rel="prefetch" href="/assets/js/20.bdce0031.js"><link rel="prefetch" href="/assets/js/21.b9bf7143.js"><link rel="prefetch" href="/assets/js/22.aadd746b.js"><link rel="prefetch" href="/assets/js/23.d590bbfb.js"><link rel="prefetch" href="/assets/js/24.72023ebd.js"><link rel="prefetch" href="/assets/js/25.dd4e2abc.js"><link rel="prefetch" href="/assets/js/26.d2b37904.js"><link rel="prefetch" href="/assets/js/27.971418ab.js"><link rel="prefetch" href="/assets/js/28.779a0681.js"><link rel="prefetch" href="/assets/js/29.246ef370.js"><link rel="prefetch" href="/assets/js/3.4c8c30ea.js"><link rel="prefetch" href="/assets/js/30.ffc51d63.js"><link rel="prefetch" href="/assets/js/31.6d4fb3a7.js"><link rel="prefetch" href="/assets/js/32.0f4e411c.js"><link rel="prefetch" href="/assets/js/33.11a7d2af.js"><link rel="prefetch" href="/assets/js/34.e7403a40.js"><link rel="prefetch" href="/assets/js/35.92937b0a.js"><link rel="prefetch" href="/assets/js/36.9f52b8c7.js"><link rel="prefetch" href="/assets/js/37.193fb1cc.js"><link rel="prefetch" href="/assets/js/38.33e3fa35.js"><link rel="prefetch" href="/assets/js/39.1b9c5402.js"><link rel="prefetch" href="/assets/js/40.4ae4ec73.js"><link rel="prefetch" href="/assets/js/41.93514908.js"><link rel="prefetch" href="/assets/js/42.79934fb7.js"><link rel="prefetch" href="/assets/js/43.6be9e89a.js"><link rel="prefetch" href="/assets/js/44.cf8d93d5.js"><link rel="prefetch" href="/assets/js/45.89850dfb.js"><link rel="prefetch" href="/assets/js/46.c9bf838d.js"><link rel="prefetch" href="/assets/js/47.d009214c.js"><link rel="prefetch" href="/assets/js/48.f303128c.js"><link rel="prefetch" href="/assets/js/49.a002314e.js"><link rel="prefetch" href="/assets/js/5.baec3451.js"><link rel="prefetch" href="/assets/js/50.bf708037.js"><link rel="prefetch" href="/assets/js/51.a0931ba6.js"><link rel="prefetch" href="/assets/js/52.d828c50a.js"><link rel="prefetch" href="/assets/js/53.319606bc.js"><link rel="prefetch" href="/assets/js/54.45b73705.js"><link rel="prefetch" href="/assets/js/55.19e29602.js"><link rel="prefetch" href="/assets/js/56.70a7339c.js"><link rel="prefetch" href="/assets/js/58.b9e501fa.js"><link rel="prefetch" href="/assets/js/59.5741b163.js"><link rel="prefetch" href="/assets/js/6.faab7e15.js"><link rel="prefetch" href="/assets/js/60.55c05a7e.js"><link rel="prefetch" href="/assets/js/61.66739ddc.js"><link rel="prefetch" href="/assets/js/62.984ff248.js"><link rel="prefetch" href="/assets/js/63.198b0614.js"><link rel="prefetch" href="/assets/js/64.44df42dc.js"><link rel="prefetch" href="/assets/js/65.835f260b.js"><link rel="prefetch" href="/assets/js/66.b01fd1a5.js"><link rel="prefetch" href="/assets/js/67.3e990aa1.js"><link rel="prefetch" href="/assets/js/68.3bff67c3.js"><link rel="prefetch" href="/assets/js/69.c77e5194.js"><link rel="prefetch" href="/assets/js/7.1e0b6ef9.js"><link rel="prefetch" href="/assets/js/70.990cc3f7.js"><link rel="prefetch" href="/assets/js/71.faf1e578.js"><link rel="prefetch" href="/assets/js/72.bf80a7aa.js"><link rel="prefetch" href="/assets/js/73.28855af5.js"><link rel="prefetch" href="/assets/js/74.575cab52.js"><link rel="prefetch" href="/assets/js/75.9fbc678e.js"><link rel="prefetch" href="/assets/js/76.aefd2222.js"><link rel="prefetch" href="/assets/js/77.29024e8c.js"><link rel="prefetch" href="/assets/js/78.1a261541.js"><link rel="prefetch" href="/assets/js/79.7f221adf.js"><link rel="prefetch" href="/assets/js/8.52cec024.js"><link rel="prefetch" href="/assets/js/80.a25bdaa1.js"><link rel="prefetch" href="/assets/js/81.78c287ce.js"><link rel="prefetch" href="/assets/js/9.6965887d.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.84492279.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/2.png" alt="CtrlCVer" class="logo"> <span class="site-name can-hide">CtrlCVer</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据库" class="dropdown-title"><span class="title">数据库</span> <span class="arrow down"></span></button> <button type="button" aria-label="数据库" class="mobile-dropdown-title"><span class="title">数据库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/数据库/MySQL.html" class="nav-link">
+  MySQL
+</a></li><li class="dropdown-item"><!----> <a href="/pages/数据库/Redis.html" class="nav-link">
+  Redis
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Vue" class="dropdown-title"><span class="title">Vue</span> <span class="arrow down"></span></button> <button type="button" aria-label="Vue" class="mobile-dropdown-title"><span class="title">Vue</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/Vue/Vue-loading动态加载.html" class="nav-link">
+  Vue-loading动态加载
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Vue/Vue项目用axios做request封装.html" class="nav-link">
+  Vue项目用axios做request封装
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Vue/前端踩坑之路.html" class="nav-link">
+  前端踩坑之路
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="SpringBoot" class="dropdown-title"><span class="title">SpringBoot</span> <span class="arrow down"></span></button> <button type="button" aria-label="SpringBoot" class="mobile-dropdown-title"><span class="title">SpringBoot</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/aop面向切面编程.html" class="nav-link">
+  aop面向切面编程
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/Cron表达式.html" class="nav-link">
+  Cron表达式
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/issue3.html" class="nav-link">
+  issue3
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/Listener监听器.html" class="nav-link">
+  Listener监听器
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/Mybatis 动态SQL.html" class="nav-link">
+  Mybatis 动态SQL
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/Mybatis.html" class="nav-link">
+  Mybatis
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/mybatis和spring整合.html" class="nav-link">
+  mybatis和spring整合
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/Mybatis缓存机制.html" class="nav-link">
+  Mybatis缓存机制
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/session之 HttpSessionActivation.html" class="nav-link">
+  session之 HttpSessionActivation
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/springboot+vue部署后出现springboot后端部分页面404.html" class="nav-link">
+  springboot+vue部署后出现springboot后端部分页面404
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/springboot.html" class="nav-link">
+  springboot
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/SpringMVC介绍.html" class="nav-link">
+  SpringMVC介绍
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/springmvc重定向和请求转发操作.html" class="nav-link">
+  springmvc重定向和请求转发操作
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/Spring介绍.html" class="nav-link">
+  Spring介绍
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/SSM整合开发.html" class="nav-link">
+  SSM整合开发
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/url-pattern设置.html" class="nav-link">
+  url-pattern设置
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/web开发.html" class="nav-link">
+  web开发
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/yaml.html" class="nav-link">
+  yaml
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/单元测试.html" class="nav-link">
+  单元测试
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/启动原理.html" class="nav-link">
+  启动原理
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/嵌入式servlet服务器.html" class="nav-link">
+  嵌入式servlet服务器
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/异常，拦截器....html" class="nav-link">
+  异常，拦截器...
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/执行流程分析.html" class="nav-link">
+  执行流程分析
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/指标监控.html" class="nav-link">
+  指标监控
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/数据访问.html" class="nav-link">
+  数据访问
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/注意.html" class="nav-link">
+  注意
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/注解.html" class="nav-link">
+  注解
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/注解方式注入.html" class="nav-link">
+  注解方式注入
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/源码分析.html" class="nav-link">
+  源码分析
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/高级特性.html" class="nav-link">
+  高级特性
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="SpringCloud" class="dropdown-title"><span class="title">SpringCloud</span> <span class="arrow down"></span></button> <button type="button" aria-label="SpringCloud" class="mobile-dropdown-title"><span class="title">SpringCloud</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/Eureka.html" class="nav-link">
+  Eureka
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/Gateway.html" class="nav-link">
+  Gateway
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/Hystrix断路器.html" class="nav-link">
+  Hystrix断路器
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/nacos-config.html" class="nav-link">
+  nacos-config
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/nacos.html" class="nav-link">
+  nacos
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/nacos集群和持久化配置.html" class="nav-link">
+  nacos集群和持久化配置
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/OpenFeign ISsue.html" class="nav-link">
+  OpenFeign ISsue
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/OpenFeign-issue.html" class="nav-link">
+  OpenFeign-issue
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/OpenFeign服务接口调用.html" class="nav-link">
+  OpenFeign服务接口调用
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/question.html" class="nav-link">
+  question
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/seata.html" class="nav-link">
+  seata
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/security.html" class="nav-link">
+  security
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/sentinel.html" class="nav-link">
+  sentinel
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/Sentinel实现熔断与限流.html" class="nav-link">
+  Sentinel实现熔断与限流
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/Spring Cloud Ribbon.html" class="nav-link">
+  Spring Cloud Ribbon
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/spring-cloud-stream.html" class="nav-link">
+  spring-cloud-stream
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/stream3.2学习.html" class="nav-link">
+  stream3.2学习
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/zookeeper.html" class="nav-link">
+  zookeeper
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/配置中心.html" class="nav-link">
+  配置中心
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="JVM" class="dropdown-title"><span class="title">JVM</span> <span class="arrow down"></span></button> <button type="button" aria-label="JVM" class="mobile-dropdown-title"><span class="title">JVM</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/JVM/JVM.html" class="nav-link">
+  JVM
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="JUC" class="dropdown-title"><span class="title">JUC</span> <span class="arrow down"></span></button> <button type="button" aria-label="JUC" class="mobile-dropdown-title"><span class="title">JUC</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/JUC/Atomic原子操作类.html" class="nav-link">
+  Atomic原子操作类
+</a></li><li class="dropdown-item"><!----> <a href="/pages/JUC/CAS.html" class="nav-link">
+  CAS
+</a></li><li class="dropdown-item"><!----> <a href="/pages/JUC/Java内存模型JMM.html" class="nav-link">
+  Java内存模型JMM
+</a></li><li class="dropdown-item"><!----> <a href="/pages/JUC/Java对象内存布局和对象头.html" class="nav-link">
+  Java对象内存布局和对象头
+</a></li><li class="dropdown-item"><!----> <a href="/pages/JUC/synchronized.html" class="nav-link">
+  synchronized
+</a></li><li class="dropdown-item"><!----> <a href="/pages/JUC/ThreadLocl.html" class="nav-link">
+  ThreadLocl
+</a></li><li class="dropdown-item"><!----> <a href="/pages/JUC/Thread、ThreadLocal、ThreadLocalMap.html" class="nav-link">
+  Thread、ThreadLocal、ThreadLocalMap
+</a></li><li class="dropdown-item"><!----> <a href="/pages/JUC/volatile.html" class="nav-link">
+  volatile
+</a></li><li class="dropdown-item"><!----> <a href="/pages/JUC/多线程锁.html" class="nav-link">
+  多线程锁
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Project" class="dropdown-title"><span class="title">Project</span> <span class="arrow down"></span></button> <button type="button" aria-label="Project" class="mobile-dropdown-title"><span class="title">Project</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/Project/clash部署至服务器，提供“上网”服务.html" class="nav-link">
+  clash部署至服务器，提供“上网”服务
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Project/Oauth2.html" class="nav-link">
+  Oauth2
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Project/SSE+Flux.html" class="nav-link">
+  SSE+Flux
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Project/Unicloud 阿里云服务器作图床.html" class="nav-link">
+  Unicloud 阿里云服务器作图床
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Project/内网穿透技术初探.html" class="nav-link">
+  内网穿透技术初探
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Project/微信订阅号开发.html" class="nav-link">
+  微信订阅号开发
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="课程" class="dropdown-title"><span class="title">课程</span> <span class="arrow down"></span></button> <button type="button" aria-label="课程" class="mobile-dropdown-title"><span class="title">课程</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/课程/操作系统.html" class="nav-link">
+  操作系统
+</a></li><li class="dropdown-item"><!----> <a href="/pages/课程/计算机组成与原理.html" class="nav-link">
+  计算机组成与原理
+</a></li><li class="dropdown-item"><!----> <a href="/pages/课程/计算机网络.html" class="nav-link">
+  计算机网络
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="机器视觉" class="dropdown-title"><span class="title">机器视觉</span> <span class="arrow down"></span></button> <button type="button" aria-label="机器视觉" class="mobile-dropdown-title"><span class="title">机器视觉</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/机器视觉/RTMPose.html" class="nav-link">
+  RTMPose
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/sunwenhaopro" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据库" class="dropdown-title"><span class="title">数据库</span> <span class="arrow down"></span></button> <button type="button" aria-label="数据库" class="mobile-dropdown-title"><span class="title">数据库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/数据库/MySQL.html" class="nav-link">
+  MySQL
+</a></li><li class="dropdown-item"><!----> <a href="/pages/数据库/Redis.html" class="nav-link">
+  Redis
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Vue" class="dropdown-title"><span class="title">Vue</span> <span class="arrow down"></span></button> <button type="button" aria-label="Vue" class="mobile-dropdown-title"><span class="title">Vue</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/Vue/Vue-loading动态加载.html" class="nav-link">
+  Vue-loading动态加载
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Vue/Vue项目用axios做request封装.html" class="nav-link">
+  Vue项目用axios做request封装
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Vue/前端踩坑之路.html" class="nav-link">
+  前端踩坑之路
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="SpringBoot" class="dropdown-title"><span class="title">SpringBoot</span> <span class="arrow down"></span></button> <button type="button" aria-label="SpringBoot" class="mobile-dropdown-title"><span class="title">SpringBoot</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/aop面向切面编程.html" class="nav-link">
+  aop面向切面编程
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/Cron表达式.html" class="nav-link">
+  Cron表达式
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/issue3.html" class="nav-link">
+  issue3
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/Listener监听器.html" class="nav-link">
+  Listener监听器
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/Mybatis 动态SQL.html" class="nav-link">
+  Mybatis 动态SQL
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/Mybatis.html" class="nav-link">
+  Mybatis
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/mybatis和spring整合.html" class="nav-link">
+  mybatis和spring整合
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/Mybatis缓存机制.html" class="nav-link">
+  Mybatis缓存机制
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/session之 HttpSessionActivation.html" class="nav-link">
+  session之 HttpSessionActivation
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/springboot+vue部署后出现springboot后端部分页面404.html" class="nav-link">
+  springboot+vue部署后出现springboot后端部分页面404
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/springboot.html" class="nav-link">
+  springboot
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/SpringMVC介绍.html" class="nav-link">
+  SpringMVC介绍
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/springmvc重定向和请求转发操作.html" class="nav-link">
+  springmvc重定向和请求转发操作
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/Spring介绍.html" class="nav-link">
+  Spring介绍
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/SSM整合开发.html" class="nav-link">
+  SSM整合开发
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/url-pattern设置.html" class="nav-link">
+  url-pattern设置
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/web开发.html" class="nav-link">
+  web开发
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/yaml.html" class="nav-link">
+  yaml
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/单元测试.html" class="nav-link">
+  单元测试
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/启动原理.html" class="nav-link">
+  启动原理
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/嵌入式servlet服务器.html" class="nav-link">
+  嵌入式servlet服务器
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/异常，拦截器....html" class="nav-link">
+  异常，拦截器...
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/执行流程分析.html" class="nav-link">
+  执行流程分析
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/指标监控.html" class="nav-link">
+  指标监控
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/数据访问.html" class="nav-link">
+  数据访问
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/注意.html" class="nav-link">
+  注意
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/注解.html" class="nav-link">
+  注解
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/注解方式注入.html" class="nav-link">
+  注解方式注入
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/源码分析.html" class="nav-link">
+  源码分析
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/高级特性.html" class="nav-link">
+  高级特性
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="SpringCloud" class="dropdown-title"><span class="title">SpringCloud</span> <span class="arrow down"></span></button> <button type="button" aria-label="SpringCloud" class="mobile-dropdown-title"><span class="title">SpringCloud</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/Eureka.html" class="nav-link">
+  Eureka
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/Gateway.html" class="nav-link">
+  Gateway
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/Hystrix断路器.html" class="nav-link">
+  Hystrix断路器
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/nacos-config.html" class="nav-link">
+  nacos-config
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/nacos.html" class="nav-link">
+  nacos
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/nacos集群和持久化配置.html" class="nav-link">
+  nacos集群和持久化配置
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/OpenFeign ISsue.html" class="nav-link">
+  OpenFeign ISsue
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/OpenFeign-issue.html" class="nav-link">
+  OpenFeign-issue
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/OpenFeign服务接口调用.html" class="nav-link">
+  OpenFeign服务接口调用
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/question.html" class="nav-link">
+  question
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/seata.html" class="nav-link">
+  seata
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/security.html" class="nav-link">
+  security
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/sentinel.html" class="nav-link">
+  sentinel
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/Sentinel实现熔断与限流.html" class="nav-link">
+  Sentinel实现熔断与限流
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/Spring Cloud Ribbon.html" class="nav-link">
+  Spring Cloud Ribbon
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/spring-cloud-stream.html" class="nav-link">
+  spring-cloud-stream
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/stream3.2学习.html" class="nav-link">
+  stream3.2学习
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/zookeeper.html" class="nav-link">
+  zookeeper
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/配置中心.html" class="nav-link">
+  配置中心
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="JVM" class="dropdown-title"><span class="title">JVM</span> <span class="arrow down"></span></button> <button type="button" aria-label="JVM" class="mobile-dropdown-title"><span class="title">JVM</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/JVM/JVM.html" class="nav-link">
+  JVM
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="JUC" class="dropdown-title"><span class="title">JUC</span> <span class="arrow down"></span></button> <button type="button" aria-label="JUC" class="mobile-dropdown-title"><span class="title">JUC</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/JUC/Atomic原子操作类.html" class="nav-link">
+  Atomic原子操作类
+</a></li><li class="dropdown-item"><!----> <a href="/pages/JUC/CAS.html" class="nav-link">
+  CAS
+</a></li><li class="dropdown-item"><!----> <a href="/pages/JUC/Java内存模型JMM.html" class="nav-link">
+  Java内存模型JMM
+</a></li><li class="dropdown-item"><!----> <a href="/pages/JUC/Java对象内存布局和对象头.html" class="nav-link">
+  Java对象内存布局和对象头
+</a></li><li class="dropdown-item"><!----> <a href="/pages/JUC/synchronized.html" class="nav-link">
+  synchronized
+</a></li><li class="dropdown-item"><!----> <a href="/pages/JUC/ThreadLocl.html" class="nav-link">
+  ThreadLocl
+</a></li><li class="dropdown-item"><!----> <a href="/pages/JUC/Thread、ThreadLocal、ThreadLocalMap.html" class="nav-link">
+  Thread、ThreadLocal、ThreadLocalMap
+</a></li><li class="dropdown-item"><!----> <a href="/pages/JUC/volatile.html" class="nav-link">
+  volatile
+</a></li><li class="dropdown-item"><!----> <a href="/pages/JUC/多线程锁.html" class="nav-link">
+  多线程锁
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Project" class="dropdown-title"><span class="title">Project</span> <span class="arrow down"></span></button> <button type="button" aria-label="Project" class="mobile-dropdown-title"><span class="title">Project</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/Project/clash部署至服务器，提供“上网”服务.html" class="nav-link">
+  clash部署至服务器，提供“上网”服务
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Project/Oauth2.html" class="nav-link">
+  Oauth2
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Project/SSE+Flux.html" class="nav-link">
+  SSE+Flux
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Project/Unicloud 阿里云服务器作图床.html" class="nav-link">
+  Unicloud 阿里云服务器作图床
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Project/内网穿透技术初探.html" class="nav-link">
+  内网穿透技术初探
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Project/微信订阅号开发.html" class="nav-link">
+  微信订阅号开发
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="课程" class="dropdown-title"><span class="title">课程</span> <span class="arrow down"></span></button> <button type="button" aria-label="课程" class="mobile-dropdown-title"><span class="title">课程</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/课程/操作系统.html" class="nav-link">
+  操作系统
+</a></li><li class="dropdown-item"><!----> <a href="/pages/课程/计算机组成与原理.html" class="nav-link">
+  计算机组成与原理
+</a></li><li class="dropdown-item"><!----> <a href="/pages/课程/计算机网络.html" class="nav-link">
+  计算机网络
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="机器视觉" class="dropdown-title"><span class="title">机器视觉</span> <span class="arrow down"></span></button> <button type="button" aria-label="机器视觉" class="mobile-dropdown-title"><span class="title">机器视觉</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/机器视觉/RTMPose.html" class="nav-link">
+  RTMPose
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/sunwenhaopro" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/pages/SpringBoot/aop面向切面编程.html" class="sidebar-link">aop介绍</a></li><li><a href="/pages/SpringBoot/Cron表达式.html" class="sidebar-link">Cron表达式</a></li><li><a href="/pages/SpringBoot/issue3.html" class="sidebar-link">创建SpringApplicationRunListener监听器失败</a></li><li><a href="/pages/SpringBoot/Listener监听器.html" class="sidebar-link">什么叫监听器</a></li><li><a href="/pages/SpringBoot/Mybatis 动态SQL.html" class="sidebar-link">Mybatis 动态SQL</a></li><li><a href="/pages/SpringBoot/Mybatis.html" class="sidebar-link">Mybatis</a></li><li><a href="/pages/SpringBoot/mybatis和spring整合.html" class="sidebar-link">mybatis和spring整合开发</a></li><li><a href="/pages/SpringBoot/Mybatis缓存机制.html" class="sidebar-link">MyBatis|缓存机制</a></li><li><a href="/pages/SpringBoot/session之 HttpSessionActivation.html" class="sidebar-link">session之 HttpSessionActivation</a></li><li><a href="/pages/SpringBoot/springboot+vue部署后出现springboot后端部分页面404.html" class="sidebar-link">springboot+vue部署后出现springboot后端部分页面404</a></li><li><a href="/pages/SpringBoot/springboot.html" class="sidebar-link">自定义文件上传路径和访问路径映射（等同于设置静态资源路径）</a></li><li><a href="/pages/SpringBoot/SpringMVC介绍.html" class="sidebar-link">spring mvc介绍</a></li><li><a href="/pages/SpringBoot/springmvc重定向和请求转发操作.html" class="sidebar-link">重定向和请求转发操作</a></li><li><a href="/pages/SpringBoot/Spring介绍.html" class="sidebar-link">spring介绍</a></li><li><a href="/pages/SpringBoot/SSM整合开发.html" class="sidebar-link">SSM整合开发</a></li><li><a href="/pages/SpringBoot/url-pattern设置.html" class="sidebar-link">/pages/SpringBoot/url-pattern设置.html</a></li><li><a href="/pages/SpringBoot/web开发.html" class="sidebar-link">springboot web开发</a></li><li><a href="/pages/SpringBoot/yaml.html" class="sidebar-link">yaml使用</a></li><li><a href="/pages/SpringBoot/单元测试.html" class="sidebar-link">springboot单元测试</a></li><li><a href="/pages/SpringBoot/启动原理.html" class="sidebar-link">springboot启动原理分析</a></li><li><a href="/pages/SpringBoot/嵌入式servlet服务器.html" class="sidebar-link">嵌入式servlet服务器</a></li><li><a href="/pages/SpringBoot/异常，拦截器....html" class="sidebar-link">异常处理</a></li><li><a href="/pages/SpringBoot/执行流程分析.html" class="sidebar-link">执行流程图</a></li><li><a href="/pages/SpringBoot/指标监控.html" class="sidebar-link">指标监控</a></li><li><a href="/pages/SpringBoot/数据访问.html" class="sidebar-link">spring boot数据访问</a></li><li><a href="/pages/SpringBoot/注意.html" class="sidebar-link">spring boot 注意点</a></li><li><a href="/pages/SpringBoot/注解.html" class="sidebar-link">spring boot注解</a></li><li><a href="/pages/SpringBoot/注解方式注入.html" class="active sidebar-link">使用注解前提</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/pages/SpringBoot/注解方式注入.html#步骤" class="sidebar-link">步骤</a></li><li class="sidebar-sub-header"><a href="/pages/SpringBoot/注解方式注入.html#测试" class="sidebar-link">测试</a></li><li class="sidebar-sub-header"><a href="/pages/SpringBoot/注解方式注入.html#注解区别" class="sidebar-link">注解区别</a></li><li class="sidebar-sub-header"><a href="/pages/SpringBoot/注解方式注入.html#使用注解的几种方式" class="sidebar-link">使用注解的几种方式</a></li><li class="sidebar-sub-header"><a href="/pages/SpringBoot/注解方式注入.html#扫描多个包的方式" class="sidebar-link">扫描多个包的方式</a></li><li class="sidebar-sub-header"><a href="/pages/SpringBoot/注解方式注入.html#对属性的赋值操作" class="sidebar-link">对属性的赋值操作</a></li><li class="sidebar-sub-header"><a href="/pages/SpringBoot/注解方式注入.html#对引用类型进行赋值操作" class="sidebar-link">对引用类型进行赋值操作</a></li><li class="sidebar-sub-header"><a href="/pages/SpringBoot/注解方式注入.html#使用配置文件和-注解配合使用" class="sidebar-link">使用配置文件和$，注解配合使用</a></li><li class="sidebar-sub-header"><a href="/pages/SpringBoot/注解方式注入.html#配置文件和注解注入的选择" class="sidebar-link">配置文件和注解注入的选择</a></li></ul></li><li><a href="/pages/SpringBoot/源码分析.html" class="sidebar-link">SpringApplication.run()阶段</a></li><li><a href="/pages/SpringBoot/高级特性.html" class="sidebar-link">spring boot高级特性</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="使用注解前提"><a href="#使用注解前提" class="header-anchor">#</a> 使用注解前提</h1> <p>如果需要使用注解的方式，那么就必须要用到 <code>spring=aop</code>这个包，否则的话，不能使用注解，但是使用maven，导入<code>spring-context</code>依赖的时候，就会自动导入这个包</p> <h1 id="使用"><a href="#使用" class="header-anchor">#</a> 使用</h1> <h2 id="步骤"><a href="#步骤" class="header-anchor">#</a> 步骤</h2> <ul><li>加入maven依赖，spring-context,在加入这个依赖的时候，会间接的加入spring-aop依赖，这个依赖是注解必须的</li> <li>在类中使用spring注解，有多个不同功能的注解</li> <li>在spring的配置文件中，加入一个组件扫描器的标签，说明注解在你的项目中的位置</li></ul> <ol><li><p>使用注解</p> <p>在这个类的上，加上<code>@Component</code>注解</p> <div class="language-java line-numbers-mode"><pre class="language-java"><code><span class="token annotation punctuation">@Component</span><span class="token punctuation">(</span>value <span class="token operator">=</span> <span class="token string">&quot;zs&quot;</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Student</span> <span class="token punctuation">{</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> name<span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token keyword">int</span> age<span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>这个注解的作用，相当于是创建对象的作用，所以上面的注解，就相当于创建了一个zs的对象，这个注解的值，是一个唯一值，这个注解相当于</p> <p><code>&lt;bean id=&quot;myStudent&quot; class=&quot;com.bjpowernode.ba01.Student&quot; /&gt;</code></p></li> <li><p>创建组件扫描器</p> <p>如果使用了注解之后，一定要使用组件扫描器，需要创建一个配置文件</p> <p><code>&lt;context:component-scan base-package=&quot;vin.cco.domain&quot; /&gt;</code></p> <p>其中，<code>base-package=&quot;vin.cco.domain&quot;</code>这个是一个包名路径，不是类的全限定名称</p> <p>其工作原理是，添加了这个标签之后，spring就会自动扫描这个包中，和子包中的所有的类，会在这些类中寻找有这个注解的类，如果有，则会创建对象，或者是给属性赋值</p> <p>加入这个组件扫描器之后，配置文件会有什么变化</p> <ol><li>会自动的加上一个约束文件（idea会自动加上）</li> <li>给约束文件，起一个别名空间</li></ol> <p>最初spring配置文件中的代码为</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;beans xmlns=&quot;http://www.springframework.org/schema/beans&quot;
+       xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+       xsi:schemaLocation=&quot;http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd&quot;&gt;
+
+&lt;/beans&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>但是加上这个组件扫描器之后，idea就会自动加上一个约束</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;beans xmlns=&quot;http://www.springframework.org/schema/beans&quot;
+       xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+       xmlns:context=&quot;http://www.springframework.org/schema/context&quot;
+       xsi:schemaLocation=&quot;http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd&quot;&gt;
+    &lt;context:component-scan base-package=&quot;vin.cco.domain&quot; /&gt;
+&lt;/beans&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div></li></ol> <h2 id="测试"><a href="#测试" class="header-anchor">#</a> 测试</h2> <div class="language-java line-numbers-mode"><pre class="language-java"><code><span class="token comment">//这是一个注解，相当于创建一个对象的功能 这个值是唯一的，</span>
+<span class="token annotation punctuation">@Component</span><span class="token punctuation">(</span>value <span class="token operator">=</span> <span class="token string">&quot;zs&quot;</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Student</span> <span class="token punctuation">{</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> name<span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token keyword">int</span> age<span class="token punctuation">;</span>
+
+    <span class="token keyword">public</span> <span class="token class-name">String</span> getName <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> name<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">void</span> setName <span class="token punctuation">(</span><span class="token class-name">String</span> name<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">int</span> getAge <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> age<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">void</span> setAge <span class="token punctuation">(</span><span class="token keyword">int</span> age<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>age <span class="token operator">=</span> age<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token class-name">String</span> toString <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token string">&quot;Student{&quot;</span> <span class="token operator">+</span> <span class="token string">&quot;name='&quot;</span> <span class="token operator">+</span> name <span class="token operator">+</span> <span class="token char">'\''</span> <span class="token operator">+</span> <span class="token string">&quot;, age=&quot;</span> <span class="token operator">+</span> age <span class="token operator">+</span> <span class="token char">'}'</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br></div></div><p>测试类</p> <div class="language-java line-numbers-mode"><pre class="language-java"><code><span class="token annotation punctuation">@Test</span>
+<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">Exception</span> <span class="token punctuation">{</span>
+    <span class="token class-name">String</span> path <span class="token operator">=</span> <span class="token string">&quot;anno1.xml&quot;</span><span class="token punctuation">;</span>
+    <span class="token class-name">ApplicationContext</span> context <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ClassPathXmlApplicationContext</span><span class="token punctuation">(</span>path<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token class-name">Student</span> zs <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token class-name">Student</span><span class="token punctuation">)</span> context<span class="token punctuation">.</span><span class="token function">getBean</span><span class="token punctuation">(</span><span class="token string">&quot;zs&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>zs<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><p>成功输出，这个的<code>context.getBean(&quot;zs&quot;);</code>参数的值，就是注解中的那个value值</p> <h2 id="注解区别"><a href="#注解区别" class="header-anchor">#</a> 注解区别</h2> <p>除了<code>Component</code>能够创建对象之外，还有几个注解，他们也能创建对象，但是他们之间的功能又存在不同，</p> <ul><li><p><code>@Repository</code>（用在持久层类的上面） : 放在dao的实现类上面，必须要放在实现类上面，因为接口是不能够进行创建对象的</p> <p>表示创建dao对象，dao对象是能访问数据库的。</p></li> <li><p><code>@Service</code>(用在业务层类的上面)：放在service的实现类上面，</p> <p>创建service对象，service对象是做业务处理，可以有事务等功能的。</p></li> <li><p><code>@Controller</code>(用在控制器的上面)：放在控制器（处理器）类的上面，创建控制器对象的，</p> <p>控制器对象，能够接受用户提交的参数，显示请求的处理结果。</p></li></ul> <p>@Repository，@Service，@Controller是给项目的对象分层的。</p> <p>他们之间虽然都是用于创建对象，但是他们之间的功能并不是一样的，各有各的功能</p> <p>那么什么时候使用@Component，先看他有没有mvc三层结构的功能，如果都没有的话，那么我们就使用@component进行对象的创建</p> <h2 id="使用注解的几种方式"><a href="#使用注解的几种方式" class="header-anchor">#</a> 使用注解的几种方式</h2> <p>因为@component注解中，只有一个value，所以我们可以省略value不写<code>@Component(&quot;zs&quot;)</code></p> <p>也可以直接写<code>@Component()</code>，但是如果是这种的话，那么<code>context.getBean(&quot;student&quot;)</code>就需要使这个类名的首字母小写</p> <h2 id="扫描多个包的方式"><a href="#扫描多个包的方式" class="header-anchor">#</a> 扫描多个包的方式</h2> <ul><li><p>使用多个<code>&lt;context:component-scan base-package=&quot;vin.cco.domain&quot; /&gt;</code>标签，这个标签可以使用多次</p></li> <li><p>使用分号<code>;</code>或者逗号<code>,</code>进行分割，这种方式，也可以扫描多个包</p> <p><code>&lt;context:component-scan base-package=&quot;vin.cco.domain;vin.cco.domain1&quot; /&gt;</code></p></li> <li><p>使用多个包共同的父包</p> <p><img src="https://picture.xcye.xyz/image-20210519205239883.png?x-oss-process=style/pictureProcess1" alt=""></p> <p><code>&lt;context:component-scan base-package=&quot;vin&quot; /&gt;</code></p> <p>但是这种方式的话，不是很推荐使用，因为可能这个vin包中，含有很多个子包，那么在启动程序的时候，加载资源花费的时间，就会变得非常多</p></li></ul> <h2 id="对属性的赋值操作"><a href="#对属性的赋值操作" class="header-anchor">#</a> 对属性的赋值操作</h2> <p>使用注解<code>@Value</code>对属性进行赋值的两种操作</p> <ul><li><p>在属性名上使用，<code>这种方式，不需要有set方法，推荐使用</code></p> <div class="language-java line-numbers-mode"><pre class="language-java"><code><span class="token comment">//@Value(&quot;chuchen&quot;)</span>
+<span class="token keyword">private</span> <span class="token class-name">String</span> name<span class="token punctuation">;</span>
+
+<span class="token comment">//@Value(&quot;20&quot;)</span>
+<span class="token keyword">private</span> <span class="token keyword">int</span> age<span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div></li> <li><p>在set方法上使用，<code>原理是调用set方法进行赋值，所以如果此set方法中，还含有其他的代码块的话，也会执行，不太推荐使用</code></p> <div class="language-java line-numbers-mode"><pre class="language-java"><code><span class="token annotation punctuation">@Value</span><span class="token punctuation">(</span><span class="token string">&quot;qsyyke&quot;</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">void</span> setName <span class="token punctuation">(</span><span class="token class-name">String</span> name<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token annotation punctuation">@Value</span><span class="token punctuation">(</span><span class="token string">&quot;20&quot;</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">void</span> setAge <span class="token punctuation">(</span><span class="token keyword">int</span> age<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;chuchen blog&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>age <span class="token operator">=</span> age<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div></li></ul> <h2 id="对引用类型进行赋值操作"><a href="#对引用类型进行赋值操作" class="header-anchor">#</a> 对引用类型进行赋值操作</h2> <p>使用<code>@Autowired()</code>注解对引用类型进行赋值操作，对引用类型进行赋值操作，不能使用<code>@Value</code>注解进行，因为这个注解中，传入的是一个String类型，只能对int，String等赋值，对引用赋值，需要使用<code>@Autowired()</code></p> <p>同样也是有两种写法，在属性上面，在set方法上面</p> <p>但是推荐在属性上面进行赋值操作</p> <div class="language-java line-numbers-mode"><pre class="language-java"><code><span class="token annotation punctuation">@Component</span><span class="token punctuation">(</span><span class="token string">&quot;bs&quot;</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">School</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Value</span><span class="token punctuation">(</span><span class="token string">&quot;保山学院&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> name<span class="token punctuation">;</span>
+    <span class="token annotation punctuation">@Value</span><span class="token punctuation">(</span><span class="token string">&quot;云南保山&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> address<span class="token punctuation">;</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token class-name">String</span> toString <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token string">&quot;School{&quot;</span> <span class="token operator">+</span> <span class="token string">&quot;name='&quot;</span> <span class="token operator">+</span> name <span class="token operator">+</span> <span class="token char">'\''</span> <span class="token operator">+</span> <span class="token string">&quot;, address='&quot;</span> <span class="token operator">+</span> address <span class="token operator">+</span> <span class="token char">'\''</span> <span class="token operator">+</span> <span class="token char">'}'</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><div class="language-java line-numbers-mode"><pre class="language-java"><code><span class="token annotation punctuation">@Component</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Student</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Value</span><span class="token punctuation">(</span><span class="token string">&quot;初尘&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> name<span class="token punctuation">;</span>
+    <span class="token annotation punctuation">@Value</span><span class="token punctuation">(</span><span class="token string">&quot;21&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword">private</span> <span class="token keyword">int</span> age<span class="token punctuation">;</span>
+
+    <span class="token annotation punctuation">@Autowired</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">private</span> <span class="token class-name">School</span> school<span class="token punctuation">;</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token class-name">String</span> toString <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token string">&quot;Student{&quot;</span> <span class="token operator">+</span> <span class="token string">&quot;name='&quot;</span> <span class="token operator">+</span> name <span class="token operator">+</span> <span class="token char">'\''</span> <span class="token operator">+</span> <span class="token string">&quot;, age=&quot;</span> <span class="token operator">+</span> age <span class="token operator">+</span> <span class="token string">&quot;, school=&quot;</span> <span class="token operator">+</span> school <span class="token operator">+</span> <span class="token char">'}'</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br></div></div><p>成功输出</p> <p><code>@Autowired()</code>注解参数中，只有一个Boolean类型的参数，</p> <p><code>boolean required() default true;</code>，默认就是为true，不需要写，原理就是使用自动注入的方式，使用byType或者是byName</p> <p>也可以不用使用注解方式进行school对象的创建，也可以使用配置文件，进行对象的创建</p> <p><code>&lt;bean id=&quot;bs&quot; class=&quot;vin.cco.anno3.School&quot;&gt;&lt;/bean&gt;</code>同样也可以达到效果</p> <p>使用上面这种方式进行引用赋值，是使用<code>byType</code>，但是如果需要使用<code>byName</code>，那么就需要在加上一个注解</p> <div class="language-java line-numbers-mode"><pre class="language-java"><code><span class="token annotation punctuation">@Qualifier</span><span class="token punctuation">(</span><span class="token string">&quot;bs&quot;</span><span class="token punctuation">)</span>
+<span class="token annotation punctuation">@Autowired</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">private</span> <span class="token class-name">School</span> school<span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>原理，在创建这个对象的时候，就会去寻找，对象School，并且这个对象的名字为bs的对象，如果没有找到，那么就会报错，这种方式就是通过byName进行赋值</p> <div class="language-java line-numbers-mode"><pre class="language-java"><code><span class="token annotation punctuation">@Component</span><span class="token punctuation">(</span><span class="token string">&quot;bs&quot;</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">School</span> <span class="token punctuation">{</span>
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p><code>Autowired</code>注解参数的使用</p> <p>假如，我们使用byName进行引用的赋值操作，但是<code>@Qualifier(&quot;bs&quot;)@Autowired()</code>的名称写错了，如果<code>@Autowired(required = true)</code>，那么就会报错，因为为true，就表示，会去寻找，找不到就报错</p> <p>但是如果是<code>@Autowired(required = false)</code>，当找不到的时候，就会为这个引用赋值一个null值</p> <p>但是推荐使用true，因为尽管启动的时候，程序发生错误，但是我们还可以进行调试</p> <p>对引用属性进行赋值，还可以使用jdk提供的注解进行<code>@Resource</code>，但是这个注解，在jdk11中，就不支持了</p> <p>这个默认是使用byName进行注入的，但是如果使用这个名字，没有找到，就会使用byType进行赋值</p> <h2 id="使用配置文件和-注解配合使用"><a href="#使用配置文件和-注解配合使用" class="header-anchor">#</a> 使用配置文件和$，注解配合使用</h2> <p>我们也可以将参数的值，写入配置文件properties中，在注解中，使用${名称}方式进行属性的赋值操作</p> <p>使用步骤</p> <ol><li>定义配置文件</li> <li>在springxml文件中，加载这个配置文件</li> <li>在注解中<code>@Value(&quot;${名称})</code>进行属性的赋值</li></ol> <div class="language-properties line-numbers-mode"><pre class="language-properties"><code><span class="token key attr-name">name</span><span class="token punctuation">=</span><span class="token value attr-value">chsdfuchen</span>
+<span class="token key attr-name">age</span><span class="token punctuation">=</span><span class="token value attr-value">199</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><div class="language- line-numbers-mode"><pre class="language-text"><code>&lt;context:component-scan base-package=&quot;vin.cco.anno3&quot; /&gt;
+&lt;!--&lt;bean id=&quot;bs&quot; class=&quot;vin.cco.anno3.School&quot;&gt;&lt;/bean&gt;--&gt;
+&lt;context:property-placeholder location=&quot;value.properties&quot; /&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>在注解中使用</p> <div class="language-java line-numbers-mode"><pre class="language-java"><code><span class="token annotation punctuation">@Value</span><span class="token punctuation">(</span><span class="token string">&quot;${name}&quot;</span><span class="token punctuation">)</span>
+<span class="token keyword">private</span> <span class="token class-name">String</span> name<span class="token punctuation">;</span>
+
+<span class="token annotation punctuation">@Value</span><span class="token punctuation">(</span><span class="token string">&quot;${age}&quot;</span><span class="token punctuation">)</span>
+<span class="token keyword">private</span> <span class="token keyword">int</span> age<span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>成功输出，<code>感觉使用配置文件进行传值的方式，会比较方便</code></p> <h2 id="配置文件和注解注入的选择"><a href="#配置文件和注解注入的选择" class="header-anchor">#</a> 配置文件和注解注入的选择</h2> <p>在使用配置文件和注解中，该如何选择呢，现在很多时候，使用的是注解的方式，但是也并不是配置文件就不行，最好的就是他们之间共同配合使用</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/pages/SpringBoot/注解.html" class="prev">
+        spring boot注解
+      </a></span> <span class="next"><a href="/pages/SpringBoot/源码分析.html">
+        SpringApplication.run()阶段
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.347fa917.js" defer></script><script src="/assets/js/4.4e440976.js" defer></script><script src="/assets/js/57.24bae8ee.js" defer></script>
+  </body>
+</html>

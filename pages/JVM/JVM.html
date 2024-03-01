@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>JVM | CtrlCVer</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    <link rel="icon" href="/6.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/2.10.0/github-markdown.min.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <meta name="description" content="孙文豪大魔王">
+    
+    <link rel="preload" href="/assets/css/0.styles.84492279.css" as="style"><link rel="preload" href="/assets/js/app.347fa917.js" as="script"><link rel="preload" href="/assets/js/4.4e440976.js" as="script"><link rel="preload" href="/assets/js/5.baec3451.js" as="script"><link rel="prefetch" href="/assets/js/10.1230c4be.js"><link rel="prefetch" href="/assets/js/11.daeaf548.js"><link rel="prefetch" href="/assets/js/12.abede0ae.js"><link rel="prefetch" href="/assets/js/13.cb62a723.js"><link rel="prefetch" href="/assets/js/14.5375bc4a.js"><link rel="prefetch" href="/assets/js/15.ffb73a9c.js"><link rel="prefetch" href="/assets/js/16.6be16dba.js"><link rel="prefetch" href="/assets/js/17.3879182a.js"><link rel="prefetch" href="/assets/js/18.04083c0b.js"><link rel="prefetch" href="/assets/js/19.ee44a025.js"><link rel="prefetch" href="/assets/js/2.3a3bb906.js"><link rel="prefetch" href="/assets/js/20.bdce0031.js"><link rel="prefetch" href="/assets/js/21.b9bf7143.js"><link rel="prefetch" href="/assets/js/22.aadd746b.js"><link rel="prefetch" href="/assets/js/23.d590bbfb.js"><link rel="prefetch" href="/assets/js/24.72023ebd.js"><link rel="prefetch" href="/assets/js/25.dd4e2abc.js"><link rel="prefetch" href="/assets/js/26.d2b37904.js"><link rel="prefetch" href="/assets/js/27.971418ab.js"><link rel="prefetch" href="/assets/js/28.779a0681.js"><link rel="prefetch" href="/assets/js/29.246ef370.js"><link rel="prefetch" href="/assets/js/3.4c8c30ea.js"><link rel="prefetch" href="/assets/js/30.ffc51d63.js"><link rel="prefetch" href="/assets/js/31.6d4fb3a7.js"><link rel="prefetch" href="/assets/js/32.0f4e411c.js"><link rel="prefetch" href="/assets/js/33.11a7d2af.js"><link rel="prefetch" href="/assets/js/34.e7403a40.js"><link rel="prefetch" href="/assets/js/35.92937b0a.js"><link rel="prefetch" href="/assets/js/36.9f52b8c7.js"><link rel="prefetch" href="/assets/js/37.193fb1cc.js"><link rel="prefetch" href="/assets/js/38.33e3fa35.js"><link rel="prefetch" href="/assets/js/39.1b9c5402.js"><link rel="prefetch" href="/assets/js/40.4ae4ec73.js"><link rel="prefetch" href="/assets/js/41.93514908.js"><link rel="prefetch" href="/assets/js/42.79934fb7.js"><link rel="prefetch" href="/assets/js/43.6be9e89a.js"><link rel="prefetch" href="/assets/js/44.cf8d93d5.js"><link rel="prefetch" href="/assets/js/45.89850dfb.js"><link rel="prefetch" href="/assets/js/46.c9bf838d.js"><link rel="prefetch" href="/assets/js/47.d009214c.js"><link rel="prefetch" href="/assets/js/48.f303128c.js"><link rel="prefetch" href="/assets/js/49.a002314e.js"><link rel="prefetch" href="/assets/js/50.bf708037.js"><link rel="prefetch" href="/assets/js/51.a0931ba6.js"><link rel="prefetch" href="/assets/js/52.d828c50a.js"><link rel="prefetch" href="/assets/js/53.319606bc.js"><link rel="prefetch" href="/assets/js/54.45b73705.js"><link rel="prefetch" href="/assets/js/55.19e29602.js"><link rel="prefetch" href="/assets/js/56.70a7339c.js"><link rel="prefetch" href="/assets/js/57.24bae8ee.js"><link rel="prefetch" href="/assets/js/58.b9e501fa.js"><link rel="prefetch" href="/assets/js/59.5741b163.js"><link rel="prefetch" href="/assets/js/6.faab7e15.js"><link rel="prefetch" href="/assets/js/60.55c05a7e.js"><link rel="prefetch" href="/assets/js/61.66739ddc.js"><link rel="prefetch" href="/assets/js/62.984ff248.js"><link rel="prefetch" href="/assets/js/63.198b0614.js"><link rel="prefetch" href="/assets/js/64.44df42dc.js"><link rel="prefetch" href="/assets/js/65.835f260b.js"><link rel="prefetch" href="/assets/js/66.b01fd1a5.js"><link rel="prefetch" href="/assets/js/67.3e990aa1.js"><link rel="prefetch" href="/assets/js/68.3bff67c3.js"><link rel="prefetch" href="/assets/js/69.c77e5194.js"><link rel="prefetch" href="/assets/js/7.1e0b6ef9.js"><link rel="prefetch" href="/assets/js/70.990cc3f7.js"><link rel="prefetch" href="/assets/js/71.faf1e578.js"><link rel="prefetch" href="/assets/js/72.bf80a7aa.js"><link rel="prefetch" href="/assets/js/73.28855af5.js"><link rel="prefetch" href="/assets/js/74.575cab52.js"><link rel="prefetch" href="/assets/js/75.9fbc678e.js"><link rel="prefetch" href="/assets/js/76.aefd2222.js"><link rel="prefetch" href="/assets/js/77.29024e8c.js"><link rel="prefetch" href="/assets/js/78.1a261541.js"><link rel="prefetch" href="/assets/js/79.7f221adf.js"><link rel="prefetch" href="/assets/js/8.52cec024.js"><link rel="prefetch" href="/assets/js/80.a25bdaa1.js"><link rel="prefetch" href="/assets/js/81.78c287ce.js"><link rel="prefetch" href="/assets/js/9.6965887d.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.84492279.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/2.png" alt="CtrlCVer" class="logo"> <span class="site-name can-hide">CtrlCVer</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据库" class="dropdown-title"><span class="title">数据库</span> <span class="arrow down"></span></button> <button type="button" aria-label="数据库" class="mobile-dropdown-title"><span class="title">数据库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/数据库/MySQL.html" class="nav-link">
+  MySQL
+</a></li><li class="dropdown-item"><!----> <a href="/pages/数据库/Redis.html" class="nav-link">
+  Redis
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Vue" class="dropdown-title"><span class="title">Vue</span> <span class="arrow down"></span></button> <button type="button" aria-label="Vue" class="mobile-dropdown-title"><span class="title">Vue</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/Vue/Vue-loading动态加载.html" class="nav-link">
+  Vue-loading动态加载
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Vue/Vue项目用axios做request封装.html" class="nav-link">
+  Vue项目用axios做request封装
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Vue/前端踩坑之路.html" class="nav-link">
+  前端踩坑之路
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="SpringBoot" class="dropdown-title"><span class="title">SpringBoot</span> <span class="arrow down"></span></button> <button type="button" aria-label="SpringBoot" class="mobile-dropdown-title"><span class="title">SpringBoot</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/aop面向切面编程.html" class="nav-link">
+  aop面向切面编程
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/Cron表达式.html" class="nav-link">
+  Cron表达式
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/issue3.html" class="nav-link">
+  issue3
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/Listener监听器.html" class="nav-link">
+  Listener监听器
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/Mybatis 动态SQL.html" class="nav-link">
+  Mybatis 动态SQL
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/Mybatis.html" class="nav-link">
+  Mybatis
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/mybatis和spring整合.html" class="nav-link">
+  mybatis和spring整合
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/Mybatis缓存机制.html" class="nav-link">
+  Mybatis缓存机制
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/session之 HttpSessionActivation.html" class="nav-link">
+  session之 HttpSessionActivation
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/springboot+vue部署后出现springboot后端部分页面404.html" class="nav-link">
+  springboot+vue部署后出现springboot后端部分页面404
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/springboot.html" class="nav-link">
+  springboot
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/SpringMVC介绍.html" class="nav-link">
+  SpringMVC介绍
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/springmvc重定向和请求转发操作.html" class="nav-link">
+  springmvc重定向和请求转发操作
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/Spring介绍.html" class="nav-link">
+  Spring介绍
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/SSM整合开发.html" class="nav-link">
+  SSM整合开发
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/url-pattern设置.html" class="nav-link">
+  url-pattern设置
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/web开发.html" class="nav-link">
+  web开发
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/yaml.html" class="nav-link">
+  yaml
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/单元测试.html" class="nav-link">
+  单元测试
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/启动原理.html" class="nav-link">
+  启动原理
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/嵌入式servlet服务器.html" class="nav-link">
+  嵌入式servlet服务器
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/异常，拦截器....html" class="nav-link">
+  异常，拦截器...
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/执行流程分析.html" class="nav-link">
+  执行流程分析
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/指标监控.html" class="nav-link">
+  指标监控
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/数据访问.html" class="nav-link">
+  数据访问
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/注意.html" class="nav-link">
+  注意
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/注解.html" class="nav-link">
+  注解
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/注解方式注入.html" class="nav-link">
+  注解方式注入
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/源码分析.html" class="nav-link">
+  源码分析
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/高级特性.html" class="nav-link">
+  高级特性
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="SpringCloud" class="dropdown-title"><span class="title">SpringCloud</span> <span class="arrow down"></span></button> <button type="button" aria-label="SpringCloud" class="mobile-dropdown-title"><span class="title">SpringCloud</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/Eureka.html" class="nav-link">
+  Eureka
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/Gateway.html" class="nav-link">
+  Gateway
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/Hystrix断路器.html" class="nav-link">
+  Hystrix断路器
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/nacos-config.html" class="nav-link">
+  nacos-config
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/nacos.html" class="nav-link">
+  nacos
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/nacos集群和持久化配置.html" class="nav-link">
+  nacos集群和持久化配置
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/OpenFeign ISsue.html" class="nav-link">
+  OpenFeign ISsue
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/OpenFeign-issue.html" class="nav-link">
+  OpenFeign-issue
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/OpenFeign服务接口调用.html" class="nav-link">
+  OpenFeign服务接口调用
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/question.html" class="nav-link">
+  question
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/seata.html" class="nav-link">
+  seata
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/security.html" class="nav-link">
+  security
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/sentinel.html" class="nav-link">
+  sentinel
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/Sentinel实现熔断与限流.html" class="nav-link">
+  Sentinel实现熔断与限流
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/Spring Cloud Ribbon.html" class="nav-link">
+  Spring Cloud Ribbon
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/spring-cloud-stream.html" class="nav-link">
+  spring-cloud-stream
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/stream3.2学习.html" class="nav-link">
+  stream3.2学习
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/zookeeper.html" class="nav-link">
+  zookeeper
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/配置中心.html" class="nav-link">
+  配置中心
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="JVM" class="dropdown-title"><span class="title">JVM</span> <span class="arrow down"></span></button> <button type="button" aria-label="JVM" class="mobile-dropdown-title"><span class="title">JVM</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/JVM/JVM.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  JVM
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="JUC" class="dropdown-title"><span class="title">JUC</span> <span class="arrow down"></span></button> <button type="button" aria-label="JUC" class="mobile-dropdown-title"><span class="title">JUC</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/JUC/Atomic原子操作类.html" class="nav-link">
+  Atomic原子操作类
+</a></li><li class="dropdown-item"><!----> <a href="/pages/JUC/CAS.html" class="nav-link">
+  CAS
+</a></li><li class="dropdown-item"><!----> <a href="/pages/JUC/Java内存模型JMM.html" class="nav-link">
+  Java内存模型JMM
+</a></li><li class="dropdown-item"><!----> <a href="/pages/JUC/Java对象内存布局和对象头.html" class="nav-link">
+  Java对象内存布局和对象头
+</a></li><li class="dropdown-item"><!----> <a href="/pages/JUC/synchronized.html" class="nav-link">
+  synchronized
+</a></li><li class="dropdown-item"><!----> <a href="/pages/JUC/ThreadLocl.html" class="nav-link">
+  ThreadLocl
+</a></li><li class="dropdown-item"><!----> <a href="/pages/JUC/Thread、ThreadLocal、ThreadLocalMap.html" class="nav-link">
+  Thread、ThreadLocal、ThreadLocalMap
+</a></li><li class="dropdown-item"><!----> <a href="/pages/JUC/volatile.html" class="nav-link">
+  volatile
+</a></li><li class="dropdown-item"><!----> <a href="/pages/JUC/多线程锁.html" class="nav-link">
+  多线程锁
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Project" class="dropdown-title"><span class="title">Project</span> <span class="arrow down"></span></button> <button type="button" aria-label="Project" class="mobile-dropdown-title"><span class="title">Project</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/Project/clash部署至服务器，提供“上网”服务.html" class="nav-link">
+  clash部署至服务器，提供“上网”服务
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Project/Oauth2.html" class="nav-link">
+  Oauth2
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Project/SSE+Flux.html" class="nav-link">
+  SSE+Flux
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Project/Unicloud 阿里云服务器作图床.html" class="nav-link">
+  Unicloud 阿里云服务器作图床
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Project/内网穿透技术初探.html" class="nav-link">
+  内网穿透技术初探
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Project/微信订阅号开发.html" class="nav-link">
+  微信订阅号开发
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="课程" class="dropdown-title"><span class="title">课程</span> <span class="arrow down"></span></button> <button type="button" aria-label="课程" class="mobile-dropdown-title"><span class="title">课程</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/课程/操作系统.html" class="nav-link">
+  操作系统
+</a></li><li class="dropdown-item"><!----> <a href="/pages/课程/计算机组成与原理.html" class="nav-link">
+  计算机组成与原理
+</a></li><li class="dropdown-item"><!----> <a href="/pages/课程/计算机网络.html" class="nav-link">
+  计算机网络
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="机器视觉" class="dropdown-title"><span class="title">机器视觉</span> <span class="arrow down"></span></button> <button type="button" aria-label="机器视觉" class="mobile-dropdown-title"><span class="title">机器视觉</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/机器视觉/RTMPose.html" class="nav-link">
+  RTMPose
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/sunwenhaopro" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据库" class="dropdown-title"><span class="title">数据库</span> <span class="arrow down"></span></button> <button type="button" aria-label="数据库" class="mobile-dropdown-title"><span class="title">数据库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/数据库/MySQL.html" class="nav-link">
+  MySQL
+</a></li><li class="dropdown-item"><!----> <a href="/pages/数据库/Redis.html" class="nav-link">
+  Redis
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Vue" class="dropdown-title"><span class="title">Vue</span> <span class="arrow down"></span></button> <button type="button" aria-label="Vue" class="mobile-dropdown-title"><span class="title">Vue</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/Vue/Vue-loading动态加载.html" class="nav-link">
+  Vue-loading动态加载
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Vue/Vue项目用axios做request封装.html" class="nav-link">
+  Vue项目用axios做request封装
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Vue/前端踩坑之路.html" class="nav-link">
+  前端踩坑之路
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="SpringBoot" class="dropdown-title"><span class="title">SpringBoot</span> <span class="arrow down"></span></button> <button type="button" aria-label="SpringBoot" class="mobile-dropdown-title"><span class="title">SpringBoot</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/aop面向切面编程.html" class="nav-link">
+  aop面向切面编程
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/Cron表达式.html" class="nav-link">
+  Cron表达式
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/issue3.html" class="nav-link">
+  issue3
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/Listener监听器.html" class="nav-link">
+  Listener监听器
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/Mybatis 动态SQL.html" class="nav-link">
+  Mybatis 动态SQL
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/Mybatis.html" class="nav-link">
+  Mybatis
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/mybatis和spring整合.html" class="nav-link">
+  mybatis和spring整合
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/Mybatis缓存机制.html" class="nav-link">
+  Mybatis缓存机制
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/session之 HttpSessionActivation.html" class="nav-link">
+  session之 HttpSessionActivation
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/springboot+vue部署后出现springboot后端部分页面404.html" class="nav-link">
+  springboot+vue部署后出现springboot后端部分页面404
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/springboot.html" class="nav-link">
+  springboot
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/SpringMVC介绍.html" class="nav-link">
+  SpringMVC介绍
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/springmvc重定向和请求转发操作.html" class="nav-link">
+  springmvc重定向和请求转发操作
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/Spring介绍.html" class="nav-link">
+  Spring介绍
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/SSM整合开发.html" class="nav-link">
+  SSM整合开发
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/url-pattern设置.html" class="nav-link">
+  url-pattern设置
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/web开发.html" class="nav-link">
+  web开发
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/yaml.html" class="nav-link">
+  yaml
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/单元测试.html" class="nav-link">
+  单元测试
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/启动原理.html" class="nav-link">
+  启动原理
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/嵌入式servlet服务器.html" class="nav-link">
+  嵌入式servlet服务器
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/异常，拦截器....html" class="nav-link">
+  异常，拦截器...
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/执行流程分析.html" class="nav-link">
+  执行流程分析
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/指标监控.html" class="nav-link">
+  指标监控
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/数据访问.html" class="nav-link">
+  数据访问
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/注意.html" class="nav-link">
+  注意
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/注解.html" class="nav-link">
+  注解
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/注解方式注入.html" class="nav-link">
+  注解方式注入
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/源码分析.html" class="nav-link">
+  源码分析
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/高级特性.html" class="nav-link">
+  高级特性
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="SpringCloud" class="dropdown-title"><span class="title">SpringCloud</span> <span class="arrow down"></span></button> <button type="button" aria-label="SpringCloud" class="mobile-dropdown-title"><span class="title">SpringCloud</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/Eureka.html" class="nav-link">
+  Eureka
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/Gateway.html" class="nav-link">
+  Gateway
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/Hystrix断路器.html" class="nav-link">
+  Hystrix断路器
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/nacos-config.html" class="nav-link">
+  nacos-config
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/nacos.html" class="nav-link">
+  nacos
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/nacos集群和持久化配置.html" class="nav-link">
+  nacos集群和持久化配置
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/OpenFeign ISsue.html" class="nav-link">
+  OpenFeign ISsue
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/OpenFeign-issue.html" class="nav-link">
+  OpenFeign-issue
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/OpenFeign服务接口调用.html" class="nav-link">
+  OpenFeign服务接口调用
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/question.html" class="nav-link">
+  question
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/seata.html" class="nav-link">
+  seata
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/security.html" class="nav-link">
+  security
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/sentinel.html" class="nav-link">
+  sentinel
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/Sentinel实现熔断与限流.html" class="nav-link">
+  Sentinel实现熔断与限流
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/Spring Cloud Ribbon.html" class="nav-link">
+  Spring Cloud Ribbon
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/spring-cloud-stream.html" class="nav-link">
+  spring-cloud-stream
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/stream3.2学习.html" class="nav-link">
+  stream3.2学习
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/zookeeper.html" class="nav-link">
+  zookeeper
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/配置中心.html" class="nav-link">
+  配置中心
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="JVM" class="dropdown-title"><span class="title">JVM</span> <span class="arrow down"></span></button> <button type="button" aria-label="JVM" class="mobile-dropdown-title"><span class="title">JVM</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/JVM/JVM.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  JVM
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="JUC" class="dropdown-title"><span class="title">JUC</span> <span class="arrow down"></span></button> <button type="button" aria-label="JUC" class="mobile-dropdown-title"><span class="title">JUC</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/JUC/Atomic原子操作类.html" class="nav-link">
+  Atomic原子操作类
+</a></li><li class="dropdown-item"><!----> <a href="/pages/JUC/CAS.html" class="nav-link">
+  CAS
+</a></li><li class="dropdown-item"><!----> <a href="/pages/JUC/Java内存模型JMM.html" class="nav-link">
+  Java内存模型JMM
+</a></li><li class="dropdown-item"><!----> <a href="/pages/JUC/Java对象内存布局和对象头.html" class="nav-link">
+  Java对象内存布局和对象头
+</a></li><li class="dropdown-item"><!----> <a href="/pages/JUC/synchronized.html" class="nav-link">
+  synchronized
+</a></li><li class="dropdown-item"><!----> <a href="/pages/JUC/ThreadLocl.html" class="nav-link">
+  ThreadLocl
+</a></li><li class="dropdown-item"><!----> <a href="/pages/JUC/Thread、ThreadLocal、ThreadLocalMap.html" class="nav-link">
+  Thread、ThreadLocal、ThreadLocalMap
+</a></li><li class="dropdown-item"><!----> <a href="/pages/JUC/volatile.html" class="nav-link">
+  volatile
+</a></li><li class="dropdown-item"><!----> <a href="/pages/JUC/多线程锁.html" class="nav-link">
+  多线程锁
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Project" class="dropdown-title"><span class="title">Project</span> <span class="arrow down"></span></button> <button type="button" aria-label="Project" class="mobile-dropdown-title"><span class="title">Project</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/Project/clash部署至服务器，提供“上网”服务.html" class="nav-link">
+  clash部署至服务器，提供“上网”服务
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Project/Oauth2.html" class="nav-link">
+  Oauth2
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Project/SSE+Flux.html" class="nav-link">
+  SSE+Flux
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Project/Unicloud 阿里云服务器作图床.html" class="nav-link">
+  Unicloud 阿里云服务器作图床
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Project/内网穿透技术初探.html" class="nav-link">
+  内网穿透技术初探
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Project/微信订阅号开发.html" class="nav-link">
+  微信订阅号开发
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="课程" class="dropdown-title"><span class="title">课程</span> <span class="arrow down"></span></button> <button type="button" aria-label="课程" class="mobile-dropdown-title"><span class="title">课程</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/课程/操作系统.html" class="nav-link">
+  操作系统
+</a></li><li class="dropdown-item"><!----> <a href="/pages/课程/计算机组成与原理.html" class="nav-link">
+  计算机组成与原理
+</a></li><li class="dropdown-item"><!----> <a href="/pages/课程/计算机网络.html" class="nav-link">
+  计算机网络
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="机器视觉" class="dropdown-title"><span class="title">机器视觉</span> <span class="arrow down"></span></button> <button type="button" aria-label="机器视觉" class="mobile-dropdown-title"><span class="title">机器视觉</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/机器视觉/RTMPose.html" class="nav-link">
+  RTMPose
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/sunwenhaopro" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/pages/JVM/JVM.html" aria-current="page" class="active sidebar-link">JVM</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/pages/JVM/JVM.html#编译型和解释型" class="sidebar-link">编译型和解释型</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/pages/JVM/JVM.html#编译型" class="sidebar-link">编译型</a></li><li class="sidebar-sub-header"><a href="/pages/JVM/JVM.html#解释型" class="sidebar-link">解释型</a></li><li class="sidebar-sub-header"><a href="/pages/JVM/JVM.html#java" class="sidebar-link">java</a></li></ul></li><li class="sidebar-sub-header"><a href="/pages/JVM/JVM.html#jre-jdk-jvm" class="sidebar-link">JRE JDK JVM</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/pages/JVM/JVM.html#jvm-2" class="sidebar-link">JVM</a></li><li class="sidebar-sub-header"><a href="/pages/JVM/JVM.html#jre" class="sidebar-link">JRE</a></li><li class="sidebar-sub-header"><a href="/pages/JVM/JVM.html#jdk" class="sidebar-link">JDK</a></li></ul></li><li class="sidebar-sub-header"><a href="/pages/JVM/JVM.html#引用类型" class="sidebar-link">引用类型</a></li><li class="sidebar-sub-header"><a href="/pages/JVM/JVM.html#类文件加载机制" class="sidebar-link">类文件加载机制</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/pages/JVM/JVM.html#load" class="sidebar-link">Load</a></li><li class="sidebar-sub-header"><a href="/pages/JVM/JVM.html#verify" class="sidebar-link">Verify</a></li><li class="sidebar-sub-header"><a href="/pages/JVM/JVM.html#prepare" class="sidebar-link">Prepare</a></li><li class="sidebar-sub-header"><a href="/pages/JVM/JVM.html#resolve" class="sidebar-link">Resolve</a></li><li class="sidebar-sub-header"><a href="/pages/JVM/JVM.html#initialize" class="sidebar-link">Initialize</a></li></ul></li><li class="sidebar-sub-header"><a href="/pages/JVM/JVM.html#类加载器classloader" class="sidebar-link">类加载器ClassLoader</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/pages/JVM/JVM.html#概念-load阶段通过类的全限定名去获取二进制字节流-装在class文件" class="sidebar-link">概念：load阶段通过类的全限定名去获取二进制字节流，装在Class文件</a></li><li class="sidebar-sub-header"><a href="/pages/JVM/JVM.html#类型" class="sidebar-link">类型：</a></li><li class="sidebar-sub-header"><a href="/pages/JVM/JVM.html#加载原则-双亲委派模型" class="sidebar-link">加载原则：双亲委派模型</a></li><li class="sidebar-sub-header"><a href="/pages/JVM/JVM.html#破坏双亲委派" class="sidebar-link">破坏双亲委派</a></li><li class="sidebar-sub-header"><a href="/pages/JVM/JVM.html#一个类的静态块是否可能被执行两次" class="sidebar-link">一个类的静态块是否可能被执行两次</a></li></ul></li><li class="sidebar-sub-header"><a href="/pages/JVM/JVM.html#运行时数据区runtime-data-areas" class="sidebar-link">运行时数据区RunTime Data Areas</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/pages/JVM/JVM.html#程序计数器-program-counter-register" class="sidebar-link">程序计数器(Program Counter Register)</a></li><li class="sidebar-sub-header"><a href="/pages/JVM/JVM.html#java虚拟机栈-java-virtual-machine-stack" class="sidebar-link">Java虚拟机栈（Java Virtual Machine Stack）</a></li><li class="sidebar-sub-header"><a href="/pages/JVM/JVM.html#java堆-java-heap" class="sidebar-link">JAVA堆 （Java Heap）</a></li><li class="sidebar-sub-header"><a href="/pages/JVM/JVM.html#本地方法栈-native-method-stacks" class="sidebar-link">本地方法栈（Native Method Stacks）</a></li><li class="sidebar-sub-header"><a href="/pages/JVM/JVM.html#方法区-method-area" class="sidebar-link">方法区（Method Area）</a></li><li class="sidebar-sub-header"><a href="/pages/JVM/JVM.html#运行时常量池-runtime-contstant-pool" class="sidebar-link">运行时常量池（Runtime Contstant Pool）</a></li><li class="sidebar-sub-header"><a href="/pages/JVM/JVM.html#直接内存-direct-memory" class="sidebar-link">直接内存（Direct Memory)</a></li><li class="sidebar-sub-header"><a href="/pages/JVM/JVM.html#内存情况" class="sidebar-link">内存情况</a></li><li class="sidebar-sub-header"><a href="/pages/JVM/JVM.html#内存异常" class="sidebar-link">内存异常</a></li><li class="sidebar-sub-header"><a href="/pages/JVM/JVM.html#几种常见的指向关系" class="sidebar-link">几种常见的指向关系</a></li></ul></li><li class="sidebar-sub-header"><a href="/pages/JVM/JVM.html#java内存模型jmm" class="sidebar-link">Java内存模型JMM</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/pages/JVM/JVM.html#java对象内存模型" class="sidebar-link">Java对象内存模型</a></li><li class="sidebar-sub-header"><a href="/pages/JVM/JVM.html#概念" class="sidebar-link">概念</a></li><li class="sidebar-sub-header"><a href="/pages/JVM/JVM.html#图形展示" class="sidebar-link">图形展示</a></li><li class="sidebar-sub-header"><a href="/pages/JVM/JVM.html#对象创建过程" class="sidebar-link">对象创建过程</a></li><li class="sidebar-sub-header"><a href="/pages/JVM/JVM.html#常见问题" class="sidebar-link">常见问题</a></li></ul></li><li class="sidebar-sub-header"><a href="/pages/JVM/JVM.html#垃圾回收gc" class="sidebar-link">垃圾回收GC</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/pages/JVM/JVM.html#如何判断一个对象需要被回收" class="sidebar-link">如何判断一个对象需要被回收</a></li><li class="sidebar-sub-header"><a href="/pages/JVM/JVM.html#垃圾回收的时机" class="sidebar-link">垃圾回收的时机</a></li><li class="sidebar-sub-header"><a href="/pages/JVM/JVM.html#常见的垃圾回收算法" class="sidebar-link">常见的垃圾回收算法</a></li></ul></li><li class="sidebar-sub-header"><a href="/pages/JVM/JVM.html#垃圾收集器" class="sidebar-link">垃圾收集器</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/pages/JVM/JVM.html#serial" class="sidebar-link">Serial</a></li><li class="sidebar-sub-header"><a href="/pages/JVM/JVM.html#serial-old" class="sidebar-link">Serial Old</a></li><li class="sidebar-sub-header"><a href="/pages/JVM/JVM.html#parnew" class="sidebar-link">ParNew</a></li><li class="sidebar-sub-header"><a href="/pages/JVM/JVM.html#parallel-scavenge" class="sidebar-link">Parallel Scavenge</a></li><li class="sidebar-sub-header"><a href="/pages/JVM/JVM.html#parallel-old" class="sidebar-link">Parallel Old</a></li><li class="sidebar-sub-header"><a href="/pages/JVM/JVM.html#cms" class="sidebar-link">CMS</a></li><li class="sidebar-sub-header"><a href="/pages/JVM/JVM.html#g1" class="sidebar-link">G1</a></li><li class="sidebar-sub-header"><a href="/pages/JVM/JVM.html#zgc" class="sidebar-link">ZGC</a></li><li class="sidebar-sub-header"><a href="/pages/JVM/JVM.html#垃圾回收期分类" class="sidebar-link">垃圾回收期分类</a></li><li class="sidebar-sub-header"><a href="/pages/JVM/JVM.html#常见问题-2" class="sidebar-link">常见问题</a></li></ul></li></ul></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="jvm"><a href="#jvm" class="header-anchor">#</a> JVM</h1> <h2 id="编译型和解释型"><a href="#编译型和解释型" class="header-anchor">#</a> 编译型和解释型</h2> <h3 id="编译型"><a href="#编译型" class="header-anchor">#</a> 编译型</h3> <blockquote><p>使用专门的编译器，针对特定的平台，将高级语言源代码一次性编译成可被该平台硬件执行的机器码，并被包装成该平台所能识别的可执行程序的格式</p></blockquote> <p>C，C++, Golang</p> <ul><li>执行速度快，效率高</li> <li>依靠编译器，跨平台性较差</li></ul> <h3 id="解释型"><a href="#解释型" class="header-anchor">#</a> 解释型</h3> <blockquote><p>使用专门的解释器对源程序助航解释成特定平台的机器码并立即执行</p> <p>代码在执行时才被解释器一行行动态翻译和执行，而不是在执行前就完成翻译</p></blockquote> <p>Python， Js</p> <h3 id="java"><a href="#java" class="header-anchor">#</a> java</h3> <p>java属于编译型+解释型的高级语言，JVM对class文件进行翻译，这个翻译大多数是解释的过程，但也存在编译的过程，称为运行时编译，即Just In Time。</p> <h2 id="jre-jdk-jvm"><a href="#jre-jdk-jvm" class="header-anchor">#</a> JRE JDK JVM</h2> <h3 id="jvm-2"><a href="#jvm-2" class="header-anchor">#</a> JVM</h3> <p>Java Virtual Machine java虚拟机，是将class文件字节码转换成特定平台下的机器码，从而实现了java的跨平台，此外它还提供内存管理，垃圾回收等功能</p> <h3 id="jre"><a href="#jre" class="header-anchor">#</a> JRE</h3> <p>Java Runtime Environment java运行时环境，是运行java程序所需要的程序包，包括jvm以及标准类库，如，java.lang, java.util,java.io JRE可以让用户运行已经编译好的java程序，但是不能用与开发java程序</p> <h3 id="jdk"><a href="#jdk" class="header-anchor">#</a> JDK</h3> <p>Java Develop Kit java开发工具包，能够支持开发和运行，调试，打包java程序，不仅包含了jre，还包括一些开发工具，javac，javap，jar，javadoc</p> <img src="/assets/img/image-20231218201234027.be4bee21.png" alt="image-20231218201234027"> <h2 id="引用类型"><a href="#引用类型" class="header-anchor">#</a> 引用类型</h2> <p>不同的引用类型，主要体现的是对象不同的可达性状态和对垃圾收集的影响</p> <ol><li>强引用：大部分对象都是强引用类型，当内存不足时，jvm会抛出OOM错误，也不会回收强引用对象</li> <li>软引用：当内存足够的时候，垃圾回收不会回收该对象；当内存不足的时候，进行垃圾回收会把软引用对象回收。这样既能满足一定的需求，又不会对主要业务造成影响。断路器，查询1000条数据，数据存储就用软引用对象</li> <li>弱引用：更短的生命周期，只要被垃圾回收器发现就会被回收。ThreadLocalMap里面的k：ThreadLocal就是软引用对象</li> <li>虚引用：如果一个对象仅持有虚引用，那么它就和没有任何引用一样，在任何时候都可 能被垃圾回收器回收。虚引用主要用来跟踪对象被垃圾回收器回收的活动。引用队列中是否已经加入了虚引用，来了解被引用的对象是否将要进行垃圾回收， 然后我们就可以在引用的对象的内存回收之前采取必要的行动。主要就是为了跟踪对象的垃圾回收情况。数据库连接池</li></ol> <img src="/assets/img/image-20231217160643585.36735f6a.png" alt="image-20231217160643585"> <p><strong>当某个被引用的对象（referent）被回收的时候，JVM 会将指向它的引用（reference）加入到引用队列的队列末尾，这相当于是一种通知机制</strong>。这个操作其实是由 <strong><code>ReferenceHandler</code> 守护线程</strong>来做的，这个守护线程是在 <code>Reference</code> 静态代码块中建立并且运行的线程，所以只要 <code>Reference</code> 这个父类被初始化，该线程就会创建和运行，它的运行方法中依赖了比较多的本地 (native) 方法：</p> <h2 id="类文件加载机制"><a href="#类文件加载机制" class="header-anchor">#</a> 类文件加载机制</h2> <p>概念：虚拟机把class文件加载到内存并对数据进行校验，转换解析和初始化，形成虚拟机直接使用的java类型</p> <p>流程：==load   -&gt;   link(verify、prepare、resolve)  -&gt;  intialize  -&gt; use  -&gt; unload==</p> <h3 id="load"><a href="#load" class="header-anchor">#</a> Load</h3> <ol><li>通过一个类的全限定名获取定义此类的二进制字节流</li> <li>将二进制字符流转化为方法区的运行时数据结构</li> <li>在java堆中生成java.lang.Class对象</li></ol> <p>Class对象封装了类在方法区内的数据结构，并且向Java程序员提供了访问方法区内的数据结构的接口。在 Java堆中生成一个代表这个类的java.lang.Class对象，作为对方法区中这些数据的访问入口</p> <h3 id="verify"><a href="#verify" class="header-anchor">#</a> Verify</h3> <ul><li>文件格式验证</li> <li>元数据验证</li> <li>字节码验证</li> <li>符号引用验证</li></ul> <h3 id="prepare"><a href="#prepare" class="header-anchor">#</a> Prepare</h3> <p>为类的静态变量分配内存，并将其初始化为默认值 age=0</p> <h3 id="resolve"><a href="#resolve" class="header-anchor">#</a> Resolve</h3> <p>把类中的符号引用转换为直接引用</p> <h3 id="initialize"><a href="#initialize" class="header-anchor">#</a> Initialize</h3> <p>对类的静态变量，静态代码块执行初始化操作  age=10</p> <h2 id="类加载器classloader"><a href="#类加载器classloader" class="header-anchor">#</a> 类加载器ClassLoader</h2> <h3 id="概念-load阶段通过类的全限定名去获取二进制字节流-装在class文件"><a href="#概念-load阶段通过类的全限定名去获取二进制字节流-装在class文件" class="header-anchor">#</a> 概念：load阶段通过类的全限定名去获取二进制字节流，装在Class文件</h3> <h3 id="类型"><a href="#类型" class="header-anchor">#</a> 类型：</h3> <ol><li>Bootstrap ClassLoader:  jre/lib/rt.jar里面的class或者xbootclasspath参数配置的jar包，c++实现，唯一一个不是classLoader子类，父类为null。</li> <li>Extension ClassLoader：加载拓展jar包， /jre/lib/*.jar或者-Djava.ext.dirs指定的jar包</li> <li>App ClassLoader： 加载classpath中指定的jar包或者Djava.class.path所指定的类的jar包</li> <li>Custom ClassLoader ：ClassLoader抽象类子类自定义的加载器。tomcat，jboss</li></ol> <img src="/assets/img/23c5990b68cc0881827798bfedaf99f1.23c5990b.png" alt="img"> <h3 id="加载原则-双亲委派模型"><a href="#加载原则-双亲委派模型" class="header-anchor">#</a> 加载原则：双亲委派模型</h3> <img src="/assets/img/279656ab47e743b489c43789199d0053.d421e925.png" alt="img"> <p>自底向上，按照custom，app，extension，bootstrap的顺序去执行，当一个类加载器收到类加载请求，它不会立即去加载，而是调用委托给父类加载器去执行，相当于所有的请求都移交给Bootstrap来做；如果父类加载器没有找到请求的类的情况下，该类加载器才会去尝试加载。否则抛出ClassNotFound的异常</p> <p>双亲委派模型可以避免类的重复加载，也保证了java核心api不会被篡改。</p> <h3 id="破坏双亲委派"><a href="#破坏双亲委派" class="header-anchor">#</a> 破坏双亲委派</h3> <p>继承ClassLoader类并且重写loadClass()方法即可，【只重写findClass()方法可以不破坏双亲委派】</p> <p>子类加载器会先尝试加载类，之后给父类加载器；或者父类加载器返回后在去从其他地方加载这个类</p> <p>具体示例：</p> <ol><li>Tomcat</li></ol> <img src="/assets/img/3566d71c95059f581fbeef0a30b767da.3566d71c.png" alt="img"> <p><code>CommonClassLoader</code>作为 <code>CatalinaClassLoader</code> 和 <code>SharedClassLoader</code> 的父加载器。<code>CommonClassLoader</code> 能加载的类都可以被 <code>CatalinaClassLoader</code> 和 <code>SharedClassLoader</code> 使用。因此，<code>CommonClassLoader</code> 是为了实现公共类库（可以被所有 Web 应用和 Tomcat 内部组件使用的类库）的共享和隔离。</p> <p><code>CatalinaClassLoader</code> 和 <code>SharedClassLoader</code> 能加载的类则与对方相互隔离。<code>CatalinaClassLoader</code> 用于加载 Tomcat 自身的类，为了隔离 Tomcat 本身的类和 Web 应用的类。<code>SharedClassLoader</code> 作为 <code>WebAppClassLoader</code> 的父加载器，专门来加载 Web 应用之间共享的类比如 Spring、Mybatis。</p> <p>每个 Web 应用都会创建一个单独的 <code>WebAppClassLoader</code>，并在启动 Web 应用的线程里设置线程线程上下文类加载器为 <code>WebAppClassLoader</code>。各个 <code>WebAppClassLoader</code> 实例之间相互隔离，进而实现 Web 应用之间的类隔。</p> <ol start="2"><li>SPI机制。</li></ol> <p>SPI 中，SPI 的接口（如 <code>java.sql.Driver</code>）是由 Java 核心库提供的，由<code>BootstrapClassLoader</code> 加载。而 SPI 的实现（如<code>com.mysql.cj.jdbc.Driver</code>）是由第三方供应商提供的，它们是由应用程序类加载器或者自定义类加载器来加载的。默认情况下，一个类及其依赖类由同一个类加载器加载。所以，加载 SPI 的接口的类加载器（<code>BootstrapClassLoader</code>）也会用来加载 SPI 的实现。按照双亲委派模型，<code>BootstrapClassLoader</code> 是无法找到 SPI 的实现类的，因为它无法委托给子类加载器去尝试加载。</p> <p>再比如，假设我们的项目中有 Spring 的 jar 包，由于其是 Web 应用之间共享的，因此会由 <code>SharedClassLoader</code> 加载（Web 服务器是 Tomcat）。我们项目中有一些用到了 Spring 的业务类，比如实现了 Spring 提供的接口、用到了 Spring 提供的注解。所以，加载 Spring 的类加载器（也就是 <code>SharedClassLoader</code>）也会用来加载这些业务类。但是业务类在 Web 应用目录下，不在 <code>SharedClassLoader</code> 的加载路径下，所以 <code>SharedClassLoader</code> 无法找到业务类，也就无法加载它们。</p> <p>3.OSGi   <a href="https://www.cnblogs.com/crazymakercircle/p/15554725.html" target="_blank" rel="noopener noreferrer">连接<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p><strong>线程上下文类加载器（<code>ThreadContextClassLoader</code>）</strong></p> <p>当 Spring 需要加载业务类的时候，它不是用自己的类加载器，而是用当前线程的上下文类加载器。还记得我上面说的吗？每个 Web 应用都会创建一个单独的 <code>WebAppClassLoader</code>，并在启动 Web 应用的线程里设置线程线程上下文类加载器为 <code>WebAppClassLoader</code>。这样就可以让高层的类加载器（<code>SharedClassLoader</code>）借助子类加载器（ <code>WebAppClassLoader</code>）来加载业务类，破坏了 Java 的类加载委托机制，让应用逆向使用类加载器。</p> <p>线程线程上下文类加载器的原理是将一个类加载器保存在线程私有数据里，跟线程绑定，然后在需要的时候取出来使用。这个类加载器通常是由应用程序或者容器（如 Tomcat）设置的。</p> <p><code>Java.lang.Thread</code> 中的<code>getContextClassLoader()</code>和 <code>setContextClassLoader(ClassLoader cl)</code>分别用来获取和设置线程的上下文类加载器。如果没有通过<code>setContextClassLoader(ClassLoader cl)</code>进行设置的话，线程将继承其父线程的上下文类加载器。</p> <h3 id="一个类的静态块是否可能被执行两次"><a href="#一个类的静态块是否可能被执行两次" class="header-anchor">#</a> 一个类的静态块是否可能被执行两次</h3> <p>如果一个类，被两个 osgi的bundle加载， 然后又有实例被初始化，其静态块会被执行两次</p> <h2 id="运行时数据区runtime-data-areas"><a href="#运行时数据区runtime-data-areas" class="header-anchor">#</a> 运行时数据区RunTime Data Areas</h2> <img src="/assets/img/image-20231218203942026.e473b1da.png" alt="image-20231218203942026"> <img src="/assets/img/b9b994fa248575c660da7e836cf0265b.b9b994fa.png" alt="img"> <img src="/assets/img/JavaRunTime.c74e8ce4.png"> <h3 id="程序计数器-program-counter-register"><a href="#程序计数器-program-counter-register" class="header-anchor">#</a> 程序计数器(Program Counter Register)</h3> <img src="/assets/img/PC.c4ad0d8c.png" alt="PC"> <p>Java虚拟机的多线程是通过==线程轮流切换==、==分配处理器执行时间==的方式来实现的。 一个内核任一时间只会执行一条线程中的指令。</p> <p>每条线程都有一个==独立==的程序计数器，这类内存区域被称为“线程私有”的内存，目的是为了==线程切换后了能恢复到正确的执行位置==。 Java方法计数器记录的是虚拟机==字节码指令的地址==；==本地native方法值为空== Undefined</p> <p>==内存情况：唯一一个没有规定任何OutOfMemoryError情况的区域==</p> <h3 id="java虚拟机栈-java-virtual-machine-stack"><a href="#java虚拟机栈-java-virtual-machine-stack" class="header-anchor">#</a> Java虚拟机栈（Java Virtual Machine Stack）</h3> <img src="/assets/img/VMStack.14ccd8d4.png" alt="VMStack"> <p>==虚拟机栈是一个线程执行的区域，保存着一个线程中方法的调用状态==。换句话说，一个Java线程</p> <p>的运行状态，由一个虚拟机栈来保存，所以虚拟机栈肯定是线程私有的，独有的，随着线程的创建而创建。</p> <p>==线程私有==，其生命周期和线程相同 ==方法执行==时，JVM同步创建一个==栈帧==（Stack Frame）用与存储==局部变量表，操作数栈，动态连接，方法出口==</p> <p>每一个被线程执行的方法，为该栈中的栈帧，即每个方法对应一个栈帧. 调用一个方法，就会向栈中压入一个栈帧；一个方法调用完成，就会把该栈帧从栈中弹出。</p> <p>局部变量表存放了编译期可知的各种JVM虚拟机==基本数据类型，对象引用== （reference）和==returnAddress==（指向一条字节码指令的地址）(结果返回地址)，数据类型在其中的存储空间以==局部变量槽Slot==，==double,long，占两个，其余占一个==。</p> <p>虚拟机栈为虚拟机执行Java方法（字节码）服务</p> <blockquote><p>==局部变量表==:方法中定义的局部变量以及方法的参数存放在这张表中局部变量表中的变量不可直接使用，如需要使用的话，必须通过相关指令将其加载至操作数栈中作为操作数使用</p> <p>==操作数栈==:以压栈和出栈的方式存储操作数的</p> <p>==动态链接==:每个栈帧都包含一个指向运行时常量池中该栈帧所属方法的引用，持有这个引用是为了支持方法调用过程中的动态连接(Dynamic Linking)。</p> <p>==方法返回地址==:当一个方法开始执行后,只有两种方式可以退出，==一种是遇到方法返回的字节码指令；一种是遇见异常==，并且这个异常没有在方法体内得到处理</p></blockquote> <h3 id="java堆-java-heap"><a href="#java堆-java-heap" class="header-anchor">#</a> JAVA堆 （Java Heap）</h3> <img src="/assets/img/JavaHeap.8d98d716.png" alt="JavaHeap"> <p>虚拟机管理内存最大的一块，==所有线程共享==，虚拟机启动时创建，唯一目的==存放对象实例==</p> <p>==新生代，老年代，永久代，Eden空间，From Survivor空间，To Survivor空间==</p> <p>从内存分配的角度看，所有线程共享的Java堆中可以划分出许多线程私有的==分配缓冲区TLAB==（Thread Local Allocation Buffer，TLAB），以提升对象分配时的效率。
+JVM默认为每个线程在==Eden上开辟一个buffer区域==，用来加速对象的分配，称之为TLAB，全称:==Thread Local Allocation Buffer==。 ==对象优先会在TLAB上分配==，但是TLAB空间通常会比较小，如果对象比较大，那么还是在共享区域分配。</p> <h3 id="本地方法栈-native-method-stacks"><a href="#本地方法栈-native-method-stacks" class="header-anchor">#</a> 本地方法栈（Native Method Stacks）</h3> <img src="/assets/img/NativeStack.af46e57a.png" alt="NativeStack"> <p>本地方法栈为虚拟机使用到本地方法服务 作用与java虚拟机栈所发挥的作用相似</p> <h3 id="方法区-method-area"><a href="#方法区-method-area" class="header-anchor">#</a> 方法区（Method Area）</h3> <p><img src="Images/MethodArea.png" alt="MethodArea"></p> <p>各个==线程共享==的内存区域，存储JVM加载的==类型信息，常量，静态变量，即时编译器编译后的代码缓存==</p> <p>方法区8之后已经是概念，真正存在本地内存中。MetaSpace</p> <h3 id="运行时常量池-runtime-contstant-pool"><a href="#运行时常量池-runtime-contstant-pool" class="header-anchor">#</a> 运行时常量池（Runtime Contstant Pool）</h3> <img src="/assets/img/ConstantPool.3c057d7e.png" alt="ConstantPool" style="zoom:80%;"> <p>==方法区的一部分==，Class文件常量池表（Constant Pool Table）用于存放编译期生成的各种==字面量和符号引用==，类加载后存放到方法区的运行时常量池中</p> <p>字面量：java代码在编译过程中是无法构建引用的，字面量就是在编译时对于数据的一种表示:</p> <div class="language-javascript line-numbers-mode"><pre class="language-javascript"><code>int a<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span><span class="token comment">//这个1便是字面量</span>
+String b<span class="token operator">=</span><span class="token string">&quot;iloveu&quot;</span><span class="token punctuation">;</span><span class="token comment">//iloveu便是字面量</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>符号引用：由于在编译过程中并不知道每个类的地址，因为可能这个类还没有加载，所以如果你在一个类中引用了另一个类，那么你完全无法知道他的内存地址，那怎么办，我们只能用他的类名作为符号引用，在类加载完后用这个符号引用去获取他的内存地址。</p> <p>例子：我在com.demo.Solution类中引用了com.test.Quest，那么我会把com.test.Quest作为符号引用存到类常量池，等类加载完后，拿着这个引用去方法区找这个类的内存地址。</p> <p>动态性：既有预置入Class文件中常量池的内容，也可以在运行期间将新的常量放入池中（String类中的intern（）方法）</p> <h3 id="直接内存-direct-memory"><a href="#直接内存-direct-memory" class="header-anchor">#</a> 直接内存（Direct Memory)</h3> <p>直接内存并不是虚拟机运行时数据区的一部分。</p> <p>JDK1.4新加入NIO（New Input/Output）类，引入了一种基于通道 （Channel）与缓冲区（Buffer）的I/O方式，它可以直接使用Native函数库直接分配堆外内存，通过Java堆里面的DirectByteBuffer对象作为这块内存的引用进行操作</p> <p>优点：某些场景显著提高性能，避免Java堆和Native堆来回复制数据</p> <h3 id="内存情况"><a href="#内存情况" class="header-anchor">#</a> 内存情况</h3> <p>线程私有 程序计数器 Java虚拟机栈 本地方法栈
+线程共享 Java堆 方法区 运行时常量池</p> <h3 id="内存异常"><a href="#内存异常" class="header-anchor">#</a> 内存异常</h3> <p>OutOfMemoryError：内存，堆，栈拓展失败 Java虚拟机栈 本地方法栈 Java堆 运行时常量池 直接内存 StackOverFlowError：栈深度超出Max允许申请 Java虚拟机栈 本地方法栈</p> <img src="/assets/img/error.c0f0c7bf.png" alt="error" style="zoom:80%;"> <h3 id="几种常见的指向关系"><a href="#几种常见的指向关系" class="header-anchor">#</a> 几种常见的指向关系</h3> <p>==栈指向堆：== 如果一个栈帧中有一个变量，类型为引用类型，这就是典型的栈中元素指向堆的中的对象</p> <img src="/assets/img/1b00aedb958d2b1bf8c917e5b6fc6b36.1b00aedb.png" alt="img" style="zoom:80%;"> <p>==方法区指向堆==：方法区会存放静态变量，常量等数据，下面情况就是典型的方法区中的元素指向堆中的对象</p> <div class="language-java line-numbers-mode"><pre class="language-java"><code><span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token class-name">Object</span> obj<span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">Object</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><img src="/assets/img/8ea360151bc819cb31d75d7d1d589143.8ea36015.png" alt="img" style="zoom:80%;"> <p>==堆指向方法区==： 方法区中会包含类的信息，堆中会有对象，对象头中会包含类元信息的指针，如下二图</p> <img src="/assets/img/57e5465e28298cb35161c33d9597f19f.57e5465e.png" alt="img" style="zoom:80%;"> <h2 id="java内存模型jmm"><a href="#java内存模型jmm" class="header-anchor">#</a> Java内存模型JMM</h2> <h3 id="java对象内存模型"><a href="#java对象内存模型" class="header-anchor">#</a> Java对象内存模型</h3> <p>java对象包含三个部分：==<strong>对象头，实例数据，对齐填充</strong>==</p> <img src="/assets/img/aa471d6f1ffcdc774a179a1ecc313185.aa471d6f.png" alt="img" style="zoom:80%;"> <h3 id="概念"><a href="#概念" class="header-anchor">#</a> 概念</h3> <p>JVM运行时数据区是一种规范，而JVM内存模式是对该规范的实现</p> <h3 id="图形展示"><a href="#图形展示" class="header-anchor">#</a> 图形展示</h3> <p>一块是非堆区，一块是堆区 堆区分为两大块，一个是Old区，一个是Young区 Young区分为两大块，一个是Survivor区（S0+S1），一块是Eden区 S0和S1一样大，也可以叫From和To</p> <img src="/assets/img/5e8b38b770eb4c278ea2d0c83eab055e.5e8b38b7.png" alt="img" style="zoom:80%;"> <h3 id="对象创建过程"><a href="#对象创建过程" class="header-anchor">#</a> 对象创建过程</h3> <p>一般情况下，新创建的对象都会被分配到Eden区，一些特殊的大对象会字节分配到老年区</p> <img src="/assets/img/4480ab199ba47cd53ea7f0ba48636b51.4480ab19.png" alt="img" style="zoom:80%;"> <blockquote><p>我是一个普通的Java对象,我出生在Eden区,在Eden区我还看到和我长的很像的小兄弟,我们在Eden区中玩了 挺长时间。有一天Eden区中的人实在是太多了,我就被迫去了Survivor区的“From”区,自从去了Survivor 区,我就开始漂了,有时候在Survivor的“From”区,有时候在Survivor的“To”区,居无定所。直到我18岁的 时候,爸爸说我成人了,该去社会上闯闯了。于是我就去了年老代那边,年老代里,人很多,并且年龄都挺大的</p></blockquote> <h3 id="常见问题"><a href="#常见问题" class="header-anchor">#</a> 常见问题</h3> <ul><li>如何理解Minor/Major/Full GC</li></ul> <blockquote><p>Minor GC：新生代</p> <p>Major GC：老年代</p> <p>Full GC：新生代+老年代</p></blockquote> <ul><li>为什么需要Surivior区？只有Eden区不行吗？</li></ul> <blockquote><p>如果没进行一次Minor GC,存货的对象就会进入老年代,这样的化老年代空间很快就被填满触发Major GC(Major GC一般伴随着Minor GC,可以看作是Full GC),老年代空间较大,进行一次Major GC时间很长,频发的GC会影响大型程序的执行和响应速度.</p> <p>假如增加老年代空间，更多存活对象才能填满老年代。虽然降低Full GC频率，但是随着老年代空间加大,一 旦发生Full GC,执行所需要的时间更长。 假如减少老年代空间，虽然Full GC所需时间减少，但是老年代很快被存活对象填满,Full GC频率增加。</p> <p>所以Surivoir区就是为了减少老年区的对象,从而减少Full GC的频率, 提高系统的执行效率</p></blockquote> <ul><li><p>为什么需要两个Survivor区(默认空间比例 8:1:1)</p> <blockquote><p>解决碎片化空间. 可以保证永远有一个空的Survivor和一个没有碎片化空间的survivor区. 当Eden发生Minor GC后,存货下来的对象会进入S0,当下一次Eden区发生Minor GC后, 存货下来的对象和S0中存活的对象就会被复制到S1, 如果一个对象复制次数达到16次就会被转移到老年代.</p></blockquote></li> <li><p>堆内存中都是线程共享的区域吗?</p></li></ul> <blockquote><p>JVM默认为每个线程在Eden上开辟一个buffer区域，用来加速对象的分配，称之为TLAB，全称:Thread Local Allocation Buffer。 对象优先会在TLAB上分配，但是TLAB空间通常会比较小，如果对象比较大，那么还是在共享区域分配。</p></blockquote> <h2 id="垃圾回收gc"><a href="#垃圾回收gc" class="header-anchor">#</a> 垃圾回收GC</h2> <h3 id="如何判断一个对象需要被回收"><a href="#如何判断一个对象需要被回收" class="header-anchor">#</a> 如何判断一个对象需要被回收</h3> <ol><li>引用计数法: ==当一个对象被引用计数就+1,引用被释放就-1==,当计数为0就说明没有地方使用这个对象,那么就是垃圾需要被回收, 但是这种方法在两个对象相互引用的情况下存在弊端:==两个对象都持有对方的引用,导致无法被识别回收.==</li> <li>可达性分析法: 根据GC ROOT的对象,开始向下寻找,看某个对象是否可达. 即==判断某个对象到GC Root是否存在一个可达的引用链.==
+GCRoot: ==类加载器, Thread, static 成员, 常量引用, 本地方法栈的变量, 虚拟机栈的本地方法表.==</li></ol> <img src="/assets/img/0e7b4a691088684b128fbcea9361bf0c.0e7b4a69.png" alt="img" style="zoom:80%;"> <h3 id="垃圾回收的时机"><a href="#垃圾回收的时机" class="header-anchor">#</a> 垃圾回收的时机</h3> <ol><li>Eden区不够用</li> <li>Surivior区不够用</li> <li>Old区不够用</li> <li>方法区不够用</li> <li>System.gc()</li></ol> <h3 id="常见的垃圾回收算法"><a href="#常见的垃圾回收算法" class="header-anchor">#</a> 常见的垃圾回收算法</h3> <ul><li><p>标记-清除: 找出堆内存中所有需要清除的对象进行标记,然后进行回收,释放占有的内存</p> <p>标记清除后会产生大量的内存碎片 ;  标记和清除这两个过程都比较耗时</p></li> <li><p>标记-复制: 将内存分为两块,每次只用其中的一块, 当一块内存使用完, 就将上面的存活对象复制到空白的区域.
+可用内存只有原来的一半 ; 在对象存活率较高时就要进行较多的复制操作，效率将会变低</p></li> <li><p>标记-整理: 先进行扫描标记处需要回收的对象,  然后将所有的存活的对象向一端移动,然后清除到边界以外的内存
+多了整理这一步，因此效率也不高，适合老年代这种垃圾回收频率不是很高的场景</p></li> <li><p>分代收集:  将堆内存分为两大块, Old区和Young区, Young区又分为Eden区和两个Surivor区, 根据区域的不同采用不同的回收算法进行回收,以此达到高效率执行. Young区一般采用标记-复制法, Old区一般采用标记-清除或者标记-整理法
+扬长避短</p></li></ul> <h2 id="垃圾收集器"><a href="#垃圾收集器" class="header-anchor">#</a> 垃圾收集器</h2> <img src="/assets/img/65f04200f41ee1a35d3356a59e88a22d.65f04200.png" alt="img" style="zoom:80%;"> <h3 id="serial"><a href="#serial" class="header-anchor">#</a> Serial</h3> <p>==单线程收集器==, 只会使用一个收集线程或者CPU去完成垃圾收集工作, 更要命的是垃圾回收期间必须==暂停其他线程==</p> <blockquote><p>优点：==简单高效，拥有很高的单线程收集效率==</p> <p>缺点：收集过程需要暂停所有线程</p> <p>算法：==标记-复制算法==</p> <p>适用范围：新生代</p> <p>应用：==Client模式==下的默认新生代收集器</p></blockquote> <img src="/assets/img/1eeb3a1d8dd0ee802696447b7f9deb1a.1eeb3a1d.png" alt="img" style="zoom:80%;"> <h3 id="serial-old"><a href="#serial-old" class="header-anchor">#</a> Serial Old</h3> <p>==单线程收集器==, 只能使用一个线程或者一个CPU区执行收集工作, 需要Stop The World.  但是采用的是==标记-整理==方法</p> <img src="/assets/img/36330a22d32b76f293ffe8a6e8a23f40.36330a22.png" alt="img" style="zoom:80%;"> <h3 id="parnew"><a href="#parnew" class="header-anchor">#</a> ParNew</h3> <p>Serival收集器的多线程版本</p> <blockquote><p>优点：在多CPU时，比Serial效率高。</p> <p>缺点：收集过程暂停所有应用程序线程，单CPU时比Serial效率差。</p> <p>算法：标记-复制算法</p> <p>适用范围：新生代</p> <p>应用：运行在Server模式下的虚拟机中首选的新生代收集器</p></blockquote> <img src="/assets/img/90ec5590c76e5db19e6be1ae199ac300.90ec5590.png" alt="img" style="zoom:80%;"> <h3 id="parallel-scavenge"><a href="#parallel-scavenge" class="header-anchor">#</a> Parallel Scavenge</h3> <p>和ParNew差不多, 但是更加关注系统的吞吐量:(运行用户代码的时间/(运行用户代码的时间+垃圾收集时间)</p> <blockquote><p>-XX:MaxGCPauseMillis控制最大的垃圾收集停顿时间</p> <p>-XX:GCRatio直接设置吞吐量的大小。</p></blockquote> <h3 id="parallel-old"><a href="#parallel-old" class="header-anchor">#</a> Parallel Old</h3> <p>parallel Scavenge的老年版本, 标记-整理,也关注系统的吞吐量</p> <h3 id="cms"><a href="#cms" class="header-anchor">#</a> CMS</h3> <p>CMS(Concurrent Mark Sweep)收集器是一种以==获取最短回收停顿时间==为目标的收集器。 采用的是&quot;==标记-清除算法==&quot;,整个过程分为4步</p> <ol><li>==初始标记== CMS initial mark 标记GC Roots直接关联对象，不用Tracing，速度很快（找出GC Root根对象）</li> <li>==并发标记== CMS concurrent mark 进行GC Roots Tracing （依根寻果，链路追踪可达对象即活的对象）</li> <li>==重新标记== CMS remark 修改并发标记因用户程序变动的内容（查漏补缺，并发标记过程中状态变化对象）</li> <li>==并发清除== CMS concurrent sweep 清除不可达对象回收空间，同时有新垃圾产生，留着下次清理称为 ==浮动垃圾==</li></ol> <blockquote><p>优点：并发收集、低停顿</p> <p>缺点：产生大量空间碎片、并发阶段会降低吞吐量</p></blockquote> <img src="/assets/img/2f8f3e4a94cce9cfe2bfa6d512c981ed.2f8f3e4a.png" alt="img" style="zoom:80%;"> <h3 id="g1"><a href="#g1" class="header-anchor">#</a> G1</h3> <p>使用G1收集器时，Java堆的内存布局与就与其他收集器有很大差别，它将整个Java堆划分为多个 大小相等的独立区域（==Region==），虽然还保留有新生代和老年代的概念，但新生代和老年代不再 是物理隔离的了，它们都是一部分Region（不需要连续）的集合。 每个Region大小都是一样的，可以是1M到32M之间的数值，但是必须保证是==2的n次幂== 如果对象太大，一个Region放不下[超过Region大小的50%]，那么就会直接放到==H==中</p> <p>设置Region大小：-XX:G1HeapRegionSize=M</p> <p>所谓Garbage-Frist，其实就是==优先回收垃圾最多的Region区域==</p> <blockquote><p>（1）==分代收集==（仍然保留了分代的概念）</p> <p>（2）==空间整合==（整体上属于“==标记-整理==”算法，不会导致空间碎片）</p> <p>（3）可预测的停顿（比CMS更先进的地方在于能让使用者明确指定一个长度为M毫秒的时间片段内，消耗在垃圾收集上的时间不得超过N毫秒</p></blockquote> <img src="/assets/img/dabfa155104e21eb29e7793822e43e0e.dabfa155.png" alt="img" style="zoom:80%;"> <ol><li>==初始标记==（Initial Marking） 标记以下GC Roots能够关联的对象，并且修改TAMS的值，需要暂停用户线程</li> <li>==并发标记==（Concurrent Marking） 从GC Roots进行可达性分析，找出存活的对象，与用户线程并发执行</li> <li>==最终标记==（Final Marking） 修正在并发标记阶段因为用户程序的并发执行导致变动的数据，需暂停用户线程</li> <li>==筛选回收==（Live Data Counting and Evacuation） 对各个Region的回收价值和成本进行排序，根据用户所期望的GC停顿时间制定回收计划</li></ol> <img src="/assets/img/fd3d713e377f68af87ce205f36405962.fd3d713e.png" alt="img" style="zoom:80%;"> <h3 id="zgc"><a href="#zgc" class="header-anchor">#</a> ZGC</h3> <p>JDK11新引入的ZGC收集器，不管是物理上还是逻辑上，ZGC中已经不存在新老年代的概念了，会分为一个个page，当进行GC操作时会对page进行压缩，因此没有碎片问题 只能在64位的linux上使用，目前用得还比较少</p> <blockquote><p>（1）可以达到10ms以内的停顿时间要求</p> <p>（2）支持TB级别的内存</p> <p>（3）堆内存变大后停顿时间还是在10ms以内</p></blockquote> <h3 id="垃圾回收期分类"><a href="#垃圾回收期分类" class="header-anchor">#</a> 垃圾回收期分类</h3> <ul><li>==串行收集器: Serial , Serial Old==</li> <li>==并行收集器:  Parallel Scanvenge, Parallel Old , PreNew==</li> <li>==并发收集器: CMS, G1, ZGC==</li></ul> <h3 id="常见问题-2"><a href="#常见问题-2" class="header-anchor">#</a> 常见问题</h3> <ul><li>==吞吐量和停顿时间==(==垃圾收集器性能的评判标准==)
+吞吐量: 程序运行时间 / 程序运行时间+垃圾回收时间
+停顿时间: 垃圾收集器进行垃圾回收终端应用执行响应的时间
+停顿时间越短就越适合需要和用户交互的程序，良好的响应速度能提升用户体验；
+高吞吐量则可以高效地利用CPU时间，尽快完成程序的运算任务，主要适合在后台运算而不需要太多交互 的任务。</li> <li>如何选择合适的垃圾收集器
+优先调整堆的大小让服务器自己来选择
+如果内存小于100M，使用串行收集器
+如果是单核，并且没有停顿时间要求，使用串行或JVM自己选
+如果允许停顿时间超过1秒，选择并行或JVM自己选
+如果响应时间最重要，并且不能超过1秒，使用并发收集器</li> <li>如何开启需要的垃圾收集器
+（1）串行 -XX：+UseSerialGC -XX：+UseSerialOldGC
+（2）并行(吞吐量优先)： -XX：+UseParallelGC -XX：+UseParallelOldGC
+（3）并发收集器(响应时间优先) -XX：+UseConcMarkSweepGC -XX：+UseG1GC</li></ul> <img src="/assets/img/691376420aaf06ff322d2e1c68a851bb.69137642.png" alt="img" style="zoom:80%;"></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.347fa917.js" defer></script><script src="/assets/js/4.4e440976.js" defer></script><script src="/assets/js/5.baec3451.js" defer></script>
+  </body>
+</html>

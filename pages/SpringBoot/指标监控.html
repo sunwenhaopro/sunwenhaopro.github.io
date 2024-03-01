@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>指标监控 | CtrlCVer</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    <link rel="icon" href="/6.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/2.10.0/github-markdown.min.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <meta name="description" content="孙文豪大魔王">
+    
+    <link rel="preload" href="/assets/css/0.styles.84492279.css" as="style"><link rel="preload" href="/assets/js/app.347fa917.js" as="script"><link rel="preload" href="/assets/js/4.4e440976.js" as="script"><link rel="preload" href="/assets/js/53.319606bc.js" as="script"><link rel="prefetch" href="/assets/js/10.1230c4be.js"><link rel="prefetch" href="/assets/js/11.daeaf548.js"><link rel="prefetch" href="/assets/js/12.abede0ae.js"><link rel="prefetch" href="/assets/js/13.cb62a723.js"><link rel="prefetch" href="/assets/js/14.5375bc4a.js"><link rel="prefetch" href="/assets/js/15.ffb73a9c.js"><link rel="prefetch" href="/assets/js/16.6be16dba.js"><link rel="prefetch" href="/assets/js/17.3879182a.js"><link rel="prefetch" href="/assets/js/18.04083c0b.js"><link rel="prefetch" href="/assets/js/19.ee44a025.js"><link rel="prefetch" href="/assets/js/2.3a3bb906.js"><link rel="prefetch" href="/assets/js/20.bdce0031.js"><link rel="prefetch" href="/assets/js/21.b9bf7143.js"><link rel="prefetch" href="/assets/js/22.aadd746b.js"><link rel="prefetch" href="/assets/js/23.d590bbfb.js"><link rel="prefetch" href="/assets/js/24.72023ebd.js"><link rel="prefetch" href="/assets/js/25.dd4e2abc.js"><link rel="prefetch" href="/assets/js/26.d2b37904.js"><link rel="prefetch" href="/assets/js/27.971418ab.js"><link rel="prefetch" href="/assets/js/28.779a0681.js"><link rel="prefetch" href="/assets/js/29.246ef370.js"><link rel="prefetch" href="/assets/js/3.4c8c30ea.js"><link rel="prefetch" href="/assets/js/30.ffc51d63.js"><link rel="prefetch" href="/assets/js/31.6d4fb3a7.js"><link rel="prefetch" href="/assets/js/32.0f4e411c.js"><link rel="prefetch" href="/assets/js/33.11a7d2af.js"><link rel="prefetch" href="/assets/js/34.e7403a40.js"><link rel="prefetch" href="/assets/js/35.92937b0a.js"><link rel="prefetch" href="/assets/js/36.9f52b8c7.js"><link rel="prefetch" href="/assets/js/37.193fb1cc.js"><link rel="prefetch" href="/assets/js/38.33e3fa35.js"><link rel="prefetch" href="/assets/js/39.1b9c5402.js"><link rel="prefetch" href="/assets/js/40.4ae4ec73.js"><link rel="prefetch" href="/assets/js/41.93514908.js"><link rel="prefetch" href="/assets/js/42.79934fb7.js"><link rel="prefetch" href="/assets/js/43.6be9e89a.js"><link rel="prefetch" href="/assets/js/44.cf8d93d5.js"><link rel="prefetch" href="/assets/js/45.89850dfb.js"><link rel="prefetch" href="/assets/js/46.c9bf838d.js"><link rel="prefetch" href="/assets/js/47.d009214c.js"><link rel="prefetch" href="/assets/js/48.f303128c.js"><link rel="prefetch" href="/assets/js/49.a002314e.js"><link rel="prefetch" href="/assets/js/5.baec3451.js"><link rel="prefetch" href="/assets/js/50.bf708037.js"><link rel="prefetch" href="/assets/js/51.a0931ba6.js"><link rel="prefetch" href="/assets/js/52.d828c50a.js"><link rel="prefetch" href="/assets/js/54.45b73705.js"><link rel="prefetch" href="/assets/js/55.19e29602.js"><link rel="prefetch" href="/assets/js/56.70a7339c.js"><link rel="prefetch" href="/assets/js/57.24bae8ee.js"><link rel="prefetch" href="/assets/js/58.b9e501fa.js"><link rel="prefetch" href="/assets/js/59.5741b163.js"><link rel="prefetch" href="/assets/js/6.faab7e15.js"><link rel="prefetch" href="/assets/js/60.55c05a7e.js"><link rel="prefetch" href="/assets/js/61.66739ddc.js"><link rel="prefetch" href="/assets/js/62.984ff248.js"><link rel="prefetch" href="/assets/js/63.198b0614.js"><link rel="prefetch" href="/assets/js/64.44df42dc.js"><link rel="prefetch" href="/assets/js/65.835f260b.js"><link rel="prefetch" href="/assets/js/66.b01fd1a5.js"><link rel="prefetch" href="/assets/js/67.3e990aa1.js"><link rel="prefetch" href="/assets/js/68.3bff67c3.js"><link rel="prefetch" href="/assets/js/69.c77e5194.js"><link rel="prefetch" href="/assets/js/7.1e0b6ef9.js"><link rel="prefetch" href="/assets/js/70.990cc3f7.js"><link rel="prefetch" href="/assets/js/71.faf1e578.js"><link rel="prefetch" href="/assets/js/72.bf80a7aa.js"><link rel="prefetch" href="/assets/js/73.28855af5.js"><link rel="prefetch" href="/assets/js/74.575cab52.js"><link rel="prefetch" href="/assets/js/75.9fbc678e.js"><link rel="prefetch" href="/assets/js/76.aefd2222.js"><link rel="prefetch" href="/assets/js/77.29024e8c.js"><link rel="prefetch" href="/assets/js/78.1a261541.js"><link rel="prefetch" href="/assets/js/79.7f221adf.js"><link rel="prefetch" href="/assets/js/8.52cec024.js"><link rel="prefetch" href="/assets/js/80.a25bdaa1.js"><link rel="prefetch" href="/assets/js/81.78c287ce.js"><link rel="prefetch" href="/assets/js/9.6965887d.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.84492279.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/2.png" alt="CtrlCVer" class="logo"> <span class="site-name can-hide">CtrlCVer</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据库" class="dropdown-title"><span class="title">数据库</span> <span class="arrow down"></span></button> <button type="button" aria-label="数据库" class="mobile-dropdown-title"><span class="title">数据库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/数据库/MySQL.html" class="nav-link">
+  MySQL
+</a></li><li class="dropdown-item"><!----> <a href="/pages/数据库/Redis.html" class="nav-link">
+  Redis
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Vue" class="dropdown-title"><span class="title">Vue</span> <span class="arrow down"></span></button> <button type="button" aria-label="Vue" class="mobile-dropdown-title"><span class="title">Vue</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/Vue/Vue-loading动态加载.html" class="nav-link">
+  Vue-loading动态加载
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Vue/Vue项目用axios做request封装.html" class="nav-link">
+  Vue项目用axios做request封装
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Vue/前端踩坑之路.html" class="nav-link">
+  前端踩坑之路
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="SpringBoot" class="dropdown-title"><span class="title">SpringBoot</span> <span class="arrow down"></span></button> <button type="button" aria-label="SpringBoot" class="mobile-dropdown-title"><span class="title">SpringBoot</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/aop面向切面编程.html" class="nav-link">
+  aop面向切面编程
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/Cron表达式.html" class="nav-link">
+  Cron表达式
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/issue3.html" class="nav-link">
+  issue3
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/Listener监听器.html" class="nav-link">
+  Listener监听器
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/Mybatis 动态SQL.html" class="nav-link">
+  Mybatis 动态SQL
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/Mybatis.html" class="nav-link">
+  Mybatis
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/mybatis和spring整合.html" class="nav-link">
+  mybatis和spring整合
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/Mybatis缓存机制.html" class="nav-link">
+  Mybatis缓存机制
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/session之 HttpSessionActivation.html" class="nav-link">
+  session之 HttpSessionActivation
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/springboot+vue部署后出现springboot后端部分页面404.html" class="nav-link">
+  springboot+vue部署后出现springboot后端部分页面404
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/springboot.html" class="nav-link">
+  springboot
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/SpringMVC介绍.html" class="nav-link">
+  SpringMVC介绍
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/springmvc重定向和请求转发操作.html" class="nav-link">
+  springmvc重定向和请求转发操作
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/Spring介绍.html" class="nav-link">
+  Spring介绍
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/SSM整合开发.html" class="nav-link">
+  SSM整合开发
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/url-pattern设置.html" class="nav-link">
+  url-pattern设置
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/web开发.html" class="nav-link">
+  web开发
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/yaml.html" class="nav-link">
+  yaml
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/单元测试.html" class="nav-link">
+  单元测试
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/启动原理.html" class="nav-link">
+  启动原理
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/嵌入式servlet服务器.html" class="nav-link">
+  嵌入式servlet服务器
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/异常，拦截器....html" class="nav-link">
+  异常，拦截器...
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/执行流程分析.html" class="nav-link">
+  执行流程分析
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/指标监控.html" class="nav-link">
+  指标监控
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/数据访问.html" class="nav-link">
+  数据访问
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/注意.html" class="nav-link">
+  注意
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/注解.html" class="nav-link">
+  注解
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/注解方式注入.html" class="nav-link">
+  注解方式注入
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/源码分析.html" class="nav-link">
+  源码分析
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/高级特性.html" class="nav-link">
+  高级特性
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="SpringCloud" class="dropdown-title"><span class="title">SpringCloud</span> <span class="arrow down"></span></button> <button type="button" aria-label="SpringCloud" class="mobile-dropdown-title"><span class="title">SpringCloud</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/Eureka.html" class="nav-link">
+  Eureka
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/Gateway.html" class="nav-link">
+  Gateway
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/Hystrix断路器.html" class="nav-link">
+  Hystrix断路器
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/nacos-config.html" class="nav-link">
+  nacos-config
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/nacos.html" class="nav-link">
+  nacos
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/nacos集群和持久化配置.html" class="nav-link">
+  nacos集群和持久化配置
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/OpenFeign ISsue.html" class="nav-link">
+  OpenFeign ISsue
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/OpenFeign-issue.html" class="nav-link">
+  OpenFeign-issue
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/OpenFeign服务接口调用.html" class="nav-link">
+  OpenFeign服务接口调用
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/question.html" class="nav-link">
+  question
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/seata.html" class="nav-link">
+  seata
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/security.html" class="nav-link">
+  security
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/sentinel.html" class="nav-link">
+  sentinel
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/Sentinel实现熔断与限流.html" class="nav-link">
+  Sentinel实现熔断与限流
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/Spring Cloud Ribbon.html" class="nav-link">
+  Spring Cloud Ribbon
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/spring-cloud-stream.html" class="nav-link">
+  spring-cloud-stream
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/stream3.2学习.html" class="nav-link">
+  stream3.2学习
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/zookeeper.html" class="nav-link">
+  zookeeper
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/配置中心.html" class="nav-link">
+  配置中心
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="JVM" class="dropdown-title"><span class="title">JVM</span> <span class="arrow down"></span></button> <button type="button" aria-label="JVM" class="mobile-dropdown-title"><span class="title">JVM</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/JVM/JVM.html" class="nav-link">
+  JVM
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="JUC" class="dropdown-title"><span class="title">JUC</span> <span class="arrow down"></span></button> <button type="button" aria-label="JUC" class="mobile-dropdown-title"><span class="title">JUC</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/JUC/Atomic原子操作类.html" class="nav-link">
+  Atomic原子操作类
+</a></li><li class="dropdown-item"><!----> <a href="/pages/JUC/CAS.html" class="nav-link">
+  CAS
+</a></li><li class="dropdown-item"><!----> <a href="/pages/JUC/Java内存模型JMM.html" class="nav-link">
+  Java内存模型JMM
+</a></li><li class="dropdown-item"><!----> <a href="/pages/JUC/Java对象内存布局和对象头.html" class="nav-link">
+  Java对象内存布局和对象头
+</a></li><li class="dropdown-item"><!----> <a href="/pages/JUC/synchronized.html" class="nav-link">
+  synchronized
+</a></li><li class="dropdown-item"><!----> <a href="/pages/JUC/ThreadLocl.html" class="nav-link">
+  ThreadLocl
+</a></li><li class="dropdown-item"><!----> <a href="/pages/JUC/Thread、ThreadLocal、ThreadLocalMap.html" class="nav-link">
+  Thread、ThreadLocal、ThreadLocalMap
+</a></li><li class="dropdown-item"><!----> <a href="/pages/JUC/volatile.html" class="nav-link">
+  volatile
+</a></li><li class="dropdown-item"><!----> <a href="/pages/JUC/多线程锁.html" class="nav-link">
+  多线程锁
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Project" class="dropdown-title"><span class="title">Project</span> <span class="arrow down"></span></button> <button type="button" aria-label="Project" class="mobile-dropdown-title"><span class="title">Project</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/Project/clash部署至服务器，提供“上网”服务.html" class="nav-link">
+  clash部署至服务器，提供“上网”服务
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Project/Oauth2.html" class="nav-link">
+  Oauth2
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Project/SSE+Flux.html" class="nav-link">
+  SSE+Flux
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Project/Unicloud 阿里云服务器作图床.html" class="nav-link">
+  Unicloud 阿里云服务器作图床
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Project/内网穿透技术初探.html" class="nav-link">
+  内网穿透技术初探
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Project/微信订阅号开发.html" class="nav-link">
+  微信订阅号开发
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="课程" class="dropdown-title"><span class="title">课程</span> <span class="arrow down"></span></button> <button type="button" aria-label="课程" class="mobile-dropdown-title"><span class="title">课程</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/课程/操作系统.html" class="nav-link">
+  操作系统
+</a></li><li class="dropdown-item"><!----> <a href="/pages/课程/计算机组成与原理.html" class="nav-link">
+  计算机组成与原理
+</a></li><li class="dropdown-item"><!----> <a href="/pages/课程/计算机网络.html" class="nav-link">
+  计算机网络
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="机器视觉" class="dropdown-title"><span class="title">机器视觉</span> <span class="arrow down"></span></button> <button type="button" aria-label="机器视觉" class="mobile-dropdown-title"><span class="title">机器视觉</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/机器视觉/RTMPose.html" class="nav-link">
+  RTMPose
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/sunwenhaopro" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据库" class="dropdown-title"><span class="title">数据库</span> <span class="arrow down"></span></button> <button type="button" aria-label="数据库" class="mobile-dropdown-title"><span class="title">数据库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/数据库/MySQL.html" class="nav-link">
+  MySQL
+</a></li><li class="dropdown-item"><!----> <a href="/pages/数据库/Redis.html" class="nav-link">
+  Redis
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Vue" class="dropdown-title"><span class="title">Vue</span> <span class="arrow down"></span></button> <button type="button" aria-label="Vue" class="mobile-dropdown-title"><span class="title">Vue</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/Vue/Vue-loading动态加载.html" class="nav-link">
+  Vue-loading动态加载
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Vue/Vue项目用axios做request封装.html" class="nav-link">
+  Vue项目用axios做request封装
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Vue/前端踩坑之路.html" class="nav-link">
+  前端踩坑之路
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="SpringBoot" class="dropdown-title"><span class="title">SpringBoot</span> <span class="arrow down"></span></button> <button type="button" aria-label="SpringBoot" class="mobile-dropdown-title"><span class="title">SpringBoot</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/aop面向切面编程.html" class="nav-link">
+  aop面向切面编程
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/Cron表达式.html" class="nav-link">
+  Cron表达式
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/issue3.html" class="nav-link">
+  issue3
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/Listener监听器.html" class="nav-link">
+  Listener监听器
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/Mybatis 动态SQL.html" class="nav-link">
+  Mybatis 动态SQL
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/Mybatis.html" class="nav-link">
+  Mybatis
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/mybatis和spring整合.html" class="nav-link">
+  mybatis和spring整合
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/Mybatis缓存机制.html" class="nav-link">
+  Mybatis缓存机制
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/session之 HttpSessionActivation.html" class="nav-link">
+  session之 HttpSessionActivation
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/springboot+vue部署后出现springboot后端部分页面404.html" class="nav-link">
+  springboot+vue部署后出现springboot后端部分页面404
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/springboot.html" class="nav-link">
+  springboot
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/SpringMVC介绍.html" class="nav-link">
+  SpringMVC介绍
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/springmvc重定向和请求转发操作.html" class="nav-link">
+  springmvc重定向和请求转发操作
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/Spring介绍.html" class="nav-link">
+  Spring介绍
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/SSM整合开发.html" class="nav-link">
+  SSM整合开发
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/url-pattern设置.html" class="nav-link">
+  url-pattern设置
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/web开发.html" class="nav-link">
+  web开发
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/yaml.html" class="nav-link">
+  yaml
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/单元测试.html" class="nav-link">
+  单元测试
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/启动原理.html" class="nav-link">
+  启动原理
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/嵌入式servlet服务器.html" class="nav-link">
+  嵌入式servlet服务器
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/异常，拦截器....html" class="nav-link">
+  异常，拦截器...
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/执行流程分析.html" class="nav-link">
+  执行流程分析
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/指标监控.html" class="nav-link">
+  指标监控
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/数据访问.html" class="nav-link">
+  数据访问
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/注意.html" class="nav-link">
+  注意
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/注解.html" class="nav-link">
+  注解
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/注解方式注入.html" class="nav-link">
+  注解方式注入
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/源码分析.html" class="nav-link">
+  源码分析
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/高级特性.html" class="nav-link">
+  高级特性
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="SpringCloud" class="dropdown-title"><span class="title">SpringCloud</span> <span class="arrow down"></span></button> <button type="button" aria-label="SpringCloud" class="mobile-dropdown-title"><span class="title">SpringCloud</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/Eureka.html" class="nav-link">
+  Eureka
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/Gateway.html" class="nav-link">
+  Gateway
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/Hystrix断路器.html" class="nav-link">
+  Hystrix断路器
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/nacos-config.html" class="nav-link">
+  nacos-config
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/nacos.html" class="nav-link">
+  nacos
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/nacos集群和持久化配置.html" class="nav-link">
+  nacos集群和持久化配置
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/OpenFeign ISsue.html" class="nav-link">
+  OpenFeign ISsue
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/OpenFeign-issue.html" class="nav-link">
+  OpenFeign-issue
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/OpenFeign服务接口调用.html" class="nav-link">
+  OpenFeign服务接口调用
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/question.html" class="nav-link">
+  question
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/seata.html" class="nav-link">
+  seata
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/security.html" class="nav-link">
+  security
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/sentinel.html" class="nav-link">
+  sentinel
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/Sentinel实现熔断与限流.html" class="nav-link">
+  Sentinel实现熔断与限流
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/Spring Cloud Ribbon.html" class="nav-link">
+  Spring Cloud Ribbon
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/spring-cloud-stream.html" class="nav-link">
+  spring-cloud-stream
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/stream3.2学习.html" class="nav-link">
+  stream3.2学习
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/zookeeper.html" class="nav-link">
+  zookeeper
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/配置中心.html" class="nav-link">
+  配置中心
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="JVM" class="dropdown-title"><span class="title">JVM</span> <span class="arrow down"></span></button> <button type="button" aria-label="JVM" class="mobile-dropdown-title"><span class="title">JVM</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/JVM/JVM.html" class="nav-link">
+  JVM
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="JUC" class="dropdown-title"><span class="title">JUC</span> <span class="arrow down"></span></button> <button type="button" aria-label="JUC" class="mobile-dropdown-title"><span class="title">JUC</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/JUC/Atomic原子操作类.html" class="nav-link">
+  Atomic原子操作类
+</a></li><li class="dropdown-item"><!----> <a href="/pages/JUC/CAS.html" class="nav-link">
+  CAS
+</a></li><li class="dropdown-item"><!----> <a href="/pages/JUC/Java内存模型JMM.html" class="nav-link">
+  Java内存模型JMM
+</a></li><li class="dropdown-item"><!----> <a href="/pages/JUC/Java对象内存布局和对象头.html" class="nav-link">
+  Java对象内存布局和对象头
+</a></li><li class="dropdown-item"><!----> <a href="/pages/JUC/synchronized.html" class="nav-link">
+  synchronized
+</a></li><li class="dropdown-item"><!----> <a href="/pages/JUC/ThreadLocl.html" class="nav-link">
+  ThreadLocl
+</a></li><li class="dropdown-item"><!----> <a href="/pages/JUC/Thread、ThreadLocal、ThreadLocalMap.html" class="nav-link">
+  Thread、ThreadLocal、ThreadLocalMap
+</a></li><li class="dropdown-item"><!----> <a href="/pages/JUC/volatile.html" class="nav-link">
+  volatile
+</a></li><li class="dropdown-item"><!----> <a href="/pages/JUC/多线程锁.html" class="nav-link">
+  多线程锁
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Project" class="dropdown-title"><span class="title">Project</span> <span class="arrow down"></span></button> <button type="button" aria-label="Project" class="mobile-dropdown-title"><span class="title">Project</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/Project/clash部署至服务器，提供“上网”服务.html" class="nav-link">
+  clash部署至服务器，提供“上网”服务
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Project/Oauth2.html" class="nav-link">
+  Oauth2
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Project/SSE+Flux.html" class="nav-link">
+  SSE+Flux
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Project/Unicloud 阿里云服务器作图床.html" class="nav-link">
+  Unicloud 阿里云服务器作图床
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Project/内网穿透技术初探.html" class="nav-link">
+  内网穿透技术初探
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Project/微信订阅号开发.html" class="nav-link">
+  微信订阅号开发
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="课程" class="dropdown-title"><span class="title">课程</span> <span class="arrow down"></span></button> <button type="button" aria-label="课程" class="mobile-dropdown-title"><span class="title">课程</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/课程/操作系统.html" class="nav-link">
+  操作系统
+</a></li><li class="dropdown-item"><!----> <a href="/pages/课程/计算机组成与原理.html" class="nav-link">
+  计算机组成与原理
+</a></li><li class="dropdown-item"><!----> <a href="/pages/课程/计算机网络.html" class="nav-link">
+  计算机网络
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="机器视觉" class="dropdown-title"><span class="title">机器视觉</span> <span class="arrow down"></span></button> <button type="button" aria-label="机器视觉" class="mobile-dropdown-title"><span class="title">机器视觉</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/机器视觉/RTMPose.html" class="nav-link">
+  RTMPose
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/sunwenhaopro" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/pages/SpringBoot/aop面向切面编程.html" class="sidebar-link">aop介绍</a></li><li><a href="/pages/SpringBoot/Cron表达式.html" class="sidebar-link">Cron表达式</a></li><li><a href="/pages/SpringBoot/issue3.html" class="sidebar-link">创建SpringApplicationRunListener监听器失败</a></li><li><a href="/pages/SpringBoot/Listener监听器.html" class="sidebar-link">什么叫监听器</a></li><li><a href="/pages/SpringBoot/Mybatis 动态SQL.html" class="sidebar-link">Mybatis 动态SQL</a></li><li><a href="/pages/SpringBoot/Mybatis.html" class="sidebar-link">Mybatis</a></li><li><a href="/pages/SpringBoot/mybatis和spring整合.html" class="sidebar-link">mybatis和spring整合开发</a></li><li><a href="/pages/SpringBoot/Mybatis缓存机制.html" class="sidebar-link">MyBatis|缓存机制</a></li><li><a href="/pages/SpringBoot/session之 HttpSessionActivation.html" class="sidebar-link">session之 HttpSessionActivation</a></li><li><a href="/pages/SpringBoot/springboot+vue部署后出现springboot后端部分页面404.html" class="sidebar-link">springboot+vue部署后出现springboot后端部分页面404</a></li><li><a href="/pages/SpringBoot/springboot.html" class="sidebar-link">自定义文件上传路径和访问路径映射（等同于设置静态资源路径）</a></li><li><a href="/pages/SpringBoot/SpringMVC介绍.html" class="sidebar-link">spring mvc介绍</a></li><li><a href="/pages/SpringBoot/springmvc重定向和请求转发操作.html" class="sidebar-link">重定向和请求转发操作</a></li><li><a href="/pages/SpringBoot/Spring介绍.html" class="sidebar-link">spring介绍</a></li><li><a href="/pages/SpringBoot/SSM整合开发.html" class="sidebar-link">SSM整合开发</a></li><li><a href="/pages/SpringBoot/url-pattern设置.html" class="sidebar-link">/pages/SpringBoot/url-pattern设置.html</a></li><li><a href="/pages/SpringBoot/web开发.html" class="sidebar-link">springboot web开发</a></li><li><a href="/pages/SpringBoot/yaml.html" class="sidebar-link">yaml使用</a></li><li><a href="/pages/SpringBoot/单元测试.html" class="sidebar-link">springboot单元测试</a></li><li><a href="/pages/SpringBoot/启动原理.html" class="sidebar-link">springboot启动原理分析</a></li><li><a href="/pages/SpringBoot/嵌入式servlet服务器.html" class="sidebar-link">嵌入式servlet服务器</a></li><li><a href="/pages/SpringBoot/异常，拦截器....html" class="sidebar-link">异常处理</a></li><li><a href="/pages/SpringBoot/执行流程分析.html" class="sidebar-link">执行流程图</a></li><li><a href="/pages/SpringBoot/指标监控.html" class="active sidebar-link">指标监控</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/pages/SpringBoot/指标监控.html#暴露所有端点" class="sidebar-link">暴露所有端点</a></li><li class="sidebar-sub-header"><a href="/pages/SpringBoot/指标监控.html#查看自动配置信息" class="sidebar-link">查看自动配置信息</a></li><li class="sidebar-sub-header"><a href="/pages/SpringBoot/指标监控.html#当前配置信息" class="sidebar-link">当前配置信息</a></li><li class="sidebar-sub-header"><a href="/pages/SpringBoot/指标监控.html#环境监控" class="sidebar-link">环境监控</a></li><li class="sidebar-sub-header"><a href="/pages/SpringBoot/指标监控.html#定制health信息" class="sidebar-link">定制health信息</a></li><li class="sidebar-sub-header"><a href="/pages/SpringBoot/指标监控.html#定制info信息" class="sidebar-link">定制info信息</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/pages/SpringBoot/指标监控.html#配置文件方式" class="sidebar-link">配置文件方式</a></li><li class="sidebar-sub-header"><a href="/pages/SpringBoot/指标监控.html#类方式" class="sidebar-link">类方式</a></li></ul></li><li class="sidebar-sub-header"><a href="/pages/SpringBoot/指标监控.html#定制metrics信息" class="sidebar-link">定制Metrics信息</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/pages/SpringBoot/指标监控.html#springboot支持自动适配的metrics" class="sidebar-link">SpringBoot支持自动适配的Metrics</a></li></ul></li><li class="sidebar-sub-header"><a href="/pages/SpringBoot/指标监控.html#添加endpoint" class="sidebar-link">添加endpoint</a></li></ul></li><li><a href="/pages/SpringBoot/数据访问.html" class="sidebar-link">spring boot数据访问</a></li><li><a href="/pages/SpringBoot/注意.html" class="sidebar-link">spring boot 注意点</a></li><li><a href="/pages/SpringBoot/注解.html" class="sidebar-link">spring boot注解</a></li><li><a href="/pages/SpringBoot/注解方式注入.html" class="sidebar-link">使用注解前提</a></li><li><a href="/pages/SpringBoot/源码分析.html" class="sidebar-link">SpringApplication.run()阶段</a></li><li><a href="/pages/SpringBoot/高级特性.html" class="sidebar-link">spring boot高级特性</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="指标监控"><a href="#指标监控" class="header-anchor">#</a> 指标监控</h1> <p>Spring Boot includes a number of additional features to help you monitor and manage your application when you push it to production. You can choose to manage and monitor your application by using HTTP endpoints or with JMX. Auditing, health, and metrics gathering can also be automatically applied to your application.</p> <p>https://docs.spring.io/spring-boot/docs/current/reference/html/actuator.html#actuator</p> <p>未来每一个微服务在云上部署以后，我们都需要对其进行监控、追踪、审计、控制等。SpringBoot就抽取了Actuator场景，使得我们每个微服务快速引用即可获得生产级别的应用监控、审计等功能。</p> <div class="language-xml line-numbers-mode"><pre class="language-xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>org.springframework.boot<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>spring-boot-starter-actuator<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">&gt;</span></span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p><img src="https://picture.xcye.xyz/image-20210710122614947.png?x-oss-process=style/pictureProcess1" alt=""></p> <h1 id="_1-x与2-x的不同"><a href="#_1-x与2-x的不同" class="header-anchor">#</a> 1.x与2.x的不同</h1> <p><img src="https://picture.xcye.xyz/image-20210710122307766.png?x-oss-process=style/pictureProcess1" alt=""></p> <h1 id="使用"><a href="#使用" class="header-anchor">#</a> 使用</h1> <p>Actuator endpoints let you monitor and interact with your application. Spring Boot includes a number of built-in endpoints and lets you add your own. For example, the <code>health</code> endpoint provides basic application health information.</p> <p>Each individual endpoint can be <a href="http://ooszy.cco.vin/img/blog-note/https://docs.spring.io/spring-boot/docs/current/reference/html/actuator.html#actuator.endpoints.enabling" target="_blank" rel="noopener noreferrer">enabled or disabled<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> and <a href="http://ooszy.cco.vin/img/blog-note/https://docs.spring.io/spring-boot/docs/current/reference/html/actuator.html#actuator.endpoints.exposing" target="_blank" rel="noopener noreferrer">exposed (made remotely accessible) over HTTP or JMX<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>. An endpoint is considered to be available when it is both enabled and exposed. The built-in endpoints will only be auto-configured when they are available. Most applications choose exposure via HTTP, where the ID of the endpoint along with a prefix of <code>/actuator</code> is mapped to a URL. For example, by default, the <code>health</code> endpoint is mapped to <code>/actuator/health</code>.</p> <p>当我们就starter导入启动web程序的时候，那么我们就可以通过通过网址http://localhost:8080//actuator/进行访问，但是默认值开启health，其他的功能，我们需要开启</p> <p>我们可以通过两种方式来监控程序</p> <ul><li><p>通过jmx</p> <p>在cmd中输入<code>jconsole</code>便可以进行监控</p> <p><img src="https://picture.xcye.xyz/image-20210710124125592.png?x-oss-process=style/pictureProcess1" alt=""></p></li> <li><p>通过web，也就是通过发送请求的方式，像这种方式就是HTTP的监控http://localhost:8080//actuator/</p></li></ul> <p>可以查看网址</p> <p>https://docs.spring.io/spring-boot/docs/current/reference/html/actuator.html#actuator.endpoints.enabling</p> <table><thead><tr><th>ID</th> <th>描述</th></tr></thead> <tbody><tr><td><code>auditevents</code></td> <td>暴露当前应用程序的审核事件信息。需要一个<code>AuditEventRepository组件</code>。</td></tr> <tr><td><code>beans</code></td> <td>显示应用程序中所有Spring Bean的完整列表。</td></tr> <tr><td><code>caches</code></td> <td>暴露可用的缓存。</td></tr> <tr><td><code>conditions</code></td> <td>显示自动配置的所有条件信息，包括匹配或不匹配的原因。</td></tr> <tr><td><code>configprops</code></td> <td>显示所有<code>@ConfigurationProperties</code>。</td></tr> <tr><td><code>env</code></td> <td>暴露Spring的属性<code>ConfigurableEnvironment</code></td></tr> <tr><td><code>flyway</code></td> <td>显示已应用的所有Flyway数据库迁移。 需要一个或多个<code>Flyway</code>组件。</td></tr> <tr><td><code>health</code></td> <td>显示应用程序运行状况信息。</td></tr> <tr><td><code>httptrace</code></td> <td>显示HTTP跟踪信息（默认情况下，最近100个HTTP请求-响应）。需要一个<code>HttpTraceRepository</code>组件。</td></tr> <tr><td><code>info</code></td> <td>显示应用程序信息。</td></tr> <tr><td><code>integrationgraph</code></td> <td>显示Spring <code>integrationgraph</code> 。需要依赖<code>spring-integration-core</code>。</td></tr> <tr><td><code>loggers</code></td> <td>显示和修改应用程序中日志的配置。</td></tr> <tr><td><code>liquibase</code></td> <td>显示已应用的所有Liquibase数据库迁移。需要一个或多个<code>Liquibase</code>组件。</td></tr> <tr><td><code>metrics</code></td> <td>显示当前应用程序的“指标”信息。</td></tr> <tr><td><code>mappings</code></td> <td>显示所有<code>@RequestMapping</code>路径列表。</td></tr> <tr><td><code>scheduledtasks</code></td> <td>显示应用程序中的计划任务。</td></tr> <tr><td><code>sessions</code></td> <td>允许从Spring Session支持的会话存储中检索和删除用户会话。需要使用Spring Session的基于Servlet的Web应用程序。</td></tr> <tr><td><code>shutdown</code></td> <td>使应用程序正常关闭。默认禁用。</td></tr> <tr><td><code>startup</code></td> <td>显示由<code>ApplicationStartup</code>收集的启动步骤数据。需要使用<code>SpringApplication</code>进行配置<code>BufferingApplicationStartup</code>。</td></tr> <tr><td><code>threaddump</code></td> <td>执行线程转储。</td></tr></tbody></table> <p>如果您的应用程序是Web应用程序（Spring MVC，Spring WebFlux或Jersey），则可以使用以下附加端点：</p> <table><thead><tr><th>ID</th> <th>描述</th></tr></thead> <tbody><tr><td><code>heapdump</code></td> <td>返回<code>hprof</code>堆转储文件。</td></tr> <tr><td><code>jolokia</code></td> <td>通过HTTP暴露JMX bean（需要引入Jolokia，不适用于WebFlux）。需要引入依赖<code>jolokia-core</code>。</td></tr> <tr><td><code>logfile</code></td> <td>返回日志文件的内容（如果已设置<code>logging.file.name</code>或<code>logging.file.path</code>属性）。支持使用HTTP<code>Range</code>标头来检索部分日志文件的内容。</td></tr> <tr><td><code>prometheus</code></td> <td>以Prometheus服务器可以抓取的格式公开指标。需要依赖<code>micrometer-registry-prometheus</code>。</td></tr></tbody></table> <p>最常用的Endpoint</p> <ul><li><p><strong>Health：监控状况</strong></p></li> <li><p><strong>Metrics：运行时指标</strong></p></li> <li><p><strong>Loggers：日志记录</strong></p></li></ul> <h1 id="配置"><a href="#配置" class="header-anchor">#</a> 配置</h1> <p>Spring Boot Actuator的所有配置都是以management作为前缀</p> <h1 id="exposing-endpoints"><a href="#exposing-endpoints" class="header-anchor">#</a> Exposing Endpoints</h1> <p>因为暴露端点是非常危险的，所以对于使用web进行监控，默认是暴露了<code>health</code>这个端点，也就是我们只有http://localhost:8080/actuator/health可以成功访问</p> <table><thead><tr><th style="text-align:left;">ID</th> <th style="text-align:left;">JMX</th> <th style="text-align:left;">Web</th></tr></thead> <tbody><tr><td style="text-align:left;"><code>auditevents</code></td> <td style="text-align:left;">Yes</td> <td style="text-align:left;">No</td></tr> <tr><td style="text-align:left;"><code>beans</code></td> <td style="text-align:left;">Yes</td> <td style="text-align:left;">No</td></tr> <tr><td style="text-align:left;"><code>caches</code></td> <td style="text-align:left;">Yes</td> <td style="text-align:left;">No</td></tr> <tr><td style="text-align:left;"><code>conditions</code></td> <td style="text-align:left;">Yes</td> <td style="text-align:left;">No</td></tr> <tr><td style="text-align:left;"><code>configprops</code></td> <td style="text-align:left;">Yes</td> <td style="text-align:left;">No</td></tr> <tr><td style="text-align:left;"><code>env</code></td> <td style="text-align:left;">Yes</td> <td style="text-align:left;">No</td></tr> <tr><td style="text-align:left;"><code>flyway</code></td> <td style="text-align:left;">Yes</td> <td style="text-align:left;">No</td></tr> <tr><td style="text-align:left;"><code>health</code></td> <td style="text-align:left;">Yes</td> <td style="text-align:left;">Yes</td></tr> <tr><td style="text-align:left;"><code>heapdump</code></td> <td style="text-align:left;">N/A</td> <td style="text-align:left;">No</td></tr> <tr><td style="text-align:left;"><code>httptrace</code></td> <td style="text-align:left;">Yes</td> <td style="text-align:left;">No</td></tr> <tr><td style="text-align:left;"><code>info</code></td> <td style="text-align:left;">Yes</td> <td style="text-align:left;">No</td></tr> <tr><td style="text-align:left;"><code>integrationgraph</code></td> <td style="text-align:left;">Yes</td> <td style="text-align:left;">No</td></tr> <tr><td style="text-align:left;"><code>jolokia</code></td> <td style="text-align:left;">N/A</td> <td style="text-align:left;">No</td></tr> <tr><td style="text-align:left;"><code>logfile</code></td> <td style="text-align:left;">N/A</td> <td style="text-align:left;">No</td></tr> <tr><td style="text-align:left;"><code>loggers</code></td> <td style="text-align:left;">Yes</td> <td style="text-align:left;">No</td></tr> <tr><td style="text-align:left;"><code>liquibase</code></td> <td style="text-align:left;">Yes</td> <td style="text-align:left;">No</td></tr> <tr><td style="text-align:left;"><code>metrics</code></td> <td style="text-align:left;">Yes</td> <td style="text-align:left;">No</td></tr> <tr><td style="text-align:left;"><code>mappings</code></td> <td style="text-align:left;">Yes</td> <td style="text-align:left;">No</td></tr> <tr><td style="text-align:left;"><code>prometheus</code></td> <td style="text-align:left;">N/A</td> <td style="text-align:left;">No</td></tr> <tr><td style="text-align:left;"><code>quartz</code></td> <td style="text-align:left;">Yes</td> <td style="text-align:left;">No</td></tr> <tr><td style="text-align:left;"><code>scheduledtasks</code></td> <td style="text-align:left;">Yes</td> <td style="text-align:left;">No</td></tr> <tr><td style="text-align:left;"><code>sessions</code></td> <td style="text-align:left;">Yes</td> <td style="text-align:left;">No</td></tr> <tr><td style="text-align:left;"><code>shutdown</code></td> <td style="text-align:left;">Yes</td> <td style="text-align:left;">No</td></tr> <tr><td style="text-align:left;"><code>startup</code></td> <td style="text-align:left;">Yes</td> <td style="text-align:left;">No</td></tr> <tr><td style="text-align:left;"><code>threaddump</code></td> <td style="text-align:left;">Yes</td> <td style="text-align:left;">No</td></tr></tbody></table> <h2 id="暴露所有端点"><a href="#暴露所有端点" class="header-anchor">#</a> 暴露所有端点</h2> <div class="language-yaml line-numbers-mode"><pre class="language-yaml"><code><span class="token key atrule">management</span><span class="token punctuation">:</span>
+  <span class="token key atrule">endpoints</span><span class="token punctuation">:</span>
+    <span class="token key atrule">web</span><span class="token punctuation">:</span>
+      <span class="token key atrule">exposure</span><span class="token punctuation">:</span>
+        <span class="token key atrule">include</span><span class="token punctuation">:</span> <span class="token string">&quot;*&quot;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>其中，<code>*</code>表示所有</p> <div class="language-yaml line-numbers-mode"><pre class="language-yaml"><code><span class="token key atrule">management</span><span class="token punctuation">:</span>
+  <span class="token key atrule">endpoints</span><span class="token punctuation">:</span>
+    <span class="token key atrule">web</span><span class="token punctuation">:</span>
+      <span class="token key atrule">exposure</span><span class="token punctuation">:</span>
+        <span class="token key atrule">include</span><span class="token punctuation">:</span> <span class="token string">&quot;*&quot;</span>
+        <span class="token key atrule">exclude</span><span class="token punctuation">:</span> <span class="token string">&quot;env,beans&quot;</span>
+        暴露除了env<span class="token punctuation">,</span>beans之外的所有端点
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><h1 id="实例"><a href="#实例" class="header-anchor">#</a> 实例</h1> <h2 id="查看自动配置信息"><a href="#查看自动配置信息" class="header-anchor">#</a> 查看自动配置信息</h2> <ul><li><p>http://localhost:8080/actuator/conditions</p> <p>查看当前应用自动配置的信息</p> <p><img src="https://picture.xcye.xyz/image-20210710130951373.png?x-oss-process=style/pictureProcess1" alt=""></p> <p><img src="https://picture.xcye.xyz/image-20210710131003483.png?x-oss-process=style/pictureProcess1" alt=""></p></li></ul> <h2 id="当前配置信息"><a href="#当前配置信息" class="header-anchor">#</a> 当前配置信息</h2> <p>http://localhost:8080/actuator/configprops</p> <p>通过<code>configprops</code>可以查看，我们当前程序中的配置信息，也就是和配置文件绑定的那些配置</p> <p>尽管有些我们没有给值，但是也是有默认值</p> <p><img src="https://picture.xcye.xyz/image-20210710131240979.png?x-oss-process=style/pictureProcess1" alt=""></p> <h2 id="环境监控"><a href="#环境监控" class="header-anchor">#</a> 环境监控</h2> <p>http://localhost:8080/actuator/env</p> <p>这个就是我们当前的环境</p> <p><img src="https://picture.xcye.xyz/image-20210710131513372.png?x-oss-process=style/pictureProcess1" alt=""></p> <p>包括java环境等等</p> <h1 id="health-endpoint"><a href="#health-endpoint" class="header-anchor">#</a> Health Endpoint</h1> <p>健康检查端点，我们一般用于在云平台，平台会定时的检查应用的健康状况，我们就需要Health Endpoint可以为平台返回当前应用的一系列组件健康状况的集合。</p> <p>重要的几点：</p> <ul><li>health endpoint返回的结果，应该是一系列健康检查后的一个汇总报告</li> <li>很多的健康检查默认已经自动配置好了，比如：数据库、redis等</li> <li>可以很容易的添加自定义的健康检查机制</li></ul> <p><img src="https://picture.xcye.xyz/image-20210710132915636.png?x-oss-process=style/pictureProcess1" alt=""></p> <p>但是默认没有详细信息，我们可以通过配置文件进行开启</p> <p>因为这些端点我们不能全部暴露，我们额可以只暴露几个</p> <div class="language-yaml line-numbers-mode"><pre class="language-yaml"><code><span class="token key atrule">management</span><span class="token punctuation">:</span>
+  <span class="token key atrule">endpoints</span><span class="token punctuation">:</span> <span class="token comment"># 对所有的端点控制</span>
+    <span class="token key atrule">web</span><span class="token punctuation">:</span>
+      <span class="token key atrule">exposure</span><span class="token punctuation">:</span>
+        <span class="token key atrule">include</span><span class="token punctuation">:</span> <span class="token string">&quot;*&quot;</span>
+    <span class="token key atrule">enabled-by-default</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+  <span class="token comment">#        exclude: &quot;env,beans&quot;</span>
+  <span class="token key atrule">endpoint</span><span class="token punctuation">:</span> <span class="token comment"># 对单个端点控制</span>
+    <span class="token key atrule">health</span><span class="token punctuation">:</span>
+      <span class="token key atrule">show-details</span><span class="token punctuation">:</span> always
+      <span class="token key atrule">enabled</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+
+    <span class="token key atrule">metrics</span><span class="token punctuation">:</span>
+      <span class="token key atrule">enabled</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div><p>如果想对某个单个端点控制的话，那么可以使用<code>management.endpoint.端点名.项</code>方式</p> <p>当对<code>health</code>端点开启详细后，我们就可以看到详细的数据</p> <p><img src="https://picture.xcye.xyz/image-20210710133628597.png?x-oss-process=style/pictureProcess1" alt=""></p> <p>只有所有的值，都是<code>UP</code>时，才会返回<code>UP</code>，否则会返回宕机状态，通过这个，我们可以多长时间发送一个请求，如果是宕机，又重新自动部署等</p> <h1 id="metrics-endpoint"><a href="#metrics-endpoint" class="header-anchor">#</a> Metrics Endpoint</h1> <p>提供详细的、层级的、空间指标信息，这些信息可以被pull（主动推送）或者push（被动获取）方式得到；</p> <ul><li><p>通过Metrics对接多种监控系统</p></li> <li><p>简化核心Metrics开发</p></li> <li><p>添加自定义Metrics或者扩展已有Metrics</p></li></ul> <p>http://localhost:8080/actuator/metrics可以通过此进行监控</p> <p><img src="https://picture.xcye.xyz/image-20210710131559010.png?x-oss-process=style/pictureProcess1" alt=""></p> <p>如果想得到上面这些的具体值，那么就http://localhost:8080/actuator/metrics/http.server.requests就可以</p> <p><img src="https://picture.xcye.xyz/image-20210710131718535.png?x-oss-process=style/pictureProcess1" alt=""></p> <h1 id="定制endpoint"><a href="#定制endpoint" class="header-anchor">#</a> 定制endpoint</h1> <p>我们也可以定制端点</p> <h2 id="定制health信息"><a href="#定制health信息" class="header-anchor">#</a> 定制health信息</h2> <p>如果要定制health的话，那么我们就需要实现<code>HealthIndicator</code>接口</p> <blockquote><p>public abstract class AbstractHealthIndicator implements HealthIndicator {}</p></blockquote> <p>类的名字以<code>名字+HealthIndicator</code>进行命名，展示的时候，会去掉后面的<code>HealthIndicator</code></p> <div class="language-java line-numbers-mode"><pre class="language-java"><code><span class="token annotation punctuation">@Component</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MyComHealthIndicator</span> <span class="token keyword">extends</span> <span class="token class-name">AbstractHealthIndicator</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">protected</span> <span class="token keyword">void</span> doHealthCheck <span class="token punctuation">(</span><span class="token class-name">Health<span class="token punctuation">.</span>Builder</span> builder<span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">Exception</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Map</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">,</span><span class="token class-name">Object</span><span class="token punctuation">&gt;</span></span> map <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">HashMap</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>i <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token comment">//健康</span>
+            <span class="token comment">//builder.up();</span>
+            builder<span class="token punctuation">.</span><span class="token function">status</span><span class="token punctuation">(</span><span class="token class-name">Status</span><span class="token punctuation">.</span><span class="token constant">UP</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            map<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span><span class="token string">&quot;count&quot;</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            map<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span><span class="token string">&quot;ms&quot;</span><span class="token punctuation">,</span><span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token punctuation">}</span><span class="token keyword">else</span> <span class="token punctuation">{</span>
+            <span class="token comment">//不健康</span>
+            <span class="token comment">//builder.down();</span>
+            builder<span class="token punctuation">.</span><span class="token function">status</span><span class="token punctuation">(</span><span class="token class-name">Status</span><span class="token punctuation">.</span><span class="token constant">OUT_OF_SERVICE</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            map<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span><span class="token string">&quot;err&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;连接超时&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            map<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span><span class="token string">&quot;ms&quot;</span><span class="token punctuation">,</span><span class="token number">3000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        builder<span class="token punctuation">.</span><span class="token function">withDetail</span><span class="token punctuation">(</span><span class="token string">&quot;map&quot;</span><span class="token punctuation">,</span>map<span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">withDetail</span><span class="token punctuation">(</span><span class="token string">&quot;ccc&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;fff&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br></div></div><p><img src="https://picture.xcye.xyz/image-20210710141539563.png?x-oss-process=style/pictureProcess1" alt=""></p> <h2 id="定制info信息"><a href="#定制info信息" class="header-anchor">#</a> 定制info信息</h2> <h3 id="配置文件方式"><a href="#配置文件方式" class="header-anchor">#</a> 配置文件方式</h3> <p>如果使用yaml，比如要像下面这样写，info就是最高的节点，其并不是在<code>management.endpoint.info</code>，而是<code>info</code></p> <div class="language-yaml line-numbers-mode"><pre class="language-yaml"><code><span class="token key atrule">info</span><span class="token punctuation">:</span>
+  <span class="token key atrule">appName</span><span class="token punctuation">:</span> chuchen
+  <span class="token key atrule">version</span><span class="token punctuation">:</span> 1.2.2
+  <span class="token key atrule">maven1</span><span class="token punctuation">:</span> @project.groupId@
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>但是如果关闭了所有的端点，就需要先开启info</p> <div class="language-yaml line-numbers-mode"><pre class="language-yaml"><code><span class="token key atrule">management</span><span class="token punctuation">:</span>
+  <span class="token key atrule">endpoints</span><span class="token punctuation">:</span>
+    <span class="token key atrule">web</span><span class="token punctuation">:</span>
+      <span class="token key atrule">exposure</span><span class="token punctuation">:</span>
+        <span class="token key atrule">include</span><span class="token punctuation">:</span> <span class="token string">&quot;*&quot;</span>
+    <span class="token key atrule">enabled-by-default</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+  <span class="token key atrule">endpoint</span><span class="token punctuation">:</span>
+    <span class="token key atrule">info</span><span class="token punctuation">:</span>
+      <span class="token key atrule">enabled</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+
+<span class="token key atrule">info</span><span class="token punctuation">:</span>
+  <span class="token key atrule">appName</span><span class="token punctuation">:</span> chuchen
+  <span class="token key atrule">version</span><span class="token punctuation">:</span> 1.2.2
+  <span class="token key atrule">maven1</span><span class="token punctuation">:</span> @project.groupId@
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div><h3 id="类方式"><a href="#类方式" class="header-anchor">#</a> 类方式</h3> <p>使用类方式，只需要实现<code>InfoContributor</code>接口就可以</p> <div class="language-java line-numbers-mode"><pre class="language-java"><code><span class="token annotation punctuation">@Component</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MyInfo</span> <span class="token keyword">implements</span> <span class="token class-name">InfoContributor</span> <span class="token punctuation">{</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> contribute <span class="token punctuation">(</span><span class="token class-name">Info<span class="token punctuation">.</span>Builder</span> builder<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        builder<span class="token punctuation">.</span><span class="token function">withDetail</span><span class="token punctuation">(</span><span class="token string">&quot;age&quot;</span><span class="token punctuation">,</span><span class="token number">21</span><span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">withDetail</span><span class="token punctuation">(</span><span class="token string">&quot;name&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;qsyyke&quot;</span><span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">withDetail</span><span class="token punctuation">(</span><span class="token string">&quot;qq&quot;</span><span class="token punctuation">,</span><span class="token number">2291308094l</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><p>他们可以混合使用，追加的方式</p> <p><img src="https://picture.xcye.xyz/image-20210710142901099.png?x-oss-process=style/pictureProcess1" alt=""></p> <h2 id="定制metrics信息"><a href="#定制metrics信息" class="header-anchor">#</a> 定制Metrics信息</h2> <h3 id="springboot支持自动适配的metrics"><a href="#springboot支持自动适配的metrics" class="header-anchor">#</a> SpringBoot支持自动适配的Metrics</h3> <ul><li>JVM metrics, report utilization of:</li> <li>Various memory and buffer pools</li> <li>Statistics related to garbage collection</li> <li>Threads utilization</li> <li>Number of classes loaded/unloaded</li> <li>CPU metrics</li> <li>File descriptor metrics</li> <li>Kafka consumer and producer metrics</li> <li>Log4j2 metrics: record the number of events logged to Log4j2 at each level</li> <li>Logback metrics: record the number of events logged to Logback at each level</li> <li>Uptime metrics: report a gauge for uptime and a fixed gauge representing the application’s absolute start time</li> <li>Tomcat metrics (<code>server.tomcat.mbeanregistry.enabled</code> must be set to <code>true</code> for all Tomcat metrics to be registered)</li> <li><a href="http://ooszy.cco.vin/img/blog-note/https://docs.spring.io/spring-integration/docs/5.4.1/reference/html/system-management.html#micrometer-integration" target="_blank" rel="noopener noreferrer">Spring Integration<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> metrics</li></ul> <div class="language-java line-numbers-mode"><pre class="language-java"><code><span class="token annotation punctuation">@Component</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MyMetrics</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token class-name">MyMetrics</span> <span class="token punctuation">(</span><span class="token class-name">MeterRegistry</span> meterRegistry<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Counter</span> counter <span class="token operator">=</span> meterRegistry<span class="token punctuation">.</span><span class="token function">counter</span><span class="token punctuation">(</span><span class="token string">&quot;myMetrics.method.running.counter&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p><img src="https://picture.xcye.xyz/image-20210710143508064.png?x-oss-process=style/pictureProcess1" alt=""></p> <p><img src="https://picture.xcye.xyz/image-20210710143531397.png?x-oss-process=style/pictureProcess1" alt=""></p> <h2 id="添加endpoint"><a href="#添加endpoint" class="header-anchor">#</a> 添加endpoint</h2> <p>我们也可以添加端点</p> <p><img src="https://picture.xcye.xyz/image-20210710144352080.png?x-oss-process=style/pictureProcess1" alt=""></p> <div class="language-java line-numbers-mode"><pre class="language-java"><code><span class="token annotation punctuation">@Endpoint</span><span class="token punctuation">(</span>id <span class="token operator">=</span> <span class="token string">&quot;myEndpoint&quot;</span><span class="token punctuation">)</span>
+<span class="token annotation punctuation">@Component</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MyEndpoint</span> <span class="token punctuation">{</span>
+
+    <span class="token annotation punctuation">@ReadOperation</span>
+    <span class="token keyword">public</span> <span class="token class-name">Map</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">,</span><span class="token class-name">Object</span><span class="token punctuation">&gt;</span></span> <span class="token function">getInfo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token class-name">Collections</span><span class="token punctuation">.</span><span class="token function">singletonMap</span><span class="token punctuation">(</span><span class="token string">&quot;info&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;ReadOperation-------&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@WriteOperation</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">restart</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;chuhen----------&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br></div></div><blockquote><p>尽管我们已经关闭端点暴露，但是我们自己的端点，可以不用去开启</p></blockquote> <h1 id="可视化"><a href="#可视化" class="header-anchor">#</a> 可视化</h1> <p>https://github.com/codecentric/spring-boot-admin</p> <p>首先，需要安装一个服务器，导入下面依赖，需要重新新建一个module</p> <div class="language-xml line-numbers-mode"><pre class="language-xml"><code></code></pre> <div class="line-numbers-wrapper"></div></div><p>启动效果</p> <p><img src="https://picture.xcye.xyz/image-20210710152839738.png?x-oss-process=style/pictureProcess1" alt=""></p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/pages/SpringBoot/执行流程分析.html" class="prev">
+        执行流程图
+      </a></span> <span class="next"><a href="/pages/SpringBoot/数据访问.html">
+        spring boot数据访问
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.347fa917.js" defer></script><script src="/assets/js/4.4e440976.js" defer></script><script src="/assets/js/53.319606bc.js" defer></script>
+  </body>
+</html>

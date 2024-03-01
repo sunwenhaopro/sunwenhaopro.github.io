@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Redis | CtrlCVer</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    <link rel="icon" href="/6.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/2.10.0/github-markdown.min.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <meta name="description" content="孙文豪大魔王">
+    
+    <link rel="preload" href="/assets/css/0.styles.84492279.css" as="style"><link rel="preload" href="/assets/js/app.347fa917.js" as="script"><link rel="preload" href="/assets/js/4.4e440976.js" as="script"><link rel="preload" href="/assets/js/80.a25bdaa1.js" as="script"><link rel="prefetch" href="/assets/js/10.1230c4be.js"><link rel="prefetch" href="/assets/js/11.daeaf548.js"><link rel="prefetch" href="/assets/js/12.abede0ae.js"><link rel="prefetch" href="/assets/js/13.cb62a723.js"><link rel="prefetch" href="/assets/js/14.5375bc4a.js"><link rel="prefetch" href="/assets/js/15.ffb73a9c.js"><link rel="prefetch" href="/assets/js/16.6be16dba.js"><link rel="prefetch" href="/assets/js/17.3879182a.js"><link rel="prefetch" href="/assets/js/18.04083c0b.js"><link rel="prefetch" href="/assets/js/19.ee44a025.js"><link rel="prefetch" href="/assets/js/2.3a3bb906.js"><link rel="prefetch" href="/assets/js/20.bdce0031.js"><link rel="prefetch" href="/assets/js/21.b9bf7143.js"><link rel="prefetch" href="/assets/js/22.aadd746b.js"><link rel="prefetch" href="/assets/js/23.d590bbfb.js"><link rel="prefetch" href="/assets/js/24.72023ebd.js"><link rel="prefetch" href="/assets/js/25.dd4e2abc.js"><link rel="prefetch" href="/assets/js/26.d2b37904.js"><link rel="prefetch" href="/assets/js/27.971418ab.js"><link rel="prefetch" href="/assets/js/28.779a0681.js"><link rel="prefetch" href="/assets/js/29.246ef370.js"><link rel="prefetch" href="/assets/js/3.4c8c30ea.js"><link rel="prefetch" href="/assets/js/30.ffc51d63.js"><link rel="prefetch" href="/assets/js/31.6d4fb3a7.js"><link rel="prefetch" href="/assets/js/32.0f4e411c.js"><link rel="prefetch" href="/assets/js/33.11a7d2af.js"><link rel="prefetch" href="/assets/js/34.e7403a40.js"><link rel="prefetch" href="/assets/js/35.92937b0a.js"><link rel="prefetch" href="/assets/js/36.9f52b8c7.js"><link rel="prefetch" href="/assets/js/37.193fb1cc.js"><link rel="prefetch" href="/assets/js/38.33e3fa35.js"><link rel="prefetch" href="/assets/js/39.1b9c5402.js"><link rel="prefetch" href="/assets/js/40.4ae4ec73.js"><link rel="prefetch" href="/assets/js/41.93514908.js"><link rel="prefetch" href="/assets/js/42.79934fb7.js"><link rel="prefetch" href="/assets/js/43.6be9e89a.js"><link rel="prefetch" href="/assets/js/44.cf8d93d5.js"><link rel="prefetch" href="/assets/js/45.89850dfb.js"><link rel="prefetch" href="/assets/js/46.c9bf838d.js"><link rel="prefetch" href="/assets/js/47.d009214c.js"><link rel="prefetch" href="/assets/js/48.f303128c.js"><link rel="prefetch" href="/assets/js/49.a002314e.js"><link rel="prefetch" href="/assets/js/5.baec3451.js"><link rel="prefetch" href="/assets/js/50.bf708037.js"><link rel="prefetch" href="/assets/js/51.a0931ba6.js"><link rel="prefetch" href="/assets/js/52.d828c50a.js"><link rel="prefetch" href="/assets/js/53.319606bc.js"><link rel="prefetch" href="/assets/js/54.45b73705.js"><link rel="prefetch" href="/assets/js/55.19e29602.js"><link rel="prefetch" href="/assets/js/56.70a7339c.js"><link rel="prefetch" href="/assets/js/57.24bae8ee.js"><link rel="prefetch" href="/assets/js/58.b9e501fa.js"><link rel="prefetch" href="/assets/js/59.5741b163.js"><link rel="prefetch" href="/assets/js/6.faab7e15.js"><link rel="prefetch" href="/assets/js/60.55c05a7e.js"><link rel="prefetch" href="/assets/js/61.66739ddc.js"><link rel="prefetch" href="/assets/js/62.984ff248.js"><link rel="prefetch" href="/assets/js/63.198b0614.js"><link rel="prefetch" href="/assets/js/64.44df42dc.js"><link rel="prefetch" href="/assets/js/65.835f260b.js"><link rel="prefetch" href="/assets/js/66.b01fd1a5.js"><link rel="prefetch" href="/assets/js/67.3e990aa1.js"><link rel="prefetch" href="/assets/js/68.3bff67c3.js"><link rel="prefetch" href="/assets/js/69.c77e5194.js"><link rel="prefetch" href="/assets/js/7.1e0b6ef9.js"><link rel="prefetch" href="/assets/js/70.990cc3f7.js"><link rel="prefetch" href="/assets/js/71.faf1e578.js"><link rel="prefetch" href="/assets/js/72.bf80a7aa.js"><link rel="prefetch" href="/assets/js/73.28855af5.js"><link rel="prefetch" href="/assets/js/74.575cab52.js"><link rel="prefetch" href="/assets/js/75.9fbc678e.js"><link rel="prefetch" href="/assets/js/76.aefd2222.js"><link rel="prefetch" href="/assets/js/77.29024e8c.js"><link rel="prefetch" href="/assets/js/78.1a261541.js"><link rel="prefetch" href="/assets/js/79.7f221adf.js"><link rel="prefetch" href="/assets/js/8.52cec024.js"><link rel="prefetch" href="/assets/js/81.78c287ce.js"><link rel="prefetch" href="/assets/js/9.6965887d.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.84492279.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/2.png" alt="CtrlCVer" class="logo"> <span class="site-name can-hide">CtrlCVer</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据库" class="dropdown-title"><span class="title">数据库</span> <span class="arrow down"></span></button> <button type="button" aria-label="数据库" class="mobile-dropdown-title"><span class="title">数据库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/数据库/MySQL.html" class="nav-link">
+  MySQL
+</a></li><li class="dropdown-item"><!----> <a href="/pages/数据库/Redis.html" class="nav-link">
+  Redis
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Vue" class="dropdown-title"><span class="title">Vue</span> <span class="arrow down"></span></button> <button type="button" aria-label="Vue" class="mobile-dropdown-title"><span class="title">Vue</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/Vue/Vue-loading动态加载.html" class="nav-link">
+  Vue-loading动态加载
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Vue/Vue项目用axios做request封装.html" class="nav-link">
+  Vue项目用axios做request封装
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Vue/前端踩坑之路.html" class="nav-link">
+  前端踩坑之路
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="SpringBoot" class="dropdown-title"><span class="title">SpringBoot</span> <span class="arrow down"></span></button> <button type="button" aria-label="SpringBoot" class="mobile-dropdown-title"><span class="title">SpringBoot</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/aop面向切面编程.html" class="nav-link">
+  aop面向切面编程
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/Cron表达式.html" class="nav-link">
+  Cron表达式
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/issue3.html" class="nav-link">
+  issue3
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/Listener监听器.html" class="nav-link">
+  Listener监听器
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/Mybatis 动态SQL.html" class="nav-link">
+  Mybatis 动态SQL
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/Mybatis.html" class="nav-link">
+  Mybatis
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/mybatis和spring整合.html" class="nav-link">
+  mybatis和spring整合
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/Mybatis缓存机制.html" class="nav-link">
+  Mybatis缓存机制
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/session之 HttpSessionActivation.html" class="nav-link">
+  session之 HttpSessionActivation
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/springboot+vue部署后出现springboot后端部分页面404.html" class="nav-link">
+  springboot+vue部署后出现springboot后端部分页面404
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/springboot.html" class="nav-link">
+  springboot
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/SpringMVC介绍.html" class="nav-link">
+  SpringMVC介绍
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/springmvc重定向和请求转发操作.html" class="nav-link">
+  springmvc重定向和请求转发操作
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/Spring介绍.html" class="nav-link">
+  Spring介绍
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/SSM整合开发.html" class="nav-link">
+  SSM整合开发
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/url-pattern设置.html" class="nav-link">
+  url-pattern设置
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/web开发.html" class="nav-link">
+  web开发
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/yaml.html" class="nav-link">
+  yaml
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/单元测试.html" class="nav-link">
+  单元测试
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/启动原理.html" class="nav-link">
+  启动原理
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/嵌入式servlet服务器.html" class="nav-link">
+  嵌入式servlet服务器
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/异常，拦截器....html" class="nav-link">
+  异常，拦截器...
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/执行流程分析.html" class="nav-link">
+  执行流程分析
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/指标监控.html" class="nav-link">
+  指标监控
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/数据访问.html" class="nav-link">
+  数据访问
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/注意.html" class="nav-link">
+  注意
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/注解.html" class="nav-link">
+  注解
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/注解方式注入.html" class="nav-link">
+  注解方式注入
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/源码分析.html" class="nav-link">
+  源码分析
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/高级特性.html" class="nav-link">
+  高级特性
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="SpringCloud" class="dropdown-title"><span class="title">SpringCloud</span> <span class="arrow down"></span></button> <button type="button" aria-label="SpringCloud" class="mobile-dropdown-title"><span class="title">SpringCloud</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/Eureka.html" class="nav-link">
+  Eureka
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/Gateway.html" class="nav-link">
+  Gateway
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/Hystrix断路器.html" class="nav-link">
+  Hystrix断路器
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/nacos-config.html" class="nav-link">
+  nacos-config
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/nacos.html" class="nav-link">
+  nacos
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/nacos集群和持久化配置.html" class="nav-link">
+  nacos集群和持久化配置
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/OpenFeign ISsue.html" class="nav-link">
+  OpenFeign ISsue
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/OpenFeign-issue.html" class="nav-link">
+  OpenFeign-issue
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/OpenFeign服务接口调用.html" class="nav-link">
+  OpenFeign服务接口调用
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/question.html" class="nav-link">
+  question
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/seata.html" class="nav-link">
+  seata
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/security.html" class="nav-link">
+  security
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/sentinel.html" class="nav-link">
+  sentinel
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/Sentinel实现熔断与限流.html" class="nav-link">
+  Sentinel实现熔断与限流
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/Spring Cloud Ribbon.html" class="nav-link">
+  Spring Cloud Ribbon
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/spring-cloud-stream.html" class="nav-link">
+  spring-cloud-stream
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/stream3.2学习.html" class="nav-link">
+  stream3.2学习
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/zookeeper.html" class="nav-link">
+  zookeeper
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/配置中心.html" class="nav-link">
+  配置中心
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="JVM" class="dropdown-title"><span class="title">JVM</span> <span class="arrow down"></span></button> <button type="button" aria-label="JVM" class="mobile-dropdown-title"><span class="title">JVM</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/JVM/JVM.html" class="nav-link">
+  JVM
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="JUC" class="dropdown-title"><span class="title">JUC</span> <span class="arrow down"></span></button> <button type="button" aria-label="JUC" class="mobile-dropdown-title"><span class="title">JUC</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/JUC/Atomic原子操作类.html" class="nav-link">
+  Atomic原子操作类
+</a></li><li class="dropdown-item"><!----> <a href="/pages/JUC/CAS.html" class="nav-link">
+  CAS
+</a></li><li class="dropdown-item"><!----> <a href="/pages/JUC/Java内存模型JMM.html" class="nav-link">
+  Java内存模型JMM
+</a></li><li class="dropdown-item"><!----> <a href="/pages/JUC/Java对象内存布局和对象头.html" class="nav-link">
+  Java对象内存布局和对象头
+</a></li><li class="dropdown-item"><!----> <a href="/pages/JUC/synchronized.html" class="nav-link">
+  synchronized
+</a></li><li class="dropdown-item"><!----> <a href="/pages/JUC/ThreadLocl.html" class="nav-link">
+  ThreadLocl
+</a></li><li class="dropdown-item"><!----> <a href="/pages/JUC/Thread、ThreadLocal、ThreadLocalMap.html" class="nav-link">
+  Thread、ThreadLocal、ThreadLocalMap
+</a></li><li class="dropdown-item"><!----> <a href="/pages/JUC/volatile.html" class="nav-link">
+  volatile
+</a></li><li class="dropdown-item"><!----> <a href="/pages/JUC/多线程锁.html" class="nav-link">
+  多线程锁
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Project" class="dropdown-title"><span class="title">Project</span> <span class="arrow down"></span></button> <button type="button" aria-label="Project" class="mobile-dropdown-title"><span class="title">Project</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/Project/clash部署至服务器，提供“上网”服务.html" class="nav-link">
+  clash部署至服务器，提供“上网”服务
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Project/Oauth2.html" class="nav-link">
+  Oauth2
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Project/SSE+Flux.html" class="nav-link">
+  SSE+Flux
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Project/Unicloud 阿里云服务器作图床.html" class="nav-link">
+  Unicloud 阿里云服务器作图床
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Project/内网穿透技术初探.html" class="nav-link">
+  内网穿透技术初探
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Project/微信订阅号开发.html" class="nav-link">
+  微信订阅号开发
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="课程" class="dropdown-title"><span class="title">课程</span> <span class="arrow down"></span></button> <button type="button" aria-label="课程" class="mobile-dropdown-title"><span class="title">课程</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/课程/操作系统.html" class="nav-link">
+  操作系统
+</a></li><li class="dropdown-item"><!----> <a href="/pages/课程/计算机组成与原理.html" class="nav-link">
+  计算机组成与原理
+</a></li><li class="dropdown-item"><!----> <a href="/pages/课程/计算机网络.html" class="nav-link">
+  计算机网络
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="机器视觉" class="dropdown-title"><span class="title">机器视觉</span> <span class="arrow down"></span></button> <button type="button" aria-label="机器视觉" class="mobile-dropdown-title"><span class="title">机器视觉</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/机器视觉/RTMPose.html" class="nav-link">
+  RTMPose
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/sunwenhaopro" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据库" class="dropdown-title"><span class="title">数据库</span> <span class="arrow down"></span></button> <button type="button" aria-label="数据库" class="mobile-dropdown-title"><span class="title">数据库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/数据库/MySQL.html" class="nav-link">
+  MySQL
+</a></li><li class="dropdown-item"><!----> <a href="/pages/数据库/Redis.html" class="nav-link">
+  Redis
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Vue" class="dropdown-title"><span class="title">Vue</span> <span class="arrow down"></span></button> <button type="button" aria-label="Vue" class="mobile-dropdown-title"><span class="title">Vue</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/Vue/Vue-loading动态加载.html" class="nav-link">
+  Vue-loading动态加载
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Vue/Vue项目用axios做request封装.html" class="nav-link">
+  Vue项目用axios做request封装
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Vue/前端踩坑之路.html" class="nav-link">
+  前端踩坑之路
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="SpringBoot" class="dropdown-title"><span class="title">SpringBoot</span> <span class="arrow down"></span></button> <button type="button" aria-label="SpringBoot" class="mobile-dropdown-title"><span class="title">SpringBoot</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/aop面向切面编程.html" class="nav-link">
+  aop面向切面编程
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/Cron表达式.html" class="nav-link">
+  Cron表达式
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/issue3.html" class="nav-link">
+  issue3
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/Listener监听器.html" class="nav-link">
+  Listener监听器
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/Mybatis 动态SQL.html" class="nav-link">
+  Mybatis 动态SQL
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/Mybatis.html" class="nav-link">
+  Mybatis
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/mybatis和spring整合.html" class="nav-link">
+  mybatis和spring整合
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/Mybatis缓存机制.html" class="nav-link">
+  Mybatis缓存机制
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/session之 HttpSessionActivation.html" class="nav-link">
+  session之 HttpSessionActivation
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/springboot+vue部署后出现springboot后端部分页面404.html" class="nav-link">
+  springboot+vue部署后出现springboot后端部分页面404
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/springboot.html" class="nav-link">
+  springboot
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/SpringMVC介绍.html" class="nav-link">
+  SpringMVC介绍
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/springmvc重定向和请求转发操作.html" class="nav-link">
+  springmvc重定向和请求转发操作
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/Spring介绍.html" class="nav-link">
+  Spring介绍
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/SSM整合开发.html" class="nav-link">
+  SSM整合开发
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/url-pattern设置.html" class="nav-link">
+  url-pattern设置
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/web开发.html" class="nav-link">
+  web开发
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/yaml.html" class="nav-link">
+  yaml
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/单元测试.html" class="nav-link">
+  单元测试
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/启动原理.html" class="nav-link">
+  启动原理
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/嵌入式servlet服务器.html" class="nav-link">
+  嵌入式servlet服务器
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/异常，拦截器....html" class="nav-link">
+  异常，拦截器...
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/执行流程分析.html" class="nav-link">
+  执行流程分析
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/指标监控.html" class="nav-link">
+  指标监控
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/数据访问.html" class="nav-link">
+  数据访问
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/注意.html" class="nav-link">
+  注意
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/注解.html" class="nav-link">
+  注解
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/注解方式注入.html" class="nav-link">
+  注解方式注入
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/源码分析.html" class="nav-link">
+  源码分析
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringBoot/高级特性.html" class="nav-link">
+  高级特性
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="SpringCloud" class="dropdown-title"><span class="title">SpringCloud</span> <span class="arrow down"></span></button> <button type="button" aria-label="SpringCloud" class="mobile-dropdown-title"><span class="title">SpringCloud</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/Eureka.html" class="nav-link">
+  Eureka
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/Gateway.html" class="nav-link">
+  Gateway
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/Hystrix断路器.html" class="nav-link">
+  Hystrix断路器
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/nacos-config.html" class="nav-link">
+  nacos-config
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/nacos.html" class="nav-link">
+  nacos
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/nacos集群和持久化配置.html" class="nav-link">
+  nacos集群和持久化配置
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/OpenFeign ISsue.html" class="nav-link">
+  OpenFeign ISsue
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/OpenFeign-issue.html" class="nav-link">
+  OpenFeign-issue
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/OpenFeign服务接口调用.html" class="nav-link">
+  OpenFeign服务接口调用
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/question.html" class="nav-link">
+  question
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/seata.html" class="nav-link">
+  seata
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/security.html" class="nav-link">
+  security
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/sentinel.html" class="nav-link">
+  sentinel
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/Sentinel实现熔断与限流.html" class="nav-link">
+  Sentinel实现熔断与限流
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/Spring Cloud Ribbon.html" class="nav-link">
+  Spring Cloud Ribbon
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/spring-cloud-stream.html" class="nav-link">
+  spring-cloud-stream
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/stream3.2学习.html" class="nav-link">
+  stream3.2学习
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/zookeeper.html" class="nav-link">
+  zookeeper
+</a></li><li class="dropdown-item"><!----> <a href="/pages/SpringCloud/配置中心.html" class="nav-link">
+  配置中心
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="JVM" class="dropdown-title"><span class="title">JVM</span> <span class="arrow down"></span></button> <button type="button" aria-label="JVM" class="mobile-dropdown-title"><span class="title">JVM</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/JVM/JVM.html" class="nav-link">
+  JVM
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="JUC" class="dropdown-title"><span class="title">JUC</span> <span class="arrow down"></span></button> <button type="button" aria-label="JUC" class="mobile-dropdown-title"><span class="title">JUC</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/JUC/Atomic原子操作类.html" class="nav-link">
+  Atomic原子操作类
+</a></li><li class="dropdown-item"><!----> <a href="/pages/JUC/CAS.html" class="nav-link">
+  CAS
+</a></li><li class="dropdown-item"><!----> <a href="/pages/JUC/Java内存模型JMM.html" class="nav-link">
+  Java内存模型JMM
+</a></li><li class="dropdown-item"><!----> <a href="/pages/JUC/Java对象内存布局和对象头.html" class="nav-link">
+  Java对象内存布局和对象头
+</a></li><li class="dropdown-item"><!----> <a href="/pages/JUC/synchronized.html" class="nav-link">
+  synchronized
+</a></li><li class="dropdown-item"><!----> <a href="/pages/JUC/ThreadLocl.html" class="nav-link">
+  ThreadLocl
+</a></li><li class="dropdown-item"><!----> <a href="/pages/JUC/Thread、ThreadLocal、ThreadLocalMap.html" class="nav-link">
+  Thread、ThreadLocal、ThreadLocalMap
+</a></li><li class="dropdown-item"><!----> <a href="/pages/JUC/volatile.html" class="nav-link">
+  volatile
+</a></li><li class="dropdown-item"><!----> <a href="/pages/JUC/多线程锁.html" class="nav-link">
+  多线程锁
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Project" class="dropdown-title"><span class="title">Project</span> <span class="arrow down"></span></button> <button type="button" aria-label="Project" class="mobile-dropdown-title"><span class="title">Project</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/Project/clash部署至服务器，提供“上网”服务.html" class="nav-link">
+  clash部署至服务器，提供“上网”服务
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Project/Oauth2.html" class="nav-link">
+  Oauth2
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Project/SSE+Flux.html" class="nav-link">
+  SSE+Flux
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Project/Unicloud 阿里云服务器作图床.html" class="nav-link">
+  Unicloud 阿里云服务器作图床
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Project/内网穿透技术初探.html" class="nav-link">
+  内网穿透技术初探
+</a></li><li class="dropdown-item"><!----> <a href="/pages/Project/微信订阅号开发.html" class="nav-link">
+  微信订阅号开发
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="课程" class="dropdown-title"><span class="title">课程</span> <span class="arrow down"></span></button> <button type="button" aria-label="课程" class="mobile-dropdown-title"><span class="title">课程</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/课程/操作系统.html" class="nav-link">
+  操作系统
+</a></li><li class="dropdown-item"><!----> <a href="/pages/课程/计算机组成与原理.html" class="nav-link">
+  计算机组成与原理
+</a></li><li class="dropdown-item"><!----> <a href="/pages/课程/计算机网络.html" class="nav-link">
+  计算机网络
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="机器视觉" class="dropdown-title"><span class="title">机器视觉</span> <span class="arrow down"></span></button> <button type="button" aria-label="机器视觉" class="mobile-dropdown-title"><span class="title">机器视觉</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/机器视觉/RTMPose.html" class="nav-link">
+  RTMPose
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/sunwenhaopro" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/pages/数据库/MySQL.html" class="sidebar-link">MySQL</a></li><li><a href="/pages/数据库/Redis.html" class="active sidebar-link">Redis</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/pages/数据库/Redis.html#什么是redis" class="sidebar-link">什么是redis</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/pages/数据库/Redis.html#redis的数据类型" class="sidebar-link">redis的数据类型</a></li></ul></li><li class="sidebar-sub-header"><a href="/pages/数据库/Redis.html#为什么使用redis作为mysql的缓存" class="sidebar-link">为什么使用redis作为mysql的缓存</a></li><li class="sidebar-sub-header"><a href="/pages/数据库/Redis.html#常见数据类型的底层实现" class="sidebar-link">常见数据类型的底层实现</a></li><li class="sidebar-sub-header"><a href="/pages/数据库/Redis.html#redis线程模型" class="sidebar-link">Redis线程模型</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/pages/数据库/Redis.html#redis是单线程吗" class="sidebar-link">redis是单线程吗</a></li><li class="sidebar-sub-header"><a href="/pages/数据库/Redis.html#redis采用单线程为什么还那么快" class="sidebar-link">redis采用单线程为什么还那么快</a></li><li class="sidebar-sub-header"><a href="/pages/数据库/Redis.html#redis之前为什么是单线程模型" class="sidebar-link">redis之前为什么是单线程模型</a></li></ul></li><li class="sidebar-sub-header"><a href="/pages/数据库/Redis.html#redis持久化" class="sidebar-link">Redis持久化</a></li><li class="sidebar-sub-header"><a href="/pages/数据库/Redis.html#redis如何实现高可用" class="sidebar-link">Redis如何实现高可用</a></li><li class="sidebar-sub-header"><a href="/pages/数据库/Redis.html#集群脑裂导致数据丢失问题" class="sidebar-link">集群脑裂导致数据丢失问题</a></li><li class="sidebar-sub-header"><a href="/pages/数据库/Redis.html#redis过期删除和内存淘汰策略" class="sidebar-link">Redis过期删除和内存淘汰策略</a></li><li class="sidebar-sub-header"><a href="/pages/数据库/Redis.html#redis持久化时会对过期🗡做什么处理" class="sidebar-link">Redis持久化时会对过期🗡做什么处理</a></li><li class="sidebar-sub-header"><a href="/pages/数据库/Redis.html#redis主从复制时-对过期键如何处理" class="sidebar-link">Redis主从复制时，对过期键如何处理</a></li><li class="sidebar-sub-header"><a href="/pages/数据库/Redis.html#redis内存满了会发生什么" class="sidebar-link">Redis内存满了会发生什么</a></li><li class="sidebar-sub-header"><a href="/pages/数据库/Redis.html#lru-算法和-lfu-算法有什么区别" class="sidebar-link">LRU 算法和 LFU 算法有什么区别？</a></li><li class="sidebar-sub-header"><a href="/pages/数据库/Redis.html#redis缓存设计" class="sidebar-link">Redis缓存设计</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/pages/数据库/Redis.html#如何避免缓存雪崩-缓存击穿-缓存穿透" class="sidebar-link">如何避免缓存雪崩，缓存击穿，缓存穿透</a></li><li class="sidebar-sub-header"><a href="/pages/数据库/Redis.html#redis缓存是策略-动态缓存热点数据" class="sidebar-link">Redis缓存是策略，动态缓存热点数据</a></li><li class="sidebar-sub-header"><a href="/pages/数据库/Redis.html#常见的缓存更新策略" class="sidebar-link">常见的缓存更新策略</a></li></ul></li><li class="sidebar-sub-header"><a href="/pages/数据库/Redis.html#redis如何实现延迟队列" class="sidebar-link">Redis如何实现延迟队列</a></li><li class="sidebar-sub-header"><a href="/pages/数据库/Redis.html#redis的大key问题如何处理" class="sidebar-link">Redis的大Key问题如何处理</a></li><li class="sidebar-sub-header"><a href="/pages/数据库/Redis.html#redis管道有什么作用" class="sidebar-link">redis管道有什么作用</a></li><li class="sidebar-sub-header"><a href="/pages/数据库/Redis.html#redis支持事务回滚吗" class="sidebar-link">Redis支持事务回滚吗？</a></li><li class="sidebar-sub-header"><a href="/pages/数据库/Redis.html#如何使用redis实现分布式锁" class="sidebar-link">如何使用redis实现分布式锁</a></li></ul></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="redis"><a href="#redis" class="header-anchor">#</a> Redis</h1> <hr> <h2 id="什么是redis"><a href="#什么是redis" class="header-anchor">#</a> 什么是redis</h2> <p>redis是一款基于内存的k-v数据结构的非关系型数据库，读写速度非常快，常用于<strong>缓存，消息队列、分布式锁等场景</strong>。</p> <h3 id="redis的数据类型"><a href="#redis的数据类型" class="header-anchor">#</a> redis的数据类型</h3> <p>string：字符串   缓存对象，token，session，数字自增，分布式锁</p> <p>list：列表   消息队列</p> <p>hash：哈希   缓存对象 购物车</p> <p>set：集合  缓存对象  点赞可能认识的人，共同好友。社交功能  收藏夹</p> <p>zset：有序集合   排行榜</p> <p>geo：地理  地理位置附近的人，滴滴</p> <p>hyperloglog：基数统计 网站pu统计</p> <p>stream：流  消息队列</p> <p>bitmap：位图  登录状态，连续签到，二值统计</p> <p>Redis还支持事务，发布-订阅，切片集群，主从复制，哨兵，持久化，内存淘汰机制，lua脚本，过期删除策略</p> <h2 id="为什么使用redis作为mysql的缓存"><a href="#为什么使用redis作为mysql的缓存" class="header-anchor">#</a> 为什么使用redis作为mysql的缓存</h2> <p>高性能</p> <p>高并发</p> <h2 id="常见数据类型的底层实现"><a href="#常见数据类型的底层实现" class="header-anchor">#</a> 常见数据类型的底层实现</h2> <table><thead><tr><th>数据类型</th> <th>3.0</th> <th>7.0</th></tr></thead> <tbody><tr><td>string</td> <td>SDS</td> <td>SDS</td></tr> <tr><td>list</td> <td>双向链表，压缩列表</td> <td>quicklist</td></tr> <tr><td>hash</td> <td>压缩列表，哈希表</td> <td>listpack，哈希表</td></tr> <tr><td>set</td> <td>哈希表，整数集合</td> <td>哈希表，整数集合</td></tr> <tr><td>zset</td> <td>压缩列表，跳表</td> <td>listpack，跳表</td></tr></tbody></table> <p>元素数量小于512，元素长度小于64字节</p> <p>string：简单动态字符串</p> <p>list：quicklist（压缩列表，双向链表）</p> <p>hash：listpack（压缩列表，哈希表）</p> <p>set：元素少于512个且为整数，整数集合；否则哈希表</p> <p>zset：元素小于128，元素值小于64字节时压缩列表；否则跳表</p> <p>7.0后压缩列表又listpack代替</p> <h2 id="redis线程模型"><a href="#redis线程模型" class="header-anchor">#</a> Redis线程模型</h2> <hr> <h3 id="redis是单线程吗"><a href="#redis是单线程吗" class="header-anchor">#</a> redis是单线程吗</h3> <p>先指出什么是redis的单线程：redis的单线程指的是接受客户端请求，解析请求，处理请求，进行数据读写操作，发送请求结果是由主线程处理的</p> <p>然后分析redis程序不是单线程：启动redis程序，不仅由主线程还有后台线程，关闭处理文件，aof刷盘，lazyfree线程（异步释放内存）</p> <h3 id="redis采用单线程为什么还那么快"><a href="#redis采用单线程为什么还那么快" class="header-anchor">#</a> redis采用单线程为什么还那么快</h3> <p>redis内存操作</p> <p>I/O多路复用机制</p> <p>单线程模型，避免多线程频繁的创建和切换</p> <h3 id="redis之前为什么是单线程模型"><a href="#redis之前为什么是单线程模型" class="header-anchor">#</a> redis之前为什么是单线程模型</h3> <p>一方面：redis性能瓶颈不在于cpu，而在于网络IO，多线程也仅仅是处理网络IO时使用多线程，指令处理过程还是单线程。
+另一方面：多线程频繁的创建销毁和切换也是不小的cpu开销，增加了系统复杂性，还需要考虑加锁场景。aaaaaa</p> <h2 id="redis持久化"><a href="#redis持久化" class="header-anchor">#</a> Redis持久化</h2> <p>==AOF日志：==执行完一条写命令，就将命令追加到server.aof_biuf缓冲区，然后通过系统write（）调用将aof_buf缓冲区的数据写入到aof文件，此时数据并没有写入到硬盘，而是拷贝到了内核缓冲区page_cache,等待内核将数据写入磁盘。在，redis重启时，会读取aof文件中的命令，进行数据恢复。</p> <p>这个过程是先执行命令再去存储命令：一方面避免了对命令的语法检查，另一方面不会阻塞写命令运行；但是可能会发生数据丢失和阻塞后续命令</p> <p>AOF写回策略有三种：</p> <p>alway：立即写回磁盘</p> <p>severysec：每秒写入一次</p> <p>no：有内核控制写入时机</p> <table><thead><tr><th>写回策略</th> <th>写回时机</th> <th>优点</th> <th>缺点</th></tr></thead> <tbody><tr><td>always</td> <td>立即写回</td> <td>可靠性高，几乎不会丢失数据</td> <td>磁盘压力大，性能开销大</td></tr> <tr><td>everysec</td> <td>每秒写回</td> <td>性能适中</td> <td>宕机时最多损失1s内数据</td></tr> <tr><td>no</td> <td>内核决定</td> <td>性能好</td> <td>宕机时可能损失最多数据</td></tr></tbody></table> <p>AOF日志过大时会触发AOF重写：读取当前数据库中所有的键值对，记录到新的aof文件，从后将文件重命名替换原来的aof文件，先生成后替换模式避免了源文件发生污染。</p> <p>重写AOF过程是由后台子进程bgrewriteaof完成的：1.避免了主进程阻塞，主进程可能继续处理请求 2.使用主进程而不是主线程，多线程之间会共享内存，修改共享内存数据时需要加锁来保证数据安全。而父子进程是以只读方式共享内存数据的，当一方发生写操作时就会触发写时复制，形成两个独立数据副本就不用加锁来保证数据安全</p> <p>如果AOF日志重写过程中主线程处理了写请求，那么写请求命令会被同时写进AOF缓冲区和AOF重写缓冲区，当子进程完成AOF重写后，主进程会将AOF重写缓冲区的所有内容追加到新的AOF文件中，改名覆盖原来文件。</p> <p>==RDB快照==：记录某一个瞬间的内存数据。这种方法重启时恢复数据比AOF重启快得多。AOF重启是将命令重新执行一遍，速度非常慢</p> <p>RDB快照又save和bgsave两个命令控制。</p> <p>save：主线程进行RDB快照生成，会阻塞主线程</p> <p>bgsave：创建一个子进程来处理生成RDB文件</p> <p>Redis 的快照是<strong>全量快照</strong>，也就是说每次执行快照，都是把内存中的「所有数据」都记录到磁盘中。所以执行快照是一个比较重的操作，如果频率太频繁，可能会对 Redis 性能产生影响。如果频率太低，服务器故障时，丢失的数据会更多</p> <p>RDB执行快照的时候，数据还是可以被修改的，写时复制技术。执行bgsave命令时会fork一个子进程，会将主线程的页表复制一份给子进程，这两份页表指向同一片内存区域，当一方尝试进行写操作时就会触发写时复制，创建两个独立的数据副本，RDB快照继续对副本进行快照，主线程又可以进行写命令操作。</p> <p>==混合持久化==：RDB快照重启时恢复快，但是宕机会损失较多数据；AOF重启式恢复较慢，但是宕机时损失数据较少。这样既保证了重启数据恢复速度又降低了数据丢失风险。</p> <p>混合持久化工作在AOF日志重写的过程中，当执行aof日志重写时，主进程fork的子进程就会先将与主进程共享的数据以RDB快照的形式存入aof文件，然后主进程记录在aof重写缓冲区的数据会以aof日志的形式追加到aof文件，这样就形成了一个混合持久化文件，然后替换原来的aof文件。这样重启时会先加载保存大量数据的rdb文件，然后加载较少的aof文件，使得重启数据恢复数据较快。因为原来的一部分命令以快照的形式存储了起来。这个重启是指数据全部加载完毕，因为rdb里面的key可能被修改，入药aof文件进行修正，这样才算重启全部完成。</p> <table><thead><tr><th>持久化方式</th> <th>数据</th> <th>重启</th></tr></thead> <tbody><tr><td>AOF</td> <td>宕机数据丢失少</td> <td>重启数据恢复较慢</td></tr> <tr><td>RDB</td> <td>宕机丢失数据较多</td> <td>重启数据恢复快</td></tr> <tr><td>混合持久化</td> <td>宕机数据丢失较少</td> <td>重启数据较快</td></tr></tbody></table> <h2 id="redis如何实现高可用"><a href="#redis如何实现高可用" class="header-anchor">#</a> Redis如何实现高可用</h2> <p>主从复制</p> <p>主从复制就是将一台redis服务器同步数据到多台从服务器，就是一主多从的模式，并且主从服务器之间采用读写分离的模式。</p> <p>主服务器可以进行读写操作，当发生写操作时自动将写操作同步给从服务器，从服务器一般只读，并接受主服务器同步的写操作命令。</p> <p>所有的写操作都是由主服务器完成的，主从服务器的数据是一致的，无法保证强一致性。在从节点进行写操作会报错，因为从节点默认是只读模式</p> <p>哨兵模式</p> <p>哨兵模式是为了解决Redis主从模式主服务器宕机时需要手动恢复的问题，哨兵模式可以监控主从服务器，并提供主从节点故障转移功能。</p> <p>切片集群</p> <p>当redis缓存数据达到一台服务器无法缓存的时候，就需要使用redis切片集群方案。将数据散发到不同的服务器上。</p> <p>Redis Cluster采用hash槽来处理数据与节点之间的映射关系。一个切片集群共有16384个hash槽。</p> <p>具体过程发了为两步：</p> <ul><li>根据键值对的 key，按照 <a href="https://en.wikipedia.org/wiki/Cyclic_redundancy_check" target="_blank" rel="noopener noreferrer">CRC16 算法 <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>计算一个 16 bit 的值。</li> <li>再用 16bit 值对 16384 取模，得到 0~16383 范围内的模数，每个模数代表一个相应编号的哈希槽。</li></ul> <p>具体映射方案：</p> <ul><li><strong>平均分配：</strong> 在使用 cluster create 命令创建 Redis 集群时，Redis 会自动把所有哈希槽平均分布到集群节点上。比如集群中有 9 个节点，则每个节点上槽的个数为 16384/9 个。</li> <li><strong>手动分配：</strong> 可以使用 cluster meet 命令手动建立节点间的连接，组成集群，再使用 cluster addslots 命令，指定每个节点上的哈希槽个数。</li></ul> <h2 id="集群脑裂导致数据丢失问题"><a href="#集群脑裂导致数据丢失问题" class="header-anchor">#</a> 集群脑裂导致数据丢失问题</h2> <p>主从架构中，主节点与所有从节点因为网络波动失去联系，但与客户端依旧保持连接，客户端依旧向这个主节点写数据，但是这些数据无法同步给从节点，哨兵发现主节点失联重新选举主节点，这样一个集群就出现了两个主节点。当原来主节点重连时，会降级为从节点，并且清空数据与主节点进行数据同步。那么失联那段时间写入的数据就会丢失。</p> <p>解决方案：当主节点下线或者通信时间超时的总数量小于阈值的时候，紧张主节点写入数据，客户端返回错误。</p> <p>min-slaves-to-write 主节点至少需要与几个节点连接，小于这个数禁止写数据</p> <p>min-slaves-max-lag  主从数据复制和同步延迟不能超过多少秒，超时就会禁止写入数据</p> <p>即使原主库是假故障，期间也无法响应哨兵心跳和从库进行同步，自然也就无法和从库进行 ACK 确认了。这样一来，min-slaves-to-write 和 min-slaves-max-lag 的组合要求就无法得到满足，原主库就会被限制接收客户端写请求，客户端也就不能在原主库中写入新数据了。</p> <p>等到新主库上线时，就只有新主库能接收和处理客户端请求，此时，新写的数据会被直接写到新主库中。而原主库会被哨兵降为从库，即使它的数据被清空了，也不会有新数据丢失。</p> <h2 id="redis过期删除和内存淘汰策略"><a href="#redis过期删除和内存淘汰策略" class="header-anchor">#</a> Redis过期删除和内存淘汰策略</h2> <p>如果key设置了过期时间就会把key带上过期时间存入到过期字典中。</p> <p>过期删除：惰性删除，定时删除，定期删除  ，redis使用定期删除和惰性删除结合的策略。</p> <p>定时删除：顶个计数器，到期自动删除</p> <p>惰性删除：等查询到key时去判断是否过期</p> <p>定期删除：过一段时间随机抽取20个键，如果超过五个就会再抽取20个，执行时间有一个阈值默认是25ms</p> <table><thead><tr><th>过期删除策略</th> <th>优点</th> <th>缺点</th></tr></thead> <tbody><tr><td>定时删除</td> <td>能及时清理过期键值</td> <td>会占用大量的cpu资源</td></tr> <tr><td>惰性删除</td> <td>占用很少的系统资源，对cpu时间最友好</td> <td>key不被访问一直存在，造成内存浪费</td></tr> <tr><td>定期删除</td> <td>限制执行时长和频率，削减对cpu的占用，减少了过期🗡的内存消耗</td> <td>难以去确定执行的时长和频率</td></tr></tbody></table> <h2 id="redis持久化时会对过期🗡做什么处理"><a href="#redis持久化时会对过期🗡做什么处理" class="header-anchor">#</a> Redis持久化时会对过期🗡做什么处理</h2> <p>RDB文件生成阶段：RDB文件生成期间会对key进行检查，过期的🗡不会被保存到新的RDB文件中。
+RDB文件加载阶段：主服务器：会对🗡进行检查，过期键不会被加载到内存中；从服务器：接收到主服务器的RDB文件不会对键的状态进行检查，从节点在执行只读操作时，如果是有expire设定的key，则会根据自己机器上的时钟来判断是否已过期，如果未过期，则返回给客户端。但从节点本身不执行删除操作，而是会等待后面的del同步操作。</p> <p>AOF重写阶段：会对键值进行过期检查，过期的不会被保留到新生成的aof文件  （aof文件过大）
+AOF写入阶段：如果过期键没被删除，aof文件会保留此过期键，当过期间被删除后，会向aof文件显式追加一条删除命令    (生成aof)</p> <h2 id="redis主从复制时-对过期键如何处理"><a href="#redis主从复制时-对过期键如何处理" class="header-anchor">#</a> Redis主从复制时，对过期键如何处理</h2> <p>只有主服务器进行过期扫描，从库过期键依靠主服务器控制，主服务器会向AOF文件追加del命令，同步到从库。</p> <h2 id="redis内存满了会发生什么"><a href="#redis内存满了会发生什么" class="header-anchor">#</a> Redis内存满了会发生什么</h2> <p>就会触发内存淘汰机制</p> <p>不做数据淘汰：满了就无法进行写操作命令，但是可以执行删除查询等操作 。maxmemory可以设置最大运行内存</p> <p>执行数据淘汰：</p> <p>1.对过期时间中数据进行淘汰：volatile-random,volatile-ttl,volatile-lru,volatile-lfu</p> <p>2.对所有键进行数据淘汰: allkeys-random,allkeys-lru,allkeys-lfu</p> <h2 id="lru-算法和-lfu-算法有什么区别"><a href="#lru-算法和-lfu-算法有什么区别" class="header-anchor">#</a> LRU 算法和 LFU 算法有什么区别？</h2> <p>传统的LRU算法基于链表实现，链表中的元素按照操作顺序从前往后排列，最新操作的元素会一道链表头部，删除末尾元素。</p> <p>redis没有采用传统的方法，因为这样需要维护一个链表，会带来额外的空间开销，并且存储数据非常多的时候链表会很大，大量访问时就会产生很多移动操作，极大的耗费性能。</p> <p>redis在对象头中添加了一个24位的lru字段用于记录最后一次访问的时间，随机淘汰时就是比较这个时间来决定是否淘汰，这样就不用维护链表节省了空间，提高了效率和性能。但是当一次性读取大量的数据，而这些数据只会被读取一次，却能保存相当长的时间，造成缓存污染。</p> <p>LFU 算法会记录每个数据的访问次数。当一个数据被再次访问时，就会增加该数据的访问次数。这样就解决了偶尔被访问一次之后，数据留存在缓存中很长一段时间的问题。</p> <p>redis在对象头中添加一个24位的lfu字段，高16位用来记录上次访问的时间戳ldt，低八位用来记录拼凑logc，这个是按数学概率来进行增加削减的。</p> <h2 id="redis缓存设计"><a href="#redis缓存设计" class="header-anchor">#</a> Redis缓存设计</h2> <h3 id="如何避免缓存雪崩-缓存击穿-缓存穿透"><a href="#如何避免缓存雪崩-缓存击穿-缓存穿透" class="header-anchor">#</a> 如何避免缓存雪崩，缓存击穿，缓存穿透</h3> <p>缓存雪崩：过期时间更加均匀，比如给过期时间加上随机数值；不设置过期时间，由后台服务决定更新时机</p> <p>缓存击穿：设置互斥锁，如双重检查锁；不设置过期时间，有后台决定更新时机；进行限流，一次只允许几个请求</p> <p>缓存穿透：对于空请求返回一个默认值；使用布隆过滤器；限制非法请求。</p> <h3 id="redis缓存是策略-动态缓存热点数据"><a href="#redis缓存是策略-动态缓存热点数据" class="header-anchor">#</a> Redis缓存是策略，动态缓存热点数据</h3> <p>数据存储受限，系统并不是将所有的数据都添加到缓存中，而只是将其中一部分热点数据缓存起来。</p> <p>动态热点缓存的策略是：根据数据最新访问时间来进行排名，并过滤到不常用的数据，只留下经常访问的数据。</p> <p>在 Redis 中可以用 zadd 方法和 zrange 方法来完成排序队列和获取 200 个商品的操作。</p> <h3 id="常见的缓存更新策略"><a href="#常见的缓存更新策略" class="header-anchor">#</a> 常见的缓存更新策略</h3> <p>Write Back：写回策略</p> <p>Write Back（写回）策略在更新数据的时候，只更新缓存，同时将缓存数据设置为脏的，然后立马返回，并不会更新数据库。对于数据库的更新，会通过批量异步更新的方式进行。</p> <p>redis没有异步更新数据库的功能</p> <p>常用在计算机体系结构中的设计，比如 CPU 的缓存、操作系统中文件系统的缓存</p> <p>Cache Aside：旁路缓存策略</p> <p>写：更新数据库数据，然后更新缓存数据</p> <p>读：如果缓存命中，直接返回数据；缓存不在就去数据库查找，然后更新缓存</p> <p>不能先删除缓存再更新数据库：会出现缓存和数据库数据不一致性的问题</p> <p>适合读多写少的场景。</p> <p>Write /  Read Through：写穿读穿策略</p> <p>read through：先查询缓存中数据是否存在，如果存在则直接返回，如果不存在，则由缓存组件负责从数据库查询数据，并将结果写入到缓存组件，最后缓存组件将数据返回给应用。</p> <p>write through：当有数据更新的时候，先查询要写入的数据在缓存中是否已经存在：</p> <ul><li>如果缓存中数据已经存在，则更新缓存中的数据，并且由缓存组件同步更新到数据库中，然后缓存组件告知应用程序更新完成。</li> <li>如果缓存中数据不存在，直接更新数据库，然后返回；</li></ul> <p>本地缓存可以这种策略；分布式缓存无法实现，因为没有此类功能</p> <h2 id="redis如何实现延迟队列"><a href="#redis如何实现延迟队列" class="header-anchor">#</a> Redis如何实现延迟队列</h2> <p>使用场景：</p> <ol><li>订单超时未支付自动关闭</li> <li>外卖十分钟没有接单会自动取消</li></ol> <p>Redis可以使用有序集合ZSet来实现延迟消息队列，ZSet的score属性可以赋值给延迟执行的时间，轮询比对利用arangebyscore来查询所有待处理任务，循环执行即可</p> <h2 id="redis的大key问题如何处理"><a href="#redis的大key问题如何处理" class="header-anchor">#</a> Redis的大Key问题如何处理</h2> <p>大key：</p> <p>String类型的值大于10kb</p> <p>Hash，List，Set，ZSet类型元素超过5000个</p> <p>大key带来的问题：</p> <ol><li>操作大key比较耗时，客户端阻塞，可能响应超时</li> <li>获取大key产生的流量较大，可能引发网络阻塞</li> <li>del删除大key引发主线程阻塞</li> <li>集群模型在slot分片均匀的情况下会产生数据和查询倾斜的问题，部分大key的几点内存占用多，QPS也比较大</li></ol> <p>如何找到大key</p> <ol><li><p>redis-cli   -a &quot;密码&quot;  --bigkeys   从节点或者小流量时期，该检测会阻塞主线程 ； 方法只会返回bigest key无法返回前n个数据；集合类型 只会统计menber数量，不会计算占用大小。</p></li> <li><p>scan 命令  scan是基于游标的迭代器，scan命令对数据库扫描，然后type获取类型，根据不同类型使用不同命令来获取长度</p> <p>string:  STRLEN来获取字符串长度
+集合类型：MEMORY USAGE来查询</p></li> <li><p>RdbTools工具
+RdbTools 第三方开源工具，可以用来解析 Redis 快照（RDB）文件，找到其中的大 key
+rdb dump.rdb -c memory --bytes 10240 -f redis.csv</p></li></ol> <p>如何删除大key
+不能直接删除大key：在应用程序释放内存时，==操作系统需要把释放掉的内存块插入一个空闲内存块的链表，以便后续进行管理和再分配==。这个过程本身需要一定时间，而且会阻塞当前释放内存的应用程序。所以，如果一下子释放了大量内存，空闲内存块链表操作时间就会增加，相应地就会造成 Redis 主线程的阻塞，如果主线程发生了阻塞，其他所有请求可能都会超时，超时越来越多，会造成 Redis 连接耗尽，产生各种异常。</p> <p>分批删除大Key：删除大 Hash，使用 <code>hscan</code> 命令，每次获取 100 个字段，再用 <code>hdel</code> 命令，每次删除 1 个字段。
+删除大 List，通过 <code>ltrim</code> 命令，每次删除少量元素。
+删除大 Set，使用 <code>sscan</code> 命令，每次扫描集合中 100 个元素，再用 <code>srem</code> 命令每次删除一个键。
+删除大 ZSet，使用 <code>zremrangebyrank</code> 命令，每次删除 top 100个元素。
+异步删除：用 unlink 命令代替 del 来删除, Redis 会将这个 key 放入到一个异步线程中进行删除，这样不会阻塞主线程。</p> <h2 id="redis管道有什么作用"><a href="#redis管道有什么作用" class="header-anchor">#</a> redis管道有什么作用</h2> <p>管道技术可以解决多个命令执行时的网络等待，它是把多个命令整合到一起发送给服务器端处理之后统一返回给客户端，这样就免去了每条命令执行后都要等待的情况，从而有效地提高了程序的执行效率。但使用管道技术也要注意避免发送的命令过大，或管道内的数据太多而导致的网络阻塞。</p> <p>管道技术本质上是客户端提供的功能，而非 Redis 服务器端的功能。</p> <h2 id="redis支持事务回滚吗"><a href="#redis支持事务回滚吗" class="header-anchor">#</a> Redis支持事务回滚吗？</h2> <p>Redis 中并没有提供回滚机制，虽然 Redis 提供了 DISCARD 命令，但是这个命令只能用来主动放弃事务执行，把暂存的命令队列清空，已经执行过的命令结果也不会删除，起不到回滚的效果。</p> <h2 id="如何使用redis实现分布式锁"><a href="#如何使用redis实现分布式锁" class="header-anchor">#</a> 如何使用redis实现分布式锁</h2> <p>分布式锁用于控制分布式场景下某一个资源只能被某一个应用所使用。
+Redis 的 SET 命令有个 NX 参数可以实现「key不存在才插入」，所以可以用它来实现分布式锁：</p> <p>Redis 节点实现分布式锁时，对于加锁操作，我们需要满足三个条件</p> <ul><li>加锁包括了读取锁变量、检查锁变量值和设置锁变量值三个操作，但需要以原子操作的方式完成，所以，我们使用 SET 命令带上 NX 选项来实现加锁；</li> <li>锁变量需要设置过期时间，以免客户端拿到锁后发生异常，导致锁一直无法释放，所以，我们在 SET 命令执行时加上 EX/PX 选项，设置其过期时间；</li> <li>锁变量的值需要能区分来自不同客户端的加锁操作，以免在释放锁时，出现误释放操作，所以，我们使用 SET 命令设置锁变量值时，每个客户端设置的值是一个唯一值，用于标识客户端；</li></ul> <div class="language-java line-numbers-mode"><pre class="language-java"><code><span class="token constant">SET</span> lock_key unique_value <span class="token constant">NX</span> <span class="token constant">PX</span> <span class="token number">10000</span> 
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>解锁的过程就是将 lock_key 键删除（del lock_key），要保证执行操作的客户端就是加锁的客户端。
+解锁的时候，我们要先判断锁的 unique_value 是否为加锁客户端，是的话，才将 lock_key 键删除。</p> <p>解锁是有两个操作，需要 Lua 脚本来保证解锁的原子性，因为 Redis 在执行 Lua 脚本时，可以以原子性的方式执行，保证了锁释放操作的原子性。</p> <div class="language-lua line-numbers-mode"><pre class="language-lua"><code><span class="token keyword">if</span> redis<span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span><span class="token string">&quot;get&quot;</span><span class="token punctuation">,</span>KEY<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">==</span> ARGV<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token keyword">then</span>
+    <span class="token keyword">return</span> redis<span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span><span class="token string">&quot;del&quot;</span><span class="token punctuation">,</span>KEYS<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token keyword">else</span>
+    <span class="token keyword">return</span> <span class="token number">0</span>
+<span class="token keyword">end</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>基于rediss的分布式锁优点：</p> <ol><li>性能高效</li> <li>redis本身提供了setnx方法，实现简单</li> <li>redis可以集群部署，能够避免单点故障</li></ol> <p>缺点：</p> <ol><li>超时时间不好设置。如果锁的超时时间设置过长，会影响性能，如果设置的超时时间过短会保护不到共享资源。看门狗机制去自动续约。</li> <li>Redis 主从复制模式中的数据是异步复制的，这样导致分布式锁的不可靠性。主节点获取到锁后还没同步就宕机了，新的主节点还能获取到锁。就失效了</li></ol> <p>分布式锁算法 Redlock（红锁）：是让客户端和多个独立的 Redis 节点依次请求申请加锁，如果客户端能够和半数以上的节点成功地完成加锁操作，那么我们就认为，客户端成功地获得分布式锁，否则加锁失败。这种算法对于集群设备之间的时序和系统时钟苛刻要求。</p> <ul><li>有界网络延迟（可以保证数据包始终在某个保证的最大值内到达 延迟），</li> <li>有界进程暂停（换句话说，硬实时约束，通常只有 在汽车安全气囊系统等中找到），以及</li> <li>有界时钟错误</li></ul> <p>系统 有 5 个 Redis 节点（A、B、C、D 和 E）和 2 个客户端（1 和 2）。如果时钟在一个上会发生什么 的 Redis 节点向前跳跃？</p> <ol><li><p>客户端 1 在节点 A、B、C 上获得锁定，由于网络问题，无法访问 D 和 E。</p></li> <li><p>节点 C 上的时钟向前跳跃，导致锁过期。</p></li> <li><p>客户端 2 在节点 C、D、E 上获得锁定，由于网络问题，无法访问 A 和 B。</p></li> <li><p>客户端 1 和 2 现在都认为他们掌握着锁。</p></li> <li><p>客户端 1 请求锁定节点 A、B、C、D、E。</p></li> <li><p>当对客户端 1 的响应在传输中时，客户端 1 进入停止世界的 GC。</p></li> <li><p>所有 Redis 节点上的锁都会过期。</p></li> <li><p>客户端 2 在节点 A、B、C、D、E 上获得锁定。</p></li> <li><p>客户端 1 完成 GC，并收到来自 Redis 节点的响应，指示其成功 获取了锁（当进程 暂停）。</p></li> <li><p>客户端 1 和 2 现在都认为他们掌握着锁。</p></li></ol> <p><a href="https://martin.kleppmann.com/2016/02/08/how-to-do-distributed-locking.html" target="_blank" rel="noopener noreferrer">如何进行分布式锁定 — Martin Kleppmann 的博客<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/pages/数据库/MySQL.html" class="prev">
+        MySQL
+      </a></span> <!----></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.347fa917.js" defer></script><script src="/assets/js/4.4e440976.js" defer></script><script src="/assets/js/80.a25bdaa1.js" defer></script>
+  </body>
+</html>
